@@ -1,0 +1,31 @@
+dependencies: \
+  /Users/wyy/Desktop/ZQuanProject/ZQuanProject/tool/JZNetTool.m \
+  /Users/wyy/Desktop/ZQuanProject/ZQuanProject/ZQuanProject-Prefix.pch \
+  /Users/wyy/Desktop/ZQuanProject/ZQuanProject/AppDelegate.h \
+  /Users/wyy/Desktop/ZQuanProject/ZQuanProject/Macros/Macros.h \
+  /Users/wyy/Desktop/ZQuanProject/ZQuanProject/Macros/APPConfig.h \
+  /Users/wyy/Desktop/ZQuanProject/ZQuanProject/tool/UIView+Additional.h \
+  /Users/wyy/Desktop/ZQuanProject/ZQuanProject/tool/MBProgressHUD.h \
+  /Users/wyy/Desktop/ZQuanProject/ZQuanProject/tool/JZNetTool.h \
+  /Users/wyy/Desktop/ZQuanProject/Build/Products/Debug-iphonesimulator/AFNetworking/AFNetworking.framework/Modules/module.modulemap \
+  /Users/wyy/Desktop/ZQuanProject/Build/Products/Debug-iphonesimulator/AFNetworking/AFNetworking.framework/Headers/UIProgressView+AFNetworking.h \
+  /Users/wyy/Desktop/ZQuanProject/Build/Products/Debug-iphonesimulator/AFNetworking/AFNetworking.framework/Headers/UIWebView+AFNetworking.h \
+  /Users/wyy/Desktop/ZQuanProject/Build/Products/Debug-iphonesimulator/AFNetworking/AFNetworking.framework/Headers/UIRefreshControl+AFNetworking.h \
+  /Users/wyy/Desktop/ZQuanProject/Build/Products/Debug-iphonesimulator/AFNetworking/AFNetworking.framework/Headers/UIKit+AFNetworking.h \
+  /Users/wyy/Desktop/ZQuanProject/Build/Products/Debug-iphonesimulator/AFNetworking/AFNetworking.framework/Headers/UIImageView+AFNetworking.h \
+  /Users/wyy/Desktop/ZQuanProject/Build/Products/Debug-iphonesimulator/AFNetworking/AFNetworking.framework/Headers/UIImage+AFNetworking.h \
+  /Users/wyy/Desktop/ZQuanProject/Build/Products/Debug-iphonesimulator/AFNetworking/AFNetworking.framework/Headers/UIButton+AFNetworking.h \
+  /Users/wyy/Desktop/ZQuanProject/Build/Products/Debug-iphonesimulator/AFNetworking/AFNetworking.framework/Headers/UIActivityIndicatorView+AFNetworking.h \
+  /Users/wyy/Desktop/ZQuanProject/Build/Products/Debug-iphonesimulator/AFNetworking/AFNetworking.framework/Headers/AFNetworkActivityIndicatorManager.h \
+  /Users/wyy/Desktop/ZQuanProject/Build/Products/Debug-iphonesimulator/AFNetworking/AFNetworking.framework/Headers/AFImageDownloader.h \
+  /Users/wyy/Desktop/ZQuanProject/Build/Products/Debug-iphonesimulator/AFNetworking/AFNetworking.framework/Headers/AFAutoPurgingImageCache.h \
+  /Users/wyy/Desktop/ZQuanProject/Build/Products/Debug-iphonesimulator/AFNetworking/AFNetworking.framework/Headers/AFHTTPSessionManager.h \
+  /Users/wyy/Desktop/ZQuanProject/Build/Products/Debug-iphonesimulator/AFNetworking/AFNetworking.framework/Headers/AFURLSessionManager.h \
+  /Users/wyy/Desktop/ZQuanProject/Build/Products/Debug-iphonesimulator/AFNetworking/AFNetworking.framework/Headers/AFNetworkReachabilityManager.h \
+  /Users/wyy/Desktop/ZQuanProject/Build/Products/Debug-iphonesimulator/AFNetworking/AFNetworking.framework/Headers/AFSecurityPolicy.h \
+  /Users/wyy/Desktop/ZQuanProject/Build/Products/Debug-iphonesimulator/AFNetworking/AFNetworking.framework/Headers/AFURLResponseSerialization.h \
+  /Users/wyy/Desktop/ZQuanProject/Build/Products/Debug-iphonesimulator/AFNetworking/AFNetworking.framework/Headers/AFURLRequestSerialization.h \
+  /Users/wyy/Desktop/ZQuanProject/Build/Products/Debug-iphonesimulator/AFNetworking/AFNetworking.framework/Headers/AFNetworking.h \
+  /Users/wyy/Desktop/ZQuanProject/Build/Products/Debug-iphonesimulator/AFNetworking/AFNetworking.framework/Headers/AFNetworking-umbrella.h \
+  /Users/wyy/Desktop/ZQuanProject/ZQuanProject/tool/Helper+Cache.h \
+  /Users/wyy/Desktop/ZQuanProject/ZQuanProject/tool/Helper.h

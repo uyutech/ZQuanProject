@@ -15,6 +15,56 @@
 		75A2246B1FDF8CF6005E28B2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 75A2246A1FDF8CF6005E28B2 /* main.m */; };
 		75A224751FDF8CF7005E28B2 /* ZQuanProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 75A224741FDF8CF7005E28B2 /* ZQuanProjectTests.m */; };
 		75A224801FDF8CF7005E28B2 /* ZQuanProjectUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 75A2247F1FDF8CF7005E28B2 /* ZQuanProjectUITests.m */; };
+		75A2249B1FDF9781005E28B2 /* UIView+Additional.m in Sources */ = {isa = PBXBuildFile; fileRef = 75A224991FDF9781005E28B2 /* UIView+Additional.m */; };
+		75A2249E1FDF97DC005E28B2 /* JZNetTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 75A2249C1FDF97DC005E28B2 /* JZNetTool.m */; };
+		75A224A11FDF98C1005E28B2 /* ZQLaunchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75A224A01FDF98C1005E28B2 /* ZQLaunchViewController.m */; };
+		75A224AB1FDF9A80005E28B2 /* ZQWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75A224AA1FDF9A80005E28B2 /* ZQWebViewController.m */; };
+		75C527FD1FE13C1B000230DD /* Helper+Cache.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C527FC1FE13C1A000230DD /* Helper+Cache.m */; };
+		75C528041FE148AC000230DD /* GradientProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C528031FE148AC000230DD /* GradientProgressView.m */; };
+		BF4BBD63652293626621B979 /* Pods_ZQuanProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32E48CC7DE08A9023BDB2986 /* Pods_ZQuanProject.framework */; };
+		FC13F8061FE4D1070009499E /* h5_bridge.js in Resources */ = {isa = PBXBuildFile; fileRef = FC13F8041FE4D1070009499E /* h5_bridge.js */; };
+		FC13F8091FE4D3350009499E /* h5.zip in Resources */ = {isa = PBXBuildFile; fileRef = FC13F8081FE4D3350009499E /* h5.zip */; };
+		FC13F9871FE60CD10009499E /* NSURLProtocol+WebKitSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13F9831FE60CD10009499E /* NSURLProtocol+WebKitSupport.m */; };
+		FC13F9881FE60CD10009499E /* WebNSURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13F9861FE60CD10009499E /* WebNSURLProtocol.m */; };
+		FC13F98B1FE61A7B0009499E /* H5Plugin.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13F98A1FE61A7B0009499E /* H5Plugin.m */; };
+		FC13F9921FE61F870009499E /* BackPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13F9911FE61F870009499E /* BackPlugin.m */; };
+		FC13F9AD1FE7726D0009499E /* H5EventDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13F9AC1FE7726D0009499E /* H5EventDispatcher.m */; };
+		FC13F9B01FE77C6F0009499E /* AlbumPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13F9AF1FE77C6F0009499E /* AlbumPlugin.m */; };
+		FC13F9B31FE77C880009499E /* AlertPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13F9B21FE77C880009499E /* AlertPlugin.m */; };
+		FC13F9B61FE77C9F0009499E /* ConfirmPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13F9B51FE77C9F0009499E /* ConfirmPlugin.m */; };
+		FC13F9B91FE77CC30009499E /* DownloadPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13F9B81FE77CC30009499E /* DownloadPlugin.m */; };
+		FC13F9BC1FE77CD80009499E /* GetPreferencePlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13F9BB1FE77CD80009499E /* GetPreferencePlugin.m */; };
+		FC13F9BF1FE77CEB0009499E /* HideBackButtonPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13F9BE1FE77CEB0009499E /* HideBackButtonPlugin.m */; };
+		FC13F9C21FE77CFE0009499E /* HideLoadingPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13F9C11FE77CFE0009499E /* HideLoadingPlugin.m */; };
+		FC13F9C51FE77D0F0009499E /* HideOptionMenuPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13F9C41FE77D0F0009499E /* HideOptionMenuPlugin.m */; };
+		FC13F9C81FE77D3A0009499E /* LoginOutPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13F9C71FE77D3A0009499E /* LoginOutPlugin.m */; };
+		FC13F9CB1FE77D4E0009499E /* LoginWeiboPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13F9CA1FE77D4E0009499E /* LoginWeiboPlugin.m */; };
+		FC13F9CE1FE77D5F0009499E /* MoveTaskToBackPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13F9CD1FE77D5F0009499E /* MoveTaskToBackPlugin.m */; };
+		FC13F9D11FE77D710009499E /* NetworkInfoPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13F9D01FE77D710009499E /* NetworkInfoPlugin.m */; };
+		FC13F9D41FE77D880009499E /* NotificationPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13F9D31FE77D880009499E /* NotificationPlugin.m */; };
+		FC13F9D71FE77D990009499E /* OpenUriPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13F9D61FE77D990009499E /* OpenUriPlugin.m */; };
+		FC13F9DA1FE77DB10009499E /* PopWindowPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13F9D91FE77DB10009499E /* PopWindowPlugin.m */; };
+		FC13F9DD1FE77DC40009499E /* PromptPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13F9DC1FE77DC40009499E /* PromptPlugin.m */; };
+		FC13F9E01FE77DDF0009499E /* PushWindowPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13F9DF1FE77DDF0009499E /* PushWindowPlugin.m */; };
+		FC13F9E31FE77DF10009499E /* RefreshPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13F9E21FE77DF10009499E /* RefreshPlugin.m */; };
+		FC13F9E61FE77E0A0009499E /* RefreshStatePlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13F9E51FE77E0A0009499E /* RefreshStatePlugin.m */; };
+		FC13F9E91FE77E1D0009499E /* SetCookiePlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13F9E81FE77E1D0009499E /* SetCookiePlugin.m */; };
+		FC13F9EC1FE77E360009499E /* SetOptionMenuPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13F9EB1FE77E360009499E /* SetOptionMenuPlugin.m */; };
+		FC13F9F21FE77E570009499E /* SetSubTitlePlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13F9F11FE77E570009499E /* SetSubTitlePlugin.m */; };
+		FC13F9F51FE77E690009499E /* SetTitleBgColorPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13F9F41FE77E690009499E /* SetTitleBgColorPlugin.m */; };
+		FC13F9F81FE77E7C0009499E /* SetTitlePlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13F9F71FE77E7C0009499E /* SetTitlePlugin.m */; };
+		FC13F9FB1FE77E910009499E /* ShowBackButtonPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13F9FA1FE77E910009499E /* ShowBackButtonPlugin.m */; };
+		FC13F9FE1FE77EA00009499E /* ShowLoadingPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13F9FD1FE77EA00009499E /* ShowLoadingPlugin.m */; };
+		FC13FA011FE77EB10009499E /* ShowOptionMenuPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13FA001FE77EB10009499E /* ShowOptionMenuPlugin.m */; };
+		FC13FA041FE77EC50009499E /* ToastPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13FA031FE77EC50009499E /* ToastPlugin.m */; };
+		FC13FA071FE77EDC0009499E /* WeiboLoginPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13FA061FE77EDC0009499E /* WeiboLoginPlugin.m */; };
+		FC13FA0A1FE790770009499E /* SetPreferencePlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13FA091FE790770009499E /* SetPreferencePlugin.m */; };
+		FC13FA0D1FE7BDCB0009499E /* HDHud.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13FA0C1FE7BDCB0009499E /* HDHud.m */; };
+		FCCC3BCE1FE01A1000C95569 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCC3BCD1FE01A1000C95569 /* MBProgressHUD.m */; };
+		FCCC3BD11FE021AE00C95569 /* Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCC3BD01FE021AE00C95569 /* Helper.m */; };
+		FCE5CD951FE8A62E00CEEDA6 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE5CD931FE8A62E00CEEDA6 /* BaseViewController.m */; };
+		FCE5CD9B1FEA082400CEEDA6 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCE5CD9A1FEA081800CEEDA6 /* UserNotifications.framework */; };
+		FCE5CD9D1FEA085400CEEDA6 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCE5CD9C1FEA084B00CEEDA6 /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +85,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E4837EDC55DCF9DA2F5A8A6 /* Pods-ZQuanProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZQuanProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZQuanProject/Pods-ZQuanProject.release.xcconfig"; sourceTree = "<group>"; };
+		32E48CC7DE08A9023BDB2986 /* Pods_ZQuanProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZQuanProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		75A224581FDF8CF5005E28B2 /* ZQuanProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZQuanProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75A2245B1FDF8CF5005E28B2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		75A2245C1FDF8CF5005E28B2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -51,6 +103,105 @@
 		75A2247B1FDF8CF7005E28B2 /* ZQuanProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZQuanProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		75A2247F1FDF8CF7005E28B2 /* ZQuanProjectUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZQuanProjectUITests.m; sourceTree = "<group>"; };
 		75A224811FDF8CF7005E28B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		75A224991FDF9781005E28B2 /* UIView+Additional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Additional.m"; sourceTree = "<group>"; };
+		75A2249A1FDF9781005E28B2 /* UIView+Additional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Additional.h"; sourceTree = "<group>"; };
+		75A2249C1FDF97DC005E28B2 /* JZNetTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZNetTool.m; sourceTree = "<group>"; };
+		75A2249D1FDF97DC005E28B2 /* JZNetTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZNetTool.h; sourceTree = "<group>"; };
+		75A2249F1FDF98C1005E28B2 /* ZQLaunchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZQLaunchViewController.h; sourceTree = "<group>"; };
+		75A224A01FDF98C1005E28B2 /* ZQLaunchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZQLaunchViewController.m; sourceTree = "<group>"; };
+		75A224A91FDF9A80005E28B2 /* ZQWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZQWebViewController.h; sourceTree = "<group>"; };
+		75A224AA1FDF9A80005E28B2 /* ZQWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZQWebViewController.m; sourceTree = "<group>"; };
+		75A224B51FDFA176005E28B2 /* Macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
+		75A224B61FDFA33C005E28B2 /* ZQuanProject-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZQuanProject-Prefix.pch"; sourceTree = "<group>"; };
+		75C527FB1FE13C1A000230DD /* Helper+Cache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Helper+Cache.h"; sourceTree = "<group>"; };
+		75C527FC1FE13C1A000230DD /* Helper+Cache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Helper+Cache.m"; sourceTree = "<group>"; };
+		75C527FE1FE14078000230DD /* APPConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APPConfig.h; sourceTree = "<group>"; };
+		75C528021FE148AC000230DD /* GradientProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradientProgressView.h; sourceTree = "<group>"; };
+		75C528031FE148AC000230DD /* GradientProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GradientProgressView.m; sourceTree = "<group>"; };
+		D87718ED34AD97DD04350730 /* Pods-ZQuanProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZQuanProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZQuanProject/Pods-ZQuanProject.debug.xcconfig"; sourceTree = "<group>"; };
+		FC13F8041FE4D1070009499E /* h5_bridge.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = h5_bridge.js; sourceTree = "<group>"; };
+		FC13F8081FE4D3350009499E /* h5.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = h5.zip; sourceTree = "<group>"; };
+		FC13F9831FE60CD10009499E /* NSURLProtocol+WebKitSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLProtocol+WebKitSupport.m"; sourceTree = "<group>"; };
+		FC13F9841FE60CD10009499E /* WebNSURLProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebNSURLProtocol.h; sourceTree = "<group>"; };
+		FC13F9851FE60CD10009499E /* NSURLProtocol+WebKitSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLProtocol+WebKitSupport.h"; sourceTree = "<group>"; };
+		FC13F9861FE60CD10009499E /* WebNSURLProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebNSURLProtocol.m; sourceTree = "<group>"; };
+		FC13F9891FE61A7B0009499E /* H5Plugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = H5Plugin.h; sourceTree = "<group>"; };
+		FC13F98A1FE61A7B0009499E /* H5Plugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = H5Plugin.m; sourceTree = "<group>"; };
+		FC13F9901FE61F870009499E /* BackPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BackPlugin.h; sourceTree = "<group>"; };
+		FC13F9911FE61F870009499E /* BackPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BackPlugin.m; sourceTree = "<group>"; };
+		FC13F9AB1FE7726D0009499E /* H5EventDispatcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = H5EventDispatcher.h; sourceTree = "<group>"; };
+		FC13F9AC1FE7726D0009499E /* H5EventDispatcher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = H5EventDispatcher.m; sourceTree = "<group>"; };
+		FC13F9AE1FE77C6F0009499E /* AlbumPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlbumPlugin.h; sourceTree = "<group>"; };
+		FC13F9AF1FE77C6F0009499E /* AlbumPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlbumPlugin.m; sourceTree = "<group>"; };
+		FC13F9B11FE77C880009499E /* AlertPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlertPlugin.h; sourceTree = "<group>"; };
+		FC13F9B21FE77C880009499E /* AlertPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlertPlugin.m; sourceTree = "<group>"; };
+		FC13F9B41FE77C9F0009499E /* ConfirmPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConfirmPlugin.h; sourceTree = "<group>"; };
+		FC13F9B51FE77C9F0009499E /* ConfirmPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConfirmPlugin.m; sourceTree = "<group>"; };
+		FC13F9B71FE77CC30009499E /* DownloadPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DownloadPlugin.h; sourceTree = "<group>"; };
+		FC13F9B81FE77CC30009499E /* DownloadPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DownloadPlugin.m; sourceTree = "<group>"; };
+		FC13F9BA1FE77CD80009499E /* GetPreferencePlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GetPreferencePlugin.h; sourceTree = "<group>"; };
+		FC13F9BB1FE77CD80009499E /* GetPreferencePlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GetPreferencePlugin.m; sourceTree = "<group>"; };
+		FC13F9BD1FE77CEB0009499E /* HideBackButtonPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HideBackButtonPlugin.h; sourceTree = "<group>"; };
+		FC13F9BE1FE77CEB0009499E /* HideBackButtonPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HideBackButtonPlugin.m; sourceTree = "<group>"; };
+		FC13F9C01FE77CFE0009499E /* HideLoadingPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HideLoadingPlugin.h; sourceTree = "<group>"; };
+		FC13F9C11FE77CFE0009499E /* HideLoadingPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HideLoadingPlugin.m; sourceTree = "<group>"; };
+		FC13F9C31FE77D0F0009499E /* HideOptionMenuPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HideOptionMenuPlugin.h; sourceTree = "<group>"; };
+		FC13F9C41FE77D0F0009499E /* HideOptionMenuPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HideOptionMenuPlugin.m; sourceTree = "<group>"; };
+		FC13F9C61FE77D3A0009499E /* LoginOutPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginOutPlugin.h; sourceTree = "<group>"; };
+		FC13F9C71FE77D3A0009499E /* LoginOutPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginOutPlugin.m; sourceTree = "<group>"; };
+		FC13F9C91FE77D4E0009499E /* LoginWeiboPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginWeiboPlugin.h; sourceTree = "<group>"; };
+		FC13F9CA1FE77D4E0009499E /* LoginWeiboPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginWeiboPlugin.m; sourceTree = "<group>"; };
+		FC13F9CC1FE77D5F0009499E /* MoveTaskToBackPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoveTaskToBackPlugin.h; sourceTree = "<group>"; };
+		FC13F9CD1FE77D5F0009499E /* MoveTaskToBackPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoveTaskToBackPlugin.m; sourceTree = "<group>"; };
+		FC13F9CF1FE77D710009499E /* NetworkInfoPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkInfoPlugin.h; sourceTree = "<group>"; };
+		FC13F9D01FE77D710009499E /* NetworkInfoPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkInfoPlugin.m; sourceTree = "<group>"; };
+		FC13F9D21FE77D880009499E /* NotificationPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationPlugin.h; sourceTree = "<group>"; };
+		FC13F9D31FE77D880009499E /* NotificationPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationPlugin.m; sourceTree = "<group>"; };
+		FC13F9D51FE77D990009499E /* OpenUriPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenUriPlugin.h; sourceTree = "<group>"; };
+		FC13F9D61FE77D990009499E /* OpenUriPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpenUriPlugin.m; sourceTree = "<group>"; };
+		FC13F9D81FE77DB10009499E /* PopWindowPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PopWindowPlugin.h; sourceTree = "<group>"; };
+		FC13F9D91FE77DB10009499E /* PopWindowPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PopWindowPlugin.m; sourceTree = "<group>"; };
+		FC13F9DB1FE77DC40009499E /* PromptPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PromptPlugin.h; sourceTree = "<group>"; };
+		FC13F9DC1FE77DC40009499E /* PromptPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PromptPlugin.m; sourceTree = "<group>"; };
+		FC13F9DE1FE77DDF0009499E /* PushWindowPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PushWindowPlugin.h; sourceTree = "<group>"; };
+		FC13F9DF1FE77DDF0009499E /* PushWindowPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PushWindowPlugin.m; sourceTree = "<group>"; };
+		FC13F9E11FE77DF10009499E /* RefreshPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RefreshPlugin.h; sourceTree = "<group>"; };
+		FC13F9E21FE77DF10009499E /* RefreshPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RefreshPlugin.m; sourceTree = "<group>"; };
+		FC13F9E41FE77E0A0009499E /* RefreshStatePlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RefreshStatePlugin.h; sourceTree = "<group>"; };
+		FC13F9E51FE77E0A0009499E /* RefreshStatePlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RefreshStatePlugin.m; sourceTree = "<group>"; };
+		FC13F9E71FE77E1D0009499E /* SetCookiePlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SetCookiePlugin.h; sourceTree = "<group>"; };
+		FC13F9E81FE77E1D0009499E /* SetCookiePlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SetCookiePlugin.m; sourceTree = "<group>"; };
+		FC13F9EA1FE77E360009499E /* SetOptionMenuPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SetOptionMenuPlugin.h; sourceTree = "<group>"; };
+		FC13F9EB1FE77E360009499E /* SetOptionMenuPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SetOptionMenuPlugin.m; sourceTree = "<group>"; };
+		FC13F9F01FE77E570009499E /* SetSubTitlePlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SetSubTitlePlugin.h; sourceTree = "<group>"; };
+		FC13F9F11FE77E570009499E /* SetSubTitlePlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SetSubTitlePlugin.m; sourceTree = "<group>"; };
+		FC13F9F31FE77E690009499E /* SetTitleBgColorPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SetTitleBgColorPlugin.h; sourceTree = "<group>"; };
+		FC13F9F41FE77E690009499E /* SetTitleBgColorPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SetTitleBgColorPlugin.m; sourceTree = "<group>"; };
+		FC13F9F61FE77E7C0009499E /* SetTitlePlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SetTitlePlugin.h; sourceTree = "<group>"; };
+		FC13F9F71FE77E7C0009499E /* SetTitlePlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SetTitlePlugin.m; sourceTree = "<group>"; };
+		FC13F9F91FE77E910009499E /* ShowBackButtonPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShowBackButtonPlugin.h; sourceTree = "<group>"; };
+		FC13F9FA1FE77E910009499E /* ShowBackButtonPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShowBackButtonPlugin.m; sourceTree = "<group>"; };
+		FC13F9FC1FE77EA00009499E /* ShowLoadingPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShowLoadingPlugin.h; sourceTree = "<group>"; };
+		FC13F9FD1FE77EA00009499E /* ShowLoadingPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShowLoadingPlugin.m; sourceTree = "<group>"; };
+		FC13F9FF1FE77EB10009499E /* ShowOptionMenuPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShowOptionMenuPlugin.h; sourceTree = "<group>"; };
+		FC13FA001FE77EB10009499E /* ShowOptionMenuPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShowOptionMenuPlugin.m; sourceTree = "<group>"; };
+		FC13FA021FE77EC50009499E /* ToastPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToastPlugin.h; sourceTree = "<group>"; };
+		FC13FA031FE77EC50009499E /* ToastPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToastPlugin.m; sourceTree = "<group>"; };
+		FC13FA051FE77EDC0009499E /* WeiboLoginPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeiboLoginPlugin.h; sourceTree = "<group>"; };
+		FC13FA061FE77EDC0009499E /* WeiboLoginPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeiboLoginPlugin.m; sourceTree = "<group>"; };
+		FC13FA081FE790770009499E /* SetPreferencePlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SetPreferencePlugin.h; sourceTree = "<group>"; };
+		FC13FA091FE790770009499E /* SetPreferencePlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SetPreferencePlugin.m; sourceTree = "<group>"; };
+		FC13FA0B1FE7BDCB0009499E /* HDHud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDHud.h; sourceTree = "<group>"; };
+		FC13FA0C1FE7BDCB0009499E /* HDHud.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDHud.m; sourceTree = "<group>"; };
+		FCCC3BCC1FE01A1000C95569 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		FCCC3BCD1FE01A1000C95569 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		FCCC3BCF1FE021AE00C95569 /* Helper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Helper.h; sourceTree = "<group>"; };
+		FCCC3BD01FE021AE00C95569 /* Helper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Helper.m; sourceTree = "<group>"; };
+		FCE5CD931FE8A62E00CEEDA6 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		FCE5CD941FE8A62E00CEEDA6 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		FCE5CD991FE9335200CEEDA6 /* ZQuanProject.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ZQuanProject.entitlements; sourceTree = "<group>"; };
+		FCE5CD9A1FEA081800CEEDA6 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		FCE5CD9C1FEA084B00CEEDA6 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +209,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCE5CD9D1FEA085400CEEDA6 /* AVFoundation.framework in Frameworks */,
+				FCE5CD9B1FEA082400CEEDA6 /* UserNotifications.framework in Frameworks */,
+				BF4BBD63652293626621B979 /* Pods_ZQuanProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +232,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		398CAB93959A1C042890AA20 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FCE5CD9C1FEA084B00CEEDA6 /* AVFoundation.framework */,
+				FCE5CD9A1FEA081800CEEDA6 /* UserNotifications.framework */,
+				32E48CC7DE08A9023BDB2986 /* Pods_ZQuanProject.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		75A2244F1FDF8CF5005E28B2 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +249,8 @@
 				75A224731FDF8CF7005E28B2 /* ZQuanProjectTests */,
 				75A2247E1FDF8CF7005E28B2 /* ZQuanProjectUITests */,
 				75A224591FDF8CF5005E28B2 /* Products */,
+				FBE617125EFA3423A5E009FD /* Pods */,
+				398CAB93959A1C042890AA20 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,15 +267,22 @@
 		75A2245A1FDF8CF5005E28B2 /* ZQuanProject */ = {
 			isa = PBXGroup;
 			children = (
+				FCE5CD991FE9335200CEEDA6 /* ZQuanProject.entitlements */,
+				75A224AF1FDFA0B8005E28B2 /* Macros */,
+				75A224A21FDF99FA005E28B2 /* Base */,
+				75A2248E1FDF9714005E28B2 /* class */,
+				75A2248D1FDF9714005E28B2 /* tool */,
 				75A2245B1FDF8CF5005E28B2 /* AppDelegate.h */,
 				75A2245C1FDF8CF5005E28B2 /* AppDelegate.m */,
 				75A2245E1FDF8CF5005E28B2 /* ViewController.h */,
 				75A2245F1FDF8CF5005E28B2 /* ViewController.m */,
+				75A224B61FDFA33C005E28B2 /* ZQuanProject-Prefix.pch */,
 				75A224611FDF8CF6005E28B2 /* Main.storyboard */,
 				75A224641FDF8CF6005E28B2 /* Assets.xcassets */,
 				75A224661FDF8CF6005E28B2 /* LaunchScreen.storyboard */,
 				75A224691FDF8CF6005E28B2 /* Info.plist */,
 				75A2246A1FDF8CF6005E28B2 /* main.m */,
+				FC13F8031FE4D1070009499E /* recource */,
 			);
 			path = ZQuanProject;
 			sourceTree = "<group>";
@@ -132,6 +305,168 @@
 			path = ZQuanProjectUITests;
 			sourceTree = "<group>";
 		};
+		75A2248D1FDF9714005E28B2 /* tool */ = {
+			isa = PBXGroup;
+			children = (
+				FC13FA0B1FE7BDCB0009499E /* HDHud.h */,
+				FC13FA0C1FE7BDCB0009499E /* HDHud.m */,
+				FCCC3BCF1FE021AE00C95569 /* Helper.h */,
+				FCCC3BD01FE021AE00C95569 /* Helper.m */,
+				75C527FB1FE13C1A000230DD /* Helper+Cache.h */,
+				75C527FC1FE13C1A000230DD /* Helper+Cache.m */,
+				FCCC3BCC1FE01A1000C95569 /* MBProgressHUD.h */,
+				FCCC3BCD1FE01A1000C95569 /* MBProgressHUD.m */,
+				75A2249D1FDF97DC005E28B2 /* JZNetTool.h */,
+				75A2249C1FDF97DC005E28B2 /* JZNetTool.m */,
+				75A2249A1FDF9781005E28B2 /* UIView+Additional.h */,
+				75A224991FDF9781005E28B2 /* UIView+Additional.m */,
+			);
+			path = tool;
+			sourceTree = "<group>";
+		};
+		75A2248E1FDF9714005E28B2 /* class */ = {
+			isa = PBXGroup;
+			children = (
+				FC13F9821FE60C510009499E /* NSURLProtocol */,
+				FC13F9AA1FE772050009499E /* event */,
+				FC13F9811FE60C200009499E /* Plugins */,
+				75A2249F1FDF98C1005E28B2 /* ZQLaunchViewController.h */,
+				75A224A01FDF98C1005E28B2 /* ZQLaunchViewController.m */,
+				75A224A91FDF9A80005E28B2 /* ZQWebViewController.h */,
+				75A224AA1FDF9A80005E28B2 /* ZQWebViewController.m */,
+				75C528021FE148AC000230DD /* GradientProgressView.h */,
+				75C528031FE148AC000230DD /* GradientProgressView.m */,
+			);
+			path = class;
+			sourceTree = "<group>";
+		};
+		75A224A21FDF99FA005E28B2 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				FCE5CD941FE8A62E00CEEDA6 /* BaseViewController.h */,
+				FCE5CD931FE8A62E00CEEDA6 /* BaseViewController.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		75A224AF1FDFA0B8005E28B2 /* Macros */ = {
+			isa = PBXGroup;
+			children = (
+				75A224B51FDFA176005E28B2 /* Macros.h */,
+				75C527FE1FE14078000230DD /* APPConfig.h */,
+			);
+			path = Macros;
+			sourceTree = "<group>";
+		};
+		FBE617125EFA3423A5E009FD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D87718ED34AD97DD04350730 /* Pods-ZQuanProject.debug.xcconfig */,
+				0E4837EDC55DCF9DA2F5A8A6 /* Pods-ZQuanProject.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FC13F8031FE4D1070009499E /* recource */ = {
+			isa = PBXGroup;
+			children = (
+				FC13F8081FE4D3350009499E /* h5.zip */,
+				FC13F8041FE4D1070009499E /* h5_bridge.js */,
+			);
+			path = recource;
+			sourceTree = "<group>";
+		};
+		FC13F9811FE60C200009499E /* Plugins */ = {
+			isa = PBXGroup;
+			children = (
+				FC13F9891FE61A7B0009499E /* H5Plugin.h */,
+				FC13F98A1FE61A7B0009499E /* H5Plugin.m */,
+				FC13F9901FE61F870009499E /* BackPlugin.h */,
+				FC13F9911FE61F870009499E /* BackPlugin.m */,
+				FC13F9AE1FE77C6F0009499E /* AlbumPlugin.h */,
+				FC13F9AF1FE77C6F0009499E /* AlbumPlugin.m */,
+				FC13F9B11FE77C880009499E /* AlertPlugin.h */,
+				FC13F9B21FE77C880009499E /* AlertPlugin.m */,
+				FC13F9DB1FE77DC40009499E /* PromptPlugin.h */,
+				FC13F9DC1FE77DC40009499E /* PromptPlugin.m */,
+				FC13F9B41FE77C9F0009499E /* ConfirmPlugin.h */,
+				FC13F9B51FE77C9F0009499E /* ConfirmPlugin.m */,
+				FC13F9B71FE77CC30009499E /* DownloadPlugin.h */,
+				FC13F9B81FE77CC30009499E /* DownloadPlugin.m */,
+				FC13FA081FE790770009499E /* SetPreferencePlugin.h */,
+				FC13FA091FE790770009499E /* SetPreferencePlugin.m */,
+				FC13F9BA1FE77CD80009499E /* GetPreferencePlugin.h */,
+				FC13F9BB1FE77CD80009499E /* GetPreferencePlugin.m */,
+				FC13F9BD1FE77CEB0009499E /* HideBackButtonPlugin.h */,
+				FC13F9BE1FE77CEB0009499E /* HideBackButtonPlugin.m */,
+				FC13F9C31FE77D0F0009499E /* HideOptionMenuPlugin.h */,
+				FC13F9C41FE77D0F0009499E /* HideOptionMenuPlugin.m */,
+				FC13F9C61FE77D3A0009499E /* LoginOutPlugin.h */,
+				FC13F9C71FE77D3A0009499E /* LoginOutPlugin.m */,
+				FC13F9C91FE77D4E0009499E /* LoginWeiboPlugin.h */,
+				FC13F9CA1FE77D4E0009499E /* LoginWeiboPlugin.m */,
+				FC13F9CC1FE77D5F0009499E /* MoveTaskToBackPlugin.h */,
+				FC13F9CD1FE77D5F0009499E /* MoveTaskToBackPlugin.m */,
+				FC13F9CF1FE77D710009499E /* NetworkInfoPlugin.h */,
+				FC13F9D01FE77D710009499E /* NetworkInfoPlugin.m */,
+				FC13F9D21FE77D880009499E /* NotificationPlugin.h */,
+				FC13F9D31FE77D880009499E /* NotificationPlugin.m */,
+				FC13F9D51FE77D990009499E /* OpenUriPlugin.h */,
+				FC13F9D61FE77D990009499E /* OpenUriPlugin.m */,
+				FC13F9D81FE77DB10009499E /* PopWindowPlugin.h */,
+				FC13F9D91FE77DB10009499E /* PopWindowPlugin.m */,
+				FC13F9DE1FE77DDF0009499E /* PushWindowPlugin.h */,
+				FC13F9DF1FE77DDF0009499E /* PushWindowPlugin.m */,
+				FC13F9E11FE77DF10009499E /* RefreshPlugin.h */,
+				FC13F9E21FE77DF10009499E /* RefreshPlugin.m */,
+				FC13F9E41FE77E0A0009499E /* RefreshStatePlugin.h */,
+				FC13F9E51FE77E0A0009499E /* RefreshStatePlugin.m */,
+				FC13F9E71FE77E1D0009499E /* SetCookiePlugin.h */,
+				FC13F9E81FE77E1D0009499E /* SetCookiePlugin.m */,
+				FC13F9EA1FE77E360009499E /* SetOptionMenuPlugin.h */,
+				FC13F9EB1FE77E360009499E /* SetOptionMenuPlugin.m */,
+				FC13F9F01FE77E570009499E /* SetSubTitlePlugin.h */,
+				FC13F9F11FE77E570009499E /* SetSubTitlePlugin.m */,
+				FC13F9F31FE77E690009499E /* SetTitleBgColorPlugin.h */,
+				FC13F9F41FE77E690009499E /* SetTitleBgColorPlugin.m */,
+				FC13F9F61FE77E7C0009499E /* SetTitlePlugin.h */,
+				FC13F9F71FE77E7C0009499E /* SetTitlePlugin.m */,
+				FC13F9F91FE77E910009499E /* ShowBackButtonPlugin.h */,
+				FC13F9FA1FE77E910009499E /* ShowBackButtonPlugin.m */,
+				FC13FA021FE77EC50009499E /* ToastPlugin.h */,
+				FC13FA031FE77EC50009499E /* ToastPlugin.m */,
+				FC13F9FC1FE77EA00009499E /* ShowLoadingPlugin.h */,
+				FC13F9FD1FE77EA00009499E /* ShowLoadingPlugin.m */,
+				FC13F9C01FE77CFE0009499E /* HideLoadingPlugin.h */,
+				FC13F9C11FE77CFE0009499E /* HideLoadingPlugin.m */,
+				FC13F9FF1FE77EB10009499E /* ShowOptionMenuPlugin.h */,
+				FC13FA001FE77EB10009499E /* ShowOptionMenuPlugin.m */,
+				FC13FA051FE77EDC0009499E /* WeiboLoginPlugin.h */,
+				FC13FA061FE77EDC0009499E /* WeiboLoginPlugin.m */,
+			);
+			path = Plugins;
+			sourceTree = "<group>";
+		};
+		FC13F9821FE60C510009499E /* NSURLProtocol */ = {
+			isa = PBXGroup;
+			children = (
+				FC13F9851FE60CD10009499E /* NSURLProtocol+WebKitSupport.h */,
+				FC13F9831FE60CD10009499E /* NSURLProtocol+WebKitSupport.m */,
+				FC13F9841FE60CD10009499E /* WebNSURLProtocol.h */,
+				FC13F9861FE60CD10009499E /* WebNSURLProtocol.m */,
+			);
+			path = NSURLProtocol;
+			sourceTree = "<group>";
+		};
+		FC13F9AA1FE772050009499E /* event */ = {
+			isa = PBXGroup;
+			children = (
+				FC13F9AB1FE7726D0009499E /* H5EventDispatcher.h */,
+				FC13F9AC1FE7726D0009499E /* H5EventDispatcher.m */,
+			);
+			path = event;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -139,9 +474,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 75A224841FDF8CF7005E28B2 /* Build configuration list for PBXNativeTarget "ZQuanProject" */;
 			buildPhases = (
+				A9A84BA5696EF68D0F98B148 /* [CP] Check Pods Manifest.lock */,
 				75A224541FDF8CF5005E28B2 /* Sources */,
 				75A224551FDF8CF5005E28B2 /* Frameworks */,
 				75A224561FDF8CF5005E28B2 /* Resources */,
+				072A33F9858450068F4DA377 /* [CP] Embed Pods Frameworks */,
+				2FA62B6F4356B3A5B5B86972 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -200,6 +538,14 @@
 					75A224571FDF8CF5005E28B2 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					75A2246F1FDF8CF7005E28B2 = {
 						CreatedOnToolsVersion = 9.2;
@@ -238,6 +584,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC13F8091FE4D3350009499E /* h5.zip in Resources */,
+				FC13F8061FE4D1070009499E /* h5_bridge.js in Resources */,
 				75A224681FDF8CF6005E28B2 /* LaunchScreen.storyboard in Resources */,
 				75A224651FDF8CF6005E28B2 /* Assets.xcassets in Resources */,
 				75A224631FDF8CF6005E28B2 /* Main.storyboard in Resources */,
@@ -260,14 +608,107 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		072A33F9858450068F4DA377 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZQuanProject/Pods-ZQuanProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2FA62B6F4356B3A5B5B86972 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZQuanProject/Pods-ZQuanProject-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A9A84BA5696EF68D0F98B148 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		75A224541FDF8CF5005E28B2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC13F9E91FE77E1D0009499E /* SetCookiePlugin.m in Sources */,
+				FC13F9881FE60CD10009499E /* WebNSURLProtocol.m in Sources */,
+				FC13F9C51FE77D0F0009499E /* HideOptionMenuPlugin.m in Sources */,
+				FC13F9DA1FE77DB10009499E /* PopWindowPlugin.m in Sources */,
 				75A224601FDF8CF5005E28B2 /* ViewController.m in Sources */,
+				FC13F9E01FE77DDF0009499E /* PushWindowPlugin.m in Sources */,
+				FC13F9D11FE77D710009499E /* NetworkInfoPlugin.m in Sources */,
+				FC13F9E31FE77DF10009499E /* RefreshPlugin.m in Sources */,
 				75A2246B1FDF8CF6005E28B2 /* main.m in Sources */,
+				FC13F9B61FE77C9F0009499E /* ConfirmPlugin.m in Sources */,
+				FC13F9F81FE77E7C0009499E /* SetTitlePlugin.m in Sources */,
+				FC13FA071FE77EDC0009499E /* WeiboLoginPlugin.m in Sources */,
+				75C527FD1FE13C1B000230DD /* Helper+Cache.m in Sources */,
+				75C528041FE148AC000230DD /* GradientProgressView.m in Sources */,
+				75A2249B1FDF9781005E28B2 /* UIView+Additional.m in Sources */,
+				FC13FA0D1FE7BDCB0009499E /* HDHud.m in Sources */,
+				FC13F9B01FE77C6F0009499E /* AlbumPlugin.m in Sources */,
+				75A224AB1FDF9A80005E28B2 /* ZQWebViewController.m in Sources */,
+				FC13FA011FE77EB10009499E /* ShowOptionMenuPlugin.m in Sources */,
+				FC13F9FE1FE77EA00009499E /* ShowLoadingPlugin.m in Sources */,
+				FC13FA041FE77EC50009499E /* ToastPlugin.m in Sources */,
+				FC13F9921FE61F870009499E /* BackPlugin.m in Sources */,
+				FCCC3BCE1FE01A1000C95569 /* MBProgressHUD.m in Sources */,
+				FC13F9871FE60CD10009499E /* NSURLProtocol+WebKitSupport.m in Sources */,
+				FC13FA0A1FE790770009499E /* SetPreferencePlugin.m in Sources */,
+				FC13F9BF1FE77CEB0009499E /* HideBackButtonPlugin.m in Sources */,
+				FC13F9CB1FE77D4E0009499E /* LoginWeiboPlugin.m in Sources */,
+				FC13F9FB1FE77E910009499E /* ShowBackButtonPlugin.m in Sources */,
+				75A224A11FDF98C1005E28B2 /* ZQLaunchViewController.m in Sources */,
 				75A2245D1FDF8CF5005E28B2 /* AppDelegate.m in Sources */,
+				FC13F9BC1FE77CD80009499E /* GetPreferencePlugin.m in Sources */,
+				FC13F9D41FE77D880009499E /* NotificationPlugin.m in Sources */,
+				FC13F9DD1FE77DC40009499E /* PromptPlugin.m in Sources */,
+				FC13F9AD1FE7726D0009499E /* H5EventDispatcher.m in Sources */,
+				75A2249E1FDF97DC005E28B2 /* JZNetTool.m in Sources */,
+				FC13F98B1FE61A7B0009499E /* H5Plugin.m in Sources */,
+				FC13F9CE1FE77D5F0009499E /* MoveTaskToBackPlugin.m in Sources */,
+				FC13F9B31FE77C880009499E /* AlertPlugin.m in Sources */,
+				FC13F9EC1FE77E360009499E /* SetOptionMenuPlugin.m in Sources */,
+				FC13F9C21FE77CFE0009499E /* HideLoadingPlugin.m in Sources */,
+				FC13F9F51FE77E690009499E /* SetTitleBgColorPlugin.m in Sources */,
+				FCCC3BD11FE021AE00C95569 /* Helper.m in Sources */,
+				FC13F9D71FE77D990009499E /* OpenUriPlugin.m in Sources */,
+				FC13F9B91FE77CC30009499E /* DownloadPlugin.m in Sources */,
+				FC13F9F21FE77E570009499E /* SetSubTitlePlugin.m in Sources */,
+				FC13F9E61FE77E0A0009499E /* RefreshStatePlugin.m in Sources */,
+				FCE5CD951FE8A62E00CEEDA6 /* BaseViewController.m in Sources */,
+				FC13F9C81FE77D3A0009499E /* LoginOutPlugin.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,26 +869,40 @@
 		};
 		75A224851FDF8CF7005E28B2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D87718ED34AD97DD04350730 /* Pods-ZQuanProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ZQuanProject/ZQuanProject.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3WAEEN98E5;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/ZQuanProject/ZQuanProject-Prefix.pch";
 				INFOPLIST_FILE = ZQuanProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = zquan.ZQuanProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zquan.ZQuan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		75A224861FDF8CF7005E28B2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E4837EDC55DCF9DA2F5A8A6 /* Pods-ZQuanProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ZQuanProject/ZQuanProject.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3WAEEN98E5;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/ZQuanProject/ZQuanProject-Prefix.pch";
 				INFOPLIST_FILE = ZQuanProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = zquan.ZQuanProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zquan.ZQuan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
