@@ -61,6 +61,7 @@
 -(NSDictionary *)createDicImage:(UIImage *)image
 {
     NSString*imgSize = NSStringFromCGSize(image.size);
+    
     NSArray *allArr = [imgSize componentsSeparatedByString:@","];
     NSArray *firstArr = [allArr[0] componentsSeparatedByString:@"{"];
     NSArray *secondArr = [allArr[1] componentsSeparatedByString:@"}"];
@@ -68,10 +69,21 @@
     CGFloat width = [firstArr[1] floatValue];
     //高
     CGFloat height = [secondArr[0] floatValue];
-    if (width>720.0) {
-        height = height*720.0/width;
-        width = 720.0;
-    }
+    
+//    float scaleSize = 1;
+//    if(height>500||width>500){
+//        scaleSize = (height>=width)?500/height : 500/width;
+//        width = width*scaleSize;
+//        height = height*scaleSize;
+//    }
+//    if (width>=500.0 &&width>height) {
+//        width = 500.0;
+//        height = height*500.0/width;
+//    }else if (height>=500){
+//        height = 500.0;
+//        width = width*500.0/height;
+//    }
+    
     NSString *widthStr = [NSString stringWithFormat:@"%.2f",width];
     NSString *heightStr = [NSString stringWithFormat:@"%.2f",height];
     

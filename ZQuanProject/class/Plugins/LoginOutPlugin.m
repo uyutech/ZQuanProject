@@ -8,7 +8,6 @@
 
 #import "LoginOutPlugin.h"
 #import "WeiboSDK.h"
-#import "CookieManager.h"
 
 @interface LoginOutPlugin()<WBHttpRequestDelegate>
 @property(nonatomic,strong)NSString *clientId;
@@ -27,9 +26,7 @@
 
 - (void)request:(WBHttpRequest *)request didFinishLoadingWithResult:(NSString *)result
 {
-    NSLog(@"登出成功：%@",result);
-    [CookieManager removeCookieOfSession];
-    
+    NSLog(@"登出成功：%@",result);    
     NSString *jsStr = [NSString stringWithFormat:@"\"%@\"",_clientId];
     
     [self.wkweb evaluateJavaScript:jsStr completionHandler:^(id _Nullable response, NSError * _Nullable error) {

@@ -7,6 +7,7 @@
 //
 
 #import "H5Plugin.h"
+#import "ZQWebVCSingleton.h"
 
 @implementation H5Plugin
 
@@ -18,12 +19,13 @@
 
 -(ZQWebViewController *)webVC
 {
-    if(!_webVC){
-        UINavigationController *nav = (UINavigationController *)[UIApplication sharedApplication].keyWindow.rootViewController;
-        
-        _webVC = (ZQWebViewController *)nav.visibleViewController;
-    }
-    return _webVC;
+//    if(!_webVC){
+//        UINavigationController *nav = (UINavigationController *)[UIApplication sharedApplication].keyWindow.rootViewController;
+//
+//        _webVC = (ZQWebViewController *)nav.visibleViewController;
+//    }
+//    return _webVC;
+    return [ZQWebVCSingleton shareInstance].webVC;
 }
 
 

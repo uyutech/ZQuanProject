@@ -10,6 +10,7 @@
 #import "Helper.h"
 #import "NSURLProtocol+WebKitSupport.h"
 #import "HDHud.h"
+#import "ZQWebVCSingleton.h"
 
 static void *WkwebBrowserContext = &WkwebBrowserContext;
 
@@ -28,6 +29,7 @@ static void *WkwebBrowserContext = &WkwebBrowserContext;
     if (@available(iOS 11.0, *)){
         self.wkWebView.scrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
     }
+    
     [self modifyWebViewUserAgent];
 
     [NSURLProtocol wk_registerScheme:@"http"];
@@ -40,7 +42,10 @@ static void *WkwebBrowserContext = &WkwebBrowserContext;
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    
     [self setHideNavBar:_hideNavBar];
+    
+    [ZQWebVCSingleton shareInstance].webVC = self;
 }
 
 

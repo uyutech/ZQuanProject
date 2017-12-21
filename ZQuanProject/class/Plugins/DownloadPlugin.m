@@ -93,18 +93,22 @@
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.hud hideAnimated:YES];
         });
-        NSString *path = [[filePath absoluteString] stringByReplacingOccurrencesOfString:@"file://" withString:@""];
-        [self saveToAlbmWithPath:path];
+        if(filePath!=nil){
+            NSString *path = [[filePath absoluteString] stringByReplacingOccurrencesOfString:@"file://" withString:@""];
+            [self saveToAlbmWithPath:path];
+        }
     }];
     [_task resume];
 }
                                       
 -(void)saveToAlbmWithPath:(NSString *)path
 {
-    NSData *imgData = [NSData dataWithContentsOfFile:path];
+    NSData *imgData = [[NSData alloc] initWithContentsOfFile:path];
     UIImage *image = [UIImage imageWithData:imgData];
     
-    UIImageWriteToSavedPhotosAlbum(image, self, @selector(image:didFinishSavingWithError:contextInfo:), (__bridge void *)self);
+    if(image){
+        UIImageWriteToSavedPhotosAlbum(image, self, @selector(image:didFinishSavingWithError:contextInfo:), (__bridge void *)self);
+    }
 }
 
 - (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo

@@ -86,7 +86,6 @@
 		FCE5CDD31FEAAF7C00CEEDA6 /* EBBannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE5CDC81FEAAF7C00CEEDA6 /* EBBannerViewController.m */; };
 		FCE5CDD91FEAAFD100CEEDA6 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE5CDD51FEAAFD100CEEDA6 /* MBProgressHUD.m */; };
 		FCE5CDDA1FEAAFD100CEEDA6 /* HDHud.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE5CDD81FEAAFD100CEEDA6 /* HDHud.m */; };
-		FCE5CDDD1FEACAA400CEEDA6 /* CookieManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE5CDDC1FEACAA400CEEDA6 /* CookieManager.m */; };
 		FCE5CDEE1FEB537000CEEDA6 /* myPhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE5CDDF1FEB537000CEEDA6 /* myPhotoCell.m */; };
 		FCE5CDEF1FEB537000CEEDA6 /* WPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE5CDE01FEB537000CEEDA6 /* WPhotoViewController.m */; };
 		FCE5CDF01FEB537000CEEDA6 /* NavView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE5CDE11FEB537000CEEDA6 /* NavView.m */; };
@@ -95,6 +94,7 @@
 		FCE5CDF31FEB537000CEEDA6 /* wphoto_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FCE5CDE51FEB537000CEEDA6 /* wphoto_back@2x.png */; };
 		FCE5CDF41FEB537000CEEDA6 /* WPFunctionView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE5CDEC1FEB537000CEEDA6 /* WPFunctionView.m */; };
 		FCE5CDF51FEB537000CEEDA6 /* UIImage+fixOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE5CDED1FEB537000CEEDA6 /* UIImage+fixOrientation.m */; };
+		FCE5CED91FEBC50000CEEDA6 /* ZQWebVCSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE5CED81FEBC50000CEEDA6 /* ZQWebVCSingleton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -261,8 +261,6 @@
 		FCE5CDD61FEAAFD100CEEDA6 /* HDHud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDHud.h; sourceTree = "<group>"; };
 		FCE5CDD71FEAAFD100CEEDA6 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		FCE5CDD81FEAAFD100CEEDA6 /* HDHud.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDHud.m; sourceTree = "<group>"; };
-		FCE5CDDB1FEACAA400CEEDA6 /* CookieManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CookieManager.h; sourceTree = "<group>"; };
-		FCE5CDDC1FEACAA400CEEDA6 /* CookieManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CookieManager.m; sourceTree = "<group>"; };
 		FCE5CDDF1FEB537000CEEDA6 /* myPhotoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = myPhotoCell.m; sourceTree = "<group>"; };
 		FCE5CDE01FEB537000CEEDA6 /* WPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPhotoViewController.m; sourceTree = "<group>"; };
 		FCE5CDE11FEB537000CEEDA6 /* NavView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavView.m; sourceTree = "<group>"; };
@@ -277,6 +275,8 @@
 		FCE5CDEB1FEB537000CEEDA6 /* WPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPhotoViewController.h; sourceTree = "<group>"; };
 		FCE5CDEC1FEB537000CEEDA6 /* WPFunctionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPFunctionView.m; sourceTree = "<group>"; };
 		FCE5CDED1FEB537000CEEDA6 /* UIImage+fixOrientation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+fixOrientation.m"; sourceTree = "<group>"; };
+		FCE5CED71FEBC50000CEEDA6 /* ZQWebVCSingleton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZQWebVCSingleton.h; sourceTree = "<group>"; };
+		FCE5CED81FEBC50000CEEDA6 /* ZQWebVCSingleton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZQWebVCSingleton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -408,8 +408,6 @@
 				FCE5CDB81FEAAF7C00CEEDA6 /* EBBannerView */,
 				FCCC3BCF1FE021AE00C95569 /* Helper.h */,
 				FCCC3BD01FE021AE00C95569 /* Helper.m */,
-				FCE5CDDB1FEACAA400CEEDA6 /* CookieManager.h */,
-				FCE5CDDC1FEACAA400CEEDA6 /* CookieManager.m */,
 				75C527FB1FE13C1A000230DD /* Helper+Cache.h */,
 				75C527FC1FE13C1A000230DD /* Helper+Cache.m */,
 				75A2249D1FDF97DC005E28B2 /* JZNetTool.h */,
@@ -432,6 +430,8 @@
 				75A224AA1FDF9A80005E28B2 /* ZQWebViewController.m */,
 				75C528021FE148AC000230DD /* GradientProgressView.h */,
 				75C528031FE148AC000230DD /* GradientProgressView.m */,
+				FCE5CED71FEBC50000CEEDA6 /* ZQWebVCSingleton.h */,
+				FCE5CED81FEBC50000CEEDA6 /* ZQWebVCSingleton.m */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -905,6 +905,7 @@
 				FC13F9AD1FE7726D0009499E /* H5EventDispatcher.m in Sources */,
 				75A2249E1FDF97DC005E28B2 /* JZNetTool.m in Sources */,
 				FC13F98B1FE61A7B0009499E /* H5Plugin.m in Sources */,
+				FCE5CED91FEBC50000CEEDA6 /* ZQWebVCSingleton.m in Sources */,
 				FCE5CDD11FEAAF7C00CEEDA6 /* EBBannerView+Categories.m in Sources */,
 				FC13F9CE1FE77D5F0009499E /* MoveTaskToBackPlugin.m in Sources */,
 				FC13F9B31FE77C880009499E /* AlertPlugin.m in Sources */,
@@ -912,7 +913,6 @@
 				FCE5CDF01FEB537000CEEDA6 /* NavView.m in Sources */,
 				FC13F9C21FE77CFE0009499E /* HideLoadingPlugin.m in Sources */,
 				FC13F9F51FE77E690009499E /* SetTitleBgColorPlugin.m in Sources */,
-				FCE5CDDD1FEACAA400CEEDA6 /* CookieManager.m in Sources */,
 				FCCC3BD11FE021AE00C95569 /* Helper.m in Sources */,
 				FCE5CDEE1FEB537000CEEDA6 /* myPhotoCell.m in Sources */,
 				FC13F9D71FE77D990009499E /* OpenUriPlugin.m in Sources */,

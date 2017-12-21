@@ -323,7 +323,7 @@
     if (![finishbtn.titleLabel.text isEqualToString:finishStr]&&_chooseArray.count) {
         [WPFunctionView finishChoosePhotos:^(NSMutableArray *myChoosePhotoArr) {
             _selectPhotosBack(myChoosePhotoArr);
-            [self btnClickBack];
+            [self dismissViewControllerAnimated:YES completion:nil];
         } chooseArray:_chooseArray];
     }
 }
@@ -380,6 +380,7 @@
 #pragma mark 返回
 -(void)btnClickBack
 {
+    _selectPhotosBack(@[]);
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
