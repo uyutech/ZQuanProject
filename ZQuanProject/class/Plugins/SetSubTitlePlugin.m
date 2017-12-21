@@ -12,6 +12,8 @@
 
 -(void)initMessageJson:(NSDictionary *)message
 {
+    [super initMessageJson:message];
+    
     if(!IsEmptyStr(message[@"param"])){
         self.webVC.subTitle = message[@"param"];
     }else{

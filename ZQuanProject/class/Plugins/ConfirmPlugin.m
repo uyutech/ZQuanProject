@@ -40,7 +40,7 @@
 
 -(void)jsHandlerClick:(BOOL)sure ClientId:(NSString *)clientId
 {
-    NSString *jsStr = [NSString stringWithFormat:@"\"%@\",\"%@\"",clientId,@(sure)];
+    NSString *jsStr = [NSString stringWithFormat:@"\"%@\",%@",clientId,@(sure)];
     
     [self.wkweb evaluateJavaScript:jsStr completionHandler:^(id _Nullable response, NSError * _Nullable error) {
         NSLog(@"PromptPlugin回调————%@————error：%@",response,error);

@@ -53,16 +53,13 @@ static AFURLSessionManager *urlsession ;
     AFHTTPSessionManager *manager = [[JZNetTool sharedNetTool] sharedHTTPSession];
     NSString * requestUrl = [netTool getEncodeurlStr:url];
     [manager GET:requestUrl parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
-
-        NSLog(@"downloadProgress_%@",downloadProgress);
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
         NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
         success(jsonDict);
-        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-        
+ 
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
         Netfailure(error);
@@ -70,6 +67,25 @@ static AFURLSessionManager *urlsession ;
     }];
 }
 
+//Post
++(void)PostDataWithUrl:(NSString*)url param:(NSDictionary *)param
+               Success:(successGetData)success
+            NetFailure:(failureGetData)Netfailure;
+{
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+    AFHTTPSessionManager *manager = [[JZNetTool sharedNetTool] sharedHTTPSession];
+    NSString * requestUrl = [netTool getEncodeurlStr:url];
+    [manager POST:requestUrl parameters:param progress:^(NSProgress * _Nonnull uploadProgress) {
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+        NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+        success(jsonDict);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        Netfailure(error);
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+    }];
+}
 
 //downLoad
 +(void)downloadTaskWithURl:(NSString *)url
@@ -98,7 +114,6 @@ static AFURLSessionManager *urlsession ;
     } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
         NSLog(@"完成：%@",filePath);
         NSString *path = [[filePath absoluteString] stringByReplacingOccurrencesOfString:@"file://" withString:@""];
-        
         completionBlock(path,error);
         
         NSHTTPURLResponse *response1 = (NSHTTPURLResponse *)response;
@@ -114,6 +129,8 @@ static AFURLSessionManager *urlsession ;
     //5.开始启动下载任务
     [task resume];  
 }
+
+
 
 
 

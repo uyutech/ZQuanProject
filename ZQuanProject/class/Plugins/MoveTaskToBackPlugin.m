@@ -12,6 +12,6 @@
 
 -(void)initMessageJson:(NSDictionary *)message
 {
-    
+    [super initMessageJson:message];
 }
 @end

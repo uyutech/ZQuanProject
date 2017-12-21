@@ -111,7 +111,7 @@
  */
 -(void)CheckVersion
 {
-    [JZNetTool GetDataWithUrl:APPCheckVersionURL Success:^(id response) {
+    [JZNetTool GetDataWithUrl:[APPURL stringByAppendingString:@"/h5/version"] Success:^(id response) {
         NSDictionary *result = (NSDictionary *)response;
         if([result isKindOfClass:[NSDictionary class]]){
             if([result[@"success"] integerValue]==1){

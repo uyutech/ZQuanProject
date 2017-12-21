@@ -39,7 +39,6 @@ static void *WkwebBrowserContext = &WkwebBrowserContext;
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-  
     [self setHideNavBar:_hideNavBar];
 }
 
@@ -48,6 +47,17 @@ static void *WkwebBrowserContext = &WkwebBrowserContext;
 {
     [super viewDidAppear:animated];
     [self registJS];
+    
+    //读通知栏消息
+    NSString *notifyUrl = [[NSUserDefaults standardUserDefaults] objectForKey:K_ReceiveNotifyURL];
+    if(!IsEmptyStr(notifyUrl)){
+        ZQWebViewController *webVC = [[ZQWebViewController alloc] init];
+        webVC.URLString = notifyUrl;
+        webVC.hideNavBar = NO;
+        webVC.showBackButton = YES;
+        [self.navigationController pushViewController:webVC animated:YES];
+        [[NSUserDefaults standardUserDefaults] removeObjectForKey:K_ReceiveNotifyURL];
+    }
 }
 
 #pragma mark ================ 加载 ================
@@ -191,7 +201,7 @@ static void *WkwebBrowserContext = &WkwebBrowserContext;
 {
     _popWindowParma = param;
     NSString *jsonStr = [Helper covertStringWithJson:param];
-    NSString *backJS = [NSString stringWithFormat:@"ZhuanQuanJSBridge.emit('resume','%@')",jsonStr];
+    NSString *backJS = [NSString stringWithFormat:@"ZhuanQuanJSBridge.emit('resume',%@)",jsonStr];
     [self.wkWebView evaluateJavaScript:backJS completionHandler:^(id _Nullable response, NSError * _Nullable error) {
         NSLog(@"PoP回调——%@-—error：%@",response,error);
     }];
@@ -215,7 +225,10 @@ static void *WkwebBrowserContext = &WkwebBrowserContext;
 
 -(void)OptionMenuEvent
 {
-    
+    NSString *JS = @"ZhuanQuanJSBridge.emit('optionMenu');";
+    [self.wkWebView evaluateJavaScript:JS completionHandler:^(id _Nullable response, NSError * _Nullable error) {
+        NSLog(@"optionMenuJS回调————%@————error：%@",response,error);
+    }];
 }
 
 

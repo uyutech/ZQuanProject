@@ -7,10 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WeiboSDK.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+typedef void(^WBLoginResultBlock)(WBBaseResponse *response);
+
+@interface AppDelegate : UIResponder <UIApplicationDelegate,WeiboSDKDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+
+@property(nonatomic,strong)WBLoginResultBlock wbLoginResultBlock;
 
 
 @end

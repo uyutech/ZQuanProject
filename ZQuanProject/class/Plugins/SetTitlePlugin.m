@@ -12,11 +12,13 @@
 
 -(void)initMessageJson:(NSDictionary *)message
 {
+    [super initMessageJson:message];
+    
     if(IS_DICTIONARY_CLASS(message)){
         if(!IsEmptyStr(message[@"param"])){
-            self.webVC.NavTitle = message[@"param"];
+            self.webVC.navTitle = message[@"param"];
         }else{
-            self.webVC.NavTitle = @"";
+            self.webVC.navTitle = @"";
         }
     }
 }

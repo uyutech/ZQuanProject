@@ -80,7 +80,12 @@
 
 #define K_isArchived @"K_isArchived"
 
+#define K_sinaWBLoginData @"K_sinaWBLoginData"
+
+#define K_ReceiveNotifyURL @"K_ReceiveNotifyURL"
+
 //通知
 #define KObserveNetStatusNotify @"KObserveNetStatusNotify"
+
 
 #endif /* Macros_h */

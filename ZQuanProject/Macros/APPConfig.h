@@ -10,14 +10,10 @@
 #define APPConfig_h
 
 
-//config
-#define UMENG_APPKEY @"59ae7dbf6e27a4386100008d"
-
+//URL
 #define APPURL @"http://circling.cc"
 
 #define WEBURL @"http://h5.circling.cc"
-
-#define APPCheckVersionURL @"http://circling.cc/h5/version"
 
 //工程中打包H5默认版本号
 #define DefaultH5Version @"13"
@@ -28,8 +24,15 @@
 #define LaunchDomain @"circling.cc"
 #define LaunchCoptyright @"2016-2017 © All Rights Reserved"
 
-
 #define LaunchWaitTime 1000
+
+
+#define UMENG_APPKEY @"59ae7dbf6e27a4386100008d"
+
+#define SINA_APPKEY @"890459019"
+#define SINA_APPSECRET @"e63640f825cbcf3ebb3eb9a16db9f97e"
+#define SINA_REDIRECTURL @"https://api.weibo.com/oauth2/default.html"
+
 /** 导航渐变色1*/
 #define kLaunchBackColor   HexRGBAlpha(0XE8F4FF,1)
 

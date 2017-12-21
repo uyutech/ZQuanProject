@@ -29,6 +29,11 @@ typedef void(^failureGetData)(id error);
               Success:(successGetData)success
            NetFailure:(failureGetData)Netfailure;
 
+//Post
++(void)PostDataWithUrl:(NSString*)url param:(NSDictionary *)param
+              Success:(successGetData)success
+           NetFailure:(failureGetData)Netfailure;
+
 //downLoad
 +(void)downloadTaskWithURl:(NSString *)url
                   progress:(nullable void (^)(float progressPercent)) downloadProgressBlock

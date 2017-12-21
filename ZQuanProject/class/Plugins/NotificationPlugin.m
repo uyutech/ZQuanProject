@@ -8,12 +8,15 @@
 
 #import "NotificationPlugin.h"
 #import <UserNotifications/UserNotifications.h>
+#import "EBBannerView.h"
 
 @implementation NotificationPlugin
 
 -(void)initMessageJson:(NSDictionary *)message
 {
-    NSString *clientid = message[@"clientId"];
+    [super initMessageJson:message];
+    
+    
     if(IS_DICTIONARY_CLASS(message[@"param"])){
         NSDictionary *param = message[@"param"];
         if(param!=nil){
@@ -29,7 +32,18 @@
                 ticker = title;
             }
             
-            //通知
+            
+            UIApplicationState state = [UIApplication sharedApplication].applicationState;
+            if(state == UIApplicationStateActive){
+                //如果在前台  模拟系统弹框
+                [[EBBannerView bannerWithBlock:^(EBBannerViewMaker *make) {
+                    make.content = content;
+                    make.object = url;
+                }] show];
+                return;
+            }
+            
+            //本地系统通知
             if (@available(iOS 10.0, *)) {
                 UNMutableNotificationContent *notifyContent = [[UNMutableNotificationContent alloc] init];
                 notifyContent.title = ticker;

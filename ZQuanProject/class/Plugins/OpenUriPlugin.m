@@ -12,6 +12,8 @@
 
 -(void)initMessageJson:(NSDictionary *)message
 {
+    [super initMessageJson:message];
+    
     if(!IsEmptyStr(message[@"param"])){
         NSString *openUrl = message[@"param"];
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:openUrl]];

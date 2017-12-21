@@ -12,6 +12,8 @@
 
 -(void)initMessageJson:(NSDictionary *)message
 {
+    [super initMessageJson:message];
+    
     if(IS_DICTIONARY_CLASS(message)){
         if(!IsEmptyStr(message[@"param"])){
             self.webVC.NavBarColor = message[@"param"];

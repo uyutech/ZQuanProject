@@ -12,6 +12,8 @@
 
 -(void)initMessageJson:(NSDictionary *)message
 {
+    [super initMessageJson:message];
+    
     self.webVC.showOptionMenu = YES;
 }
 

@@ -22,14 +22,15 @@
         
         NSString *value = [[NSUserDefaults standardUserDefaults] objectForKey:key];
         
+        NSString *clientId = message[@"clientId"];
+        NSString *jsStr;
         if(IsEmptyStr(value)){
             value = @"";
+            jsStr = [NSString stringWithFormat:@"\"%@\",\"\"",clientId];
+        }else{
+            jsStr = [NSString stringWithFormat:@"\"%@\",\"%@\"",clientId,value];
         }
-        
-        //回调
-        NSString *clientId = message[@"clientId"];
-        NSString *jsStr = [NSString stringWithFormat:@"\"%@\",\"%@\"",clientId,value];
-        
+
         [self.wkweb evaluateJavaScript:jsStr completionHandler:^(id _Nullable response, NSError * _Nullable error) {
             NSLog(@"GetPreferencePlugin回调————%@————error：%@",response,error);
         }];
