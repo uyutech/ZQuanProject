@@ -87,6 +87,14 @@
 		FCE5CDD91FEAAFD100CEEDA6 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE5CDD51FEAAFD100CEEDA6 /* MBProgressHUD.m */; };
 		FCE5CDDA1FEAAFD100CEEDA6 /* HDHud.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE5CDD81FEAAFD100CEEDA6 /* HDHud.m */; };
 		FCE5CDDD1FEACAA400CEEDA6 /* CookieManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE5CDDC1FEACAA400CEEDA6 /* CookieManager.m */; };
+		FCE5CDEE1FEB537000CEEDA6 /* myPhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE5CDDF1FEB537000CEEDA6 /* myPhotoCell.m */; };
+		FCE5CDEF1FEB537000CEEDA6 /* WPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE5CDE01FEB537000CEEDA6 /* WPhotoViewController.m */; };
+		FCE5CDF01FEB537000CEEDA6 /* NavView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE5CDE11FEB537000CEEDA6 /* NavView.m */; };
+		FCE5CDF11FEB537000CEEDA6 /* wphoto_select_no@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FCE5CDE31FEB537000CEEDA6 /* wphoto_select_no@2x.png */; };
+		FCE5CDF21FEB537000CEEDA6 /* wphoto_select_yes@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FCE5CDE41FEB537000CEEDA6 /* wphoto_select_yes@2x.png */; };
+		FCE5CDF31FEB537000CEEDA6 /* wphoto_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FCE5CDE51FEB537000CEEDA6 /* wphoto_back@2x.png */; };
+		FCE5CDF41FEB537000CEEDA6 /* WPFunctionView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE5CDEC1FEB537000CEEDA6 /* WPFunctionView.m */; };
+		FCE5CDF51FEB537000CEEDA6 /* UIImage+fixOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE5CDED1FEB537000CEEDA6 /* UIImage+fixOrientation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -255,6 +263,20 @@
 		FCE5CDD81FEAAFD100CEEDA6 /* HDHud.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDHud.m; sourceTree = "<group>"; };
 		FCE5CDDB1FEACAA400CEEDA6 /* CookieManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CookieManager.h; sourceTree = "<group>"; };
 		FCE5CDDC1FEACAA400CEEDA6 /* CookieManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CookieManager.m; sourceTree = "<group>"; };
+		FCE5CDDF1FEB537000CEEDA6 /* myPhotoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = myPhotoCell.m; sourceTree = "<group>"; };
+		FCE5CDE01FEB537000CEEDA6 /* WPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPhotoViewController.m; sourceTree = "<group>"; };
+		FCE5CDE11FEB537000CEEDA6 /* NavView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavView.m; sourceTree = "<group>"; };
+		FCE5CDE31FEB537000CEEDA6 /* wphoto_select_no@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wphoto_select_no@2x.png"; sourceTree = "<group>"; };
+		FCE5CDE41FEB537000CEEDA6 /* wphoto_select_yes@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wphoto_select_yes@2x.png"; sourceTree = "<group>"; };
+		FCE5CDE51FEB537000CEEDA6 /* wphoto_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wphoto_back@2x.png"; sourceTree = "<group>"; };
+		FCE5CDE61FEB537000CEEDA6 /* WPFunctionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPFunctionView.h; sourceTree = "<group>"; };
+		FCE5CDE71FEB537000CEEDA6 /* UIImage+fixOrientation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+fixOrientation.h"; sourceTree = "<group>"; };
+		FCE5CDE81FEB537000CEEDA6 /* myPhotoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = myPhotoCell.h; sourceTree = "<group>"; };
+		FCE5CDE91FEB537000CEEDA6 /* WPMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPMacros.h; sourceTree = "<group>"; };
+		FCE5CDEA1FEB537000CEEDA6 /* NavView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavView.h; sourceTree = "<group>"; };
+		FCE5CDEB1FEB537000CEEDA6 /* WPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPhotoViewController.h; sourceTree = "<group>"; };
+		FCE5CDEC1FEB537000CEEDA6 /* WPFunctionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPFunctionView.m; sourceTree = "<group>"; };
+		FCE5CDED1FEB537000CEEDA6 /* UIImage+fixOrientation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+fixOrientation.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -381,6 +403,7 @@
 		75A2248D1FDF9714005E28B2 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				FCE5CDDE1FEB537000CEEDA6 /* CustomAlbum */,
 				FCE5CDD41FEAAFD100CEEDA6 /* MBProgressHUD */,
 				FCE5CDB81FEAAF7C00CEEDA6 /* EBBannerView */,
 				FCCC3BCF1FE021AE00C95569 /* Helper.h */,
@@ -601,6 +624,35 @@
 			path = MBProgressHUD;
 			sourceTree = "<group>";
 		};
+		FCE5CDDE1FEB537000CEEDA6 /* CustomAlbum */ = {
+			isa = PBXGroup;
+			children = (
+				FCE5CDE21FEB537000CEEDA6 /* AlbumImage */,
+				FCE5CDDF1FEB537000CEEDA6 /* myPhotoCell.m */,
+				FCE5CDE01FEB537000CEEDA6 /* WPhotoViewController.m */,
+				FCE5CDE11FEB537000CEEDA6 /* NavView.m */,
+				FCE5CDE61FEB537000CEEDA6 /* WPFunctionView.h */,
+				FCE5CDE71FEB537000CEEDA6 /* UIImage+fixOrientation.h */,
+				FCE5CDE81FEB537000CEEDA6 /* myPhotoCell.h */,
+				FCE5CDE91FEB537000CEEDA6 /* WPMacros.h */,
+				FCE5CDEA1FEB537000CEEDA6 /* NavView.h */,
+				FCE5CDEB1FEB537000CEEDA6 /* WPhotoViewController.h */,
+				FCE5CDEC1FEB537000CEEDA6 /* WPFunctionView.m */,
+				FCE5CDED1FEB537000CEEDA6 /* UIImage+fixOrientation.m */,
+			);
+			path = CustomAlbum;
+			sourceTree = "<group>";
+		};
+		FCE5CDE21FEB537000CEEDA6 /* AlbumImage */ = {
+			isa = PBXGroup;
+			children = (
+				FCE5CDE31FEB537000CEEDA6 /* wphoto_select_no@2x.png */,
+				FCE5CDE41FEB537000CEEDA6 /* wphoto_select_yes@2x.png */,
+				FCE5CDE51FEB537000CEEDA6 /* wphoto_back@2x.png */,
+			);
+			path = AlbumImage;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -718,8 +770,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCE5CDF21FEB537000CEEDA6 /* wphoto_select_yes@2x.png in Resources */,
 				FCE5CDD21FEAAF7C00CEEDA6 /* EBMuteDetector.mp3 in Resources */,
 				FC13F8091FE4D3350009499E /* h5.zip in Resources */,
+				FCE5CDF11FEB537000CEEDA6 /* wphoto_select_no@2x.png in Resources */,
+				FCE5CDF31FEB537000CEEDA6 /* wphoto_back@2x.png in Resources */,
 				FC13F8061FE4D1070009499E /* h5_bridge.js in Resources */,
 				75A224681FDF8CF6005E28B2 /* LaunchScreen.storyboard in Resources */,
 				75A224651FDF8CF6005E28B2 /* Assets.xcassets in Resources */,
@@ -804,6 +859,7 @@
 				FC13F9C51FE77D0F0009499E /* HideOptionMenuPlugin.m in Sources */,
 				FC13F9DA1FE77DB10009499E /* PopWindowPlugin.m in Sources */,
 				75A224601FDF8CF5005E28B2 /* ViewController.m in Sources */,
+				FCE5CDF51FEB537000CEEDA6 /* UIImage+fixOrientation.m in Sources */,
 				FC13F9E01FE77DDF0009499E /* PushWindowPlugin.m in Sources */,
 				FC13F9D11FE77D710009499E /* NetworkInfoPlugin.m in Sources */,
 				FCE5CDD31FEAAF7C00CEEDA6 /* EBBannerViewController.m in Sources */,
@@ -836,6 +892,7 @@
 				75A2245D1FDF8CF5005E28B2 /* AppDelegate.m in Sources */,
 				FC13F9BC1FE77CD80009499E /* GetPreferencePlugin.m in Sources */,
 				FC13F9D41FE77D880009499E /* NotificationPlugin.m in Sources */,
+				FCE5CDEF1FEB537000CEEDA6 /* WPhotoViewController.m in Sources */,
 				FC13F9DD1FE77DC40009499E /* PromptPlugin.m in Sources */,
 				FC13F9AD1FE7726D0009499E /* H5EventDispatcher.m in Sources */,
 				75A2249E1FDF97DC005E28B2 /* JZNetTool.m in Sources */,
@@ -844,13 +901,16 @@
 				FC13F9CE1FE77D5F0009499E /* MoveTaskToBackPlugin.m in Sources */,
 				FC13F9B31FE77C880009499E /* AlertPlugin.m in Sources */,
 				FC13F9EC1FE77E360009499E /* SetOptionMenuPlugin.m in Sources */,
+				FCE5CDF01FEB537000CEEDA6 /* NavView.m in Sources */,
 				FC13F9C21FE77CFE0009499E /* HideLoadingPlugin.m in Sources */,
 				FC13F9F51FE77E690009499E /* SetTitleBgColorPlugin.m in Sources */,
 				FCE5CDDD1FEACAA400CEEDA6 /* CookieManager.m in Sources */,
 				FCCC3BD11FE021AE00C95569 /* Helper.m in Sources */,
+				FCE5CDEE1FEB537000CEEDA6 /* myPhotoCell.m in Sources */,
 				FC13F9D71FE77D990009499E /* OpenUriPlugin.m in Sources */,
 				FC13F9B91FE77CC30009499E /* DownloadPlugin.m in Sources */,
 				FC13F9F21FE77E570009499E /* SetSubTitlePlugin.m in Sources */,
+				FCE5CDF41FEB537000CEEDA6 /* WPFunctionView.m in Sources */,
 				FC13F9E61FE77E0A0009499E /* RefreshStatePlugin.m in Sources */,
 				FCE5CDDA1FEAAFD100CEEDA6 /* HDHud.m in Sources */,
 				FCE5CD951FE8A62E00CEEDA6 /* BaseViewController.m in Sources */,

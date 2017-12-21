@@ -24,6 +24,7 @@ static void *WkwebBrowserContext = &WkwebBrowserContext;
 
     //添加到主控制器
     [self.view addSubview:self.wkWebView];
+    
     if (@available(iOS 11.0, *)){
         self.wkWebView.scrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
     }
@@ -159,7 +160,7 @@ static void *WkwebBrowserContext = &WkwebBrowserContext;
         if(_hideNavBar){
             _wkWebView.frame = [UIScreen mainScreen].bounds;
         }
-        _wkWebView.backgroundColor = [UIColor whiteColor];
+        _wkWebView.backgroundColor = [UIColor clearColor];
         // 设置代理
         _wkWebView.navigationDelegate = self;
         _wkWebView.UIDelegate = self;

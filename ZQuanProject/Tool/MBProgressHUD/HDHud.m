@@ -1,9 +1,9 @@
 //
 //  HDHud.m
-//  CreditGroup
+//  ZQuanProject
 //
-//  Created by ang on 14/8/27.
-//  Copyright (c) 2014年 JPlay. All rights reserved.
+//  Created by 王园园 on 2017/12/18.
+//  Copyright © 2017年 zquan. All rights reserved.
 //
 
 #import "HDHud.h"

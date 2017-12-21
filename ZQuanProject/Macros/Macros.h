@@ -66,14 +66,12 @@
 #define CachPathForFileName(fileName) [CachDirectoryePath stringByAppendingPathComponent:fileName]
 
 #define AppendBslash(s) [s stringByAppendingString:@"/"]
+
 //宏定义
 #define DownLoadFileName @"h5" //解压的文件名
 
-#define LogURLScheme @"h5container.message"
 
 //本地化
-#define K_H5DONAIN @"K_H5DONAIN"
-
 #define K_CurrentVersion @"K_CurrentVersion"
 
 #define K_ZIPPath @"K_ZIPPath"

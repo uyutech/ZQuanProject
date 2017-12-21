@@ -15,6 +15,8 @@
 
 #define WEBURL @"http://h5.circling.cc"
 
+#define LogURLScheme @"h5container.message"
+
 //工程中打包H5默认版本号
 #define DefaultH5Version @"13"
 

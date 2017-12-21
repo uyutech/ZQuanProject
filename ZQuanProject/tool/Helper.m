@@ -53,8 +53,6 @@
 +(NSString *)getUnZipFilePah;
 {
     //创建解压文件夹
-    [Helper creatFileWithFileName:DownLoadFileName];
-    
     return CachPathForFileName(DownLoadFileName);
 }
 

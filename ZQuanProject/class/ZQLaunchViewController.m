@@ -40,6 +40,7 @@
     [self fadeIn:self.view];
     [self Runtimer];
     [self CheckVersion];
+
 }
 
 
@@ -117,13 +118,8 @@
             if([result[@"success"] integerValue]==1){
                 _requestVersion = [result[@"version"] floatValue];
                 if([self isShouldUpdate:_requestVersion]){
-                    //需要下载更新包
+                    
                     _downLoadUrl = result[@"url"];
-                    
-                    NSURL *d_URL = [NSURL URLWithString:result[@"url"]];
-                    NSLog(@"%@://%@",d_URL.scheme,d_URL.host);
-                    [[NSUserDefaults standardUserDefaults] setObject:[NSString stringWithFormat:@"%@://%@",d_URL.scheme,d_URL.host] forKey:K_H5DONAIN];
-                    
                     [self downLoadHeBundle];
                     return;
                 }
@@ -133,15 +129,13 @@
         if([self achiveIsSuccess]){
             [self enterMainVC];
         }else{
-            //解压
             [self achiveDownLoadZipFile:YES];
         }
     } NetFailure:^(id error) {
-        //没网
+
         if([self achiveIsSuccess]){
             [self enterMainVC];
         }else{
-            //解压
             [self achiveDownLoadZipFile:YES];
         }
     }];
@@ -162,9 +156,7 @@
         });
     } completionBlock:^(NSString * _Nullable ZIPfilePath, NSError * _Nullable error) {
         if(!error){
-            //下载完成记录ZIP路径
             [[NSUserDefaults standardUserDefaults] setObject:ZIPfilePath forKey:K_ZIPPath];
-            //下载成功解压
             [weakSelf achiveDownLoadZipFile:YES];
         }else{
             //下载失败
@@ -209,14 +201,6 @@
 - (void)zipArchiveWillUnzipArchiveAtPath:(NSString *)path zipInfo:(unz_global_info)zipInfo {
     NSLog(@"将要解压。");
 }
-
-- (void)zipArchiveDidUnzipArchiveAtPath:(NSString *)path zipInfo:(unz_global_info)zipInfo unzippedPath:(NSString *)unzippedPat uniqueId:(NSString *)uniqueId {
-    NSLog(@"解压完成！");//！！！没用到该方法 本项目用覆盖解压
-    [[NSUserDefaults standardUserDefaults] setBool:NO forKey:K_isArchived];
-    //删除zip
-    [Helper removeCacheWithFilePath:[Helper getdownzipPath]];
-}
-
 
 
 /**
