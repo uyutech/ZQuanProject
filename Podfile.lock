@@ -14,19 +14,22 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - Bugly (2.5.0)
   - SSZipArchive (2.1.1)
   - UMengAnalytics (4.2.4)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.1.0)
+  - Bugly
   - SSZipArchive
   - UMengAnalytics
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  Bugly: 00c8701f2bebab4887771ba43afbf51334009742
   SSZipArchive: 14401ade5f8e82aba1ff03e9f88e9de60937ae60
   UMengAnalytics: ef8d45f94c0e5771dc364cf6a5731d9d3b101da2
 
-PODFILE CHECKSUM: 6de5b0e5107c9ddce37ef117179ad7824fd75431
+PODFILE CHECKSUM: e3f512c32c200179feba0ca2326cbe5b67aa52db
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.4.0.beta.2

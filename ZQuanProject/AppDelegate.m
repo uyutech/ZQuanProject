@@ -15,6 +15,7 @@
 #import <UserNotifications/UserNotifications.h>
 #import <UMMobClick/MobClick.h>
 #import "EBBannerView.h"
+#import <Bugly/Bugly.h>
 
 @interface AppDelegate ()
 
@@ -42,6 +43,9 @@
     
     //友盟
     [self initUMMob];
+    
+    //BUGLY
+    [self initBugly];
     
     //sina
     [self registSina];
@@ -82,6 +86,10 @@
     [MobClick startWithConfigure:UMConfigInstance];
 }
 
+-(void)initBugly
+{
+    [Bugly startWithAppId:BUGLY_APPID];
+}
 -(void)registSina
 {
     [WeiboSDK enableDebugMode:YES];

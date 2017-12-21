@@ -52,4 +52,38 @@
 }
 
 
+//显示下载进度
++(MBProgressHUD *)showprogressInView:(UIView *)view title:(NSString *)title;
+{
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
+    // Set the bar determinate mode to show task progress.
+    hud.mode = MBProgressHUDModeDeterminateHorizontalBar;
+    hud.label.text =title;
+    
+    [hud.button setTitle:@"取消" forState:UIControlStateNormal];
+    [hud.button addTarget:self action:@selector(cancelWork) forControlEvents:UIControlEventTouchUpInside];
+    
+    dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0), ^{
+
+        float progress = 0.0f;
+        while (progress < 1.0f) {
+            progress += 0.01f;
+            dispatch_async(dispatch_get_main_queue(), ^{
+                // Instead we could have also passed a reference to the HUD
+                // to the HUD to myProgressTask as a method parameter.
+                [MBProgressHUD HUDForView:view].progress = progress;
+            });
+            usleep(50000);
+        }
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [hud hideAnimated:YES];
+        });
+    });
+    return hud;
+}
+
+-(void)cancelWork
+{
+    //self.canceled = YES;
+}
 @end

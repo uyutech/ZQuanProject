@@ -19,6 +19,9 @@
 //显示信息
 +(MBProgressHUD *)showMessageInView:(UIView *)view title:(NSString *)title;
 
+//显示下载进度
++(MBProgressHUD *)showprogressInView:(UIView *)view title:(NSString *)title;
+
 //显示信息和图片
 +(MBProgressHUD *)showMessageInView:(UIView *)view title:(NSString *)title Image:(UIImage *)img;
 

@@ -29,7 +29,9 @@
 #define LaunchWaitTime 1000
 
 
-#define UMENG_APPKEY @"59ae7dbf6e27a4386100008d"
+#define UMENG_APPKEY @"5a3b4aa9b27b0a1f2700015e"
+
+#define BUGLY_APPID @"e7a023119f"
 
 #define SINA_APPKEY @"890459019"
 #define SINA_APPSECRET @"e63640f825cbcf3ebb3eb9a16db9f97e"

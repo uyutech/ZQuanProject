@@ -6,5 +6,6 @@ target 'ZQuanProject' do
     pod 'AFNetworking', '~> 3.1.0'
     pod 'SSZipArchive'
     pod 'UMengAnalytics'
+    pod 'Bugly'
 
 end
