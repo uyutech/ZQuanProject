@@ -10,17 +10,11 @@
 
 @interface BaseViewController : UIViewController
 
-@property(nonatomic,strong)UIView* navBarview;
-
-@property(nonatomic,strong)UILabel* titleLabel;
-
-@property(nonatomic,strong)UILabel* subTitleLabel;
 
 @property(nonatomic,strong)UIButton* leftbarButton;
 
 @property(nonatomic,strong)UIButton* rightbarButton ;
 
-@property(nonatomic,strong)UIImageView* backImageView;
 
 -(void)setNavColor:(NSString *)colorStr;
 

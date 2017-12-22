@@ -9,7 +9,13 @@
 #import "BaseViewController.h"
 
 @interface BaseViewController()
+@property(nonatomic,strong)UIView* navBarview;
 
+@property(nonatomic,strong)UILabel* titleLabel;
+
+@property(nonatomic,strong)UILabel* subTitleLabel;
+
+@property(nonatomic,strong) CAGradientLayer *gradientLayer;
 @end
 
 @implementation BaseViewController
@@ -60,6 +66,8 @@
     [self.rightbarButton setFrame:CGRectMake(kMainBoundsWidth - 70, 20, 64, 44)];
     
     [self.view addSubview:self.navBarview];
+    [_navBarview.layer addSublayer:self.gradientLayer];
+    
     [_navBarview addSubview:self.rightbarButton];
     [_navBarview addSubview:self.leftbarButton];
     [_navBarview addSubview:self.titleLabel];
@@ -72,7 +80,7 @@
 {
     if(!_navBarview){
         _navBarview = [[UIView alloc]initWithFrame:CGRectMake(0, [UIApplication sharedApplication].statusBarFrame.size.height, kMainBoundsWidth,self.navigationController.navigationBar.frame.size.height)];
-        _navBarview.backgroundColor =kDefaultNavBackColorTwo;
+        //_navBarview.backgroundColor =kDefaultNavBackColorTwo;
     }
     return _navBarview;
 }
@@ -170,8 +178,27 @@
     if([Helper reverseColorString:colorStr]!=0){
         UIColor *color = HexRGBAlpha([Helper reverseColorString:colorStr],1);
         self.navBarview.backgroundColor = color;
+        if(_gradientLayer){
+            [_gradientLayer removeFromSuperlayer];
+        }
     }
 }
+
+
+-(CAGradientLayer *)gradientLayer
+{
+    if(!_gradientLayer){
+        _gradientLayer = [CAGradientLayer layer];
+        _gradientLayer.frame = CGRectMake(0, 0, kMainBoundsWidth, 64);
+        //设置颜色数组
+        _gradientLayer.colors = @[(__bridge id)kDefaultNavBackColorOne.CGColor,
+                                 (__bridge id)kDefaultNavBackColorTwo.CGColor];
+        //设置颜色分割点（范围：0-1）
+        _gradientLayer.locations = @[@(0.0f), @(1.0f)];
+    }
+    return _gradientLayer;
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

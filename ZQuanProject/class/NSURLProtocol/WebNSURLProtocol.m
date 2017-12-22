@@ -15,7 +15,9 @@
 
 static NSString* const ZQNSURLProtocolHKey = @"ZQNSURLProtocol";
 @interface WebNSURLProtocol ()<NSURLSessionDelegate>
+
 @property(nonatomic,strong)NSMutableArray *urlArr;
+
 @end
 
 
@@ -30,8 +32,8 @@ static WebNSURLProtocol * prototol;
     }
 }
 
-+ (BOOL)canInitWithRequest:(NSURLRequest *)request {
 
++ (BOOL)canInitWithRequest:(NSURLRequest *)request {
     //拦截log
     if([[[request URL] scheme] isEqualToString:@"h5container.message"]){
         
