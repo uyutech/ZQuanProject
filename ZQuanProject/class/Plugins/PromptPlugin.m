@@ -49,11 +49,8 @@
     NSDictionary *dict = @{@"value":text,@"success":@(sure)};
     NSString *jsonStr = [Helper covertStringWithJson:dict];
     
-    NSString *jsStr = [NSString stringWithFormat:@"\"%@\",%@",clientId,jsonStr];
-    
-    [self.wkweb evaluateJavaScript:jsStr completionHandler:^(id _Nullable response, NSError * _Nullable error) {
-        NSLog(@"PromptPlugin回调————%@————error：%@",response,error);
-    }];
+    NSString *jsStr = [NSString stringWithFormat:@"javascript: ZhuanQuanJSBridge._invokeJS(\"%@\",%@);",clientId,jsonStr];
+    [self.web stringByEvaluatingJavaScriptFromString:jsStr];
 }
 
 @end

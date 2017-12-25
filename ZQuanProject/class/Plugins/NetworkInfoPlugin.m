@@ -26,24 +26,11 @@
     
     NSDictionary *dict = @{@"available":@(hasNet),@"wifi":@(isWifi)};
     NSString *jsonStr = [Helper covertStringWithJson:dict];
-    
-    NSString *jsStr = [NSString stringWithFormat:@"\"%@\",%@",clientId,jsonStr];
-    [self.wkweb evaluateJavaScript:jsStr completionHandler:^(id _Nullable response, NSError * _Nullable error) {
-        NSLog(@"PromptPlugin回调————%@————error：%@",response,error);
-    }];
+
+    NSString *jsStr = [NSString stringWithFormat:@"javascript: ZhuanQuanJSBridge._invokeJS(\"%@\",%@);",clientId,jsonStr];
+    [self.web stringByEvaluatingJavaScriptFromString:jsStr];
 }
 
 
--(void)jsHandlerText:(NSString *)text Click:(BOOL)sure ClientId:(NSString *)clientId
-{
-    NSDictionary *dict = @{@"value":text,@"success":@(sure)};
-    NSString *jsonStr = [Helper covertStringWithJson:dict];
-    
-    NSString *jsStr = [NSString stringWithFormat:@"\"%@\",%@",clientId,jsonStr];
-    
-    [self.wkweb evaluateJavaScript:jsStr completionHandler:^(id _Nullable response, NSError * _Nullable error) {
-        NSLog(@"PromptPlugin回调————%@————error：%@",response,error);
-    }];
-}
 
 @end

@@ -34,16 +34,15 @@
         [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
             [self jsHandlerClick:true ClientId:clientId];
         }]];
+        [self.webVC presentViewController:alert animated:YES completion:NULL];
     }
 }
 
 
 -(void)jsHandlerClick:(BOOL)sure ClientId:(NSString *)clientId
 {
-    NSString *jsStr = [NSString stringWithFormat:@"\"%@\",%@",clientId,@(sure)];
+    NSString *jsStr = [NSString stringWithFormat:@"javascript: ZhuanQuanJSBridge._invokeJS(\"%@\",%@);",clientId,@(sure)];
     
-    [self.wkweb evaluateJavaScript:jsStr completionHandler:^(id _Nullable response, NSError * _Nullable error) {
-        NSLog(@"PromptPlugin回调————%@————error：%@",response,error);
-    }];
+    [self.web stringByEvaluatingJavaScriptFromString:jsStr];
 }
 @end

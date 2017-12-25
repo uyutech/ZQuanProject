@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ZQLaunchViewController.h"
-#import "ZQWebViewController.h"
+#import "ZQUIWebViewController.h"
 #import "JZNetTool.h"
 #import "WebNSURLProtocol.h"
 #import <AVFoundation/AVFoundation.h>
@@ -28,6 +28,8 @@
     // Override point for customization after application launch.
     
     [NSURLProtocol registerClass:[WebNSURLProtocol class]];
+
+    [self modifyWebViewUserAgent];
     
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     _window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
@@ -51,6 +53,19 @@
     [self registSina];
     
     return YES;
+}
+
+-(void)modifyWebViewUserAgent
+{
+    UIWebView *webView = [[UIWebView alloc] initWithFrame:CGRectZero];
+    NSString *oldAgent = [webView stringByEvaluatingJavaScriptFromString:@"navigator.userAgent"];
+    
+    NSString *str = [NSString stringWithFormat:@" app/ZhuanQuan/%@",IOSVersion];
+    NSString *newAgent = [oldAgent stringByAppendingString:str];
+    NSLog(@"new agent :%@", newAgent);
+
+    NSDictionary *dictionnary = [[NSDictionary alloc] initWithObjectsAndKeys:newAgent, @"UserAgent", nil];
+    [[NSUserDefaults standardUserDefaults] registerDefaults:dictionnary];
 }
 
 
@@ -98,6 +113,7 @@
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
+    [[NSNotificationCenter defaultCenter] postNotificationName:KObserveAPPActiveNotify object:@(NO)];
     [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:nil];
 }
 
@@ -110,6 +126,7 @@
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
     // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+    [[NSNotificationCenter defaultCenter] postNotificationName:KObserveAPPActiveNotify object:@(YES)];
     [[AVAudioSession sharedInstance] setActive:YES error:nil];
     [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];//进入前台取消应用消息图标
 }
@@ -173,13 +190,16 @@
 
 -(void)receiveNotifyPushWebURL:(NSString *)url
 {
-    ZQWebViewController *webVC = [[ZQWebViewController alloc] init];
-    webVC.URLString = url;
-    webVC.hideNavBar = NO;
-    webVC.showBackButton = YES;
     if([[UIApplication sharedApplication].keyWindow.rootViewController isKindOfClass:[UINavigationController class]]){
+        
+        ZQUIWebViewController *webVC = [[ZQUIWebViewController alloc] init];
+        webVC.URLString = url;
+        webVC.hideNavBar = NO;
+        webVC.showBackButton = YES;
+        webVC.refreshState = YES;
         UINavigationController *nav = (UINavigationController *)[UIApplication sharedApplication].keyWindow.rootViewController;
         [nav pushViewController:webVC animated:YES];
+        
     }else{
         //当前启动页  进入首页后跳转
         [[NSUserDefaults standardUserDefaults] setObject:url forKey:@"K_ReceiveNotifyURL"];

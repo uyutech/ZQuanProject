@@ -33,10 +33,8 @@
             //取消
             NSDictionary *dict = @{@"cancel":@(true),@"success":@(false)};
             NSString *jsonStr = [Helper covertStringWithJson:dict];
-             NSString *jsStr = [NSString stringWithFormat:@"\"%@\",%@",clientId,jsonStr];
-            [self.wkweb evaluateJavaScript:jsStr completionHandler:^(id _Nullable response, NSError * _Nullable error) {
-                NSLog(@"AlbumPlugin回调————%@————error：%@",response,error);
-            }];
+             NSString *jsStr = [NSString stringWithFormat:@"javascript: ZhuanQuanJSBridge._invokeJS(\"%@\",%@);",clientId,jsonStr];
+            [self.web stringByEvaluatingJavaScriptFromString:jsStr];
         }else{
             NSMutableArray *base64Arr = [NSMutableArray array];
             [phostsArr enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
@@ -60,10 +58,8 @@
             
             NSDictionary *dict = @{@"base64":base64Arr,@"success":@(true)};
             NSString *jsonStr = [Helper covertStringWithJson:dict];
-            NSString *jsStr = [NSString stringWithFormat:@"\"%@\",%@",clientId,jsonStr];
-            [self.wkweb evaluateJavaScript:jsStr completionHandler:^(id _Nullable response, NSError * _Nullable error) {
-                //NSLog(@"AlbumPlugin回调————%@————error：%@",response,error);
-            }];
+            NSString *jsStr = [NSString stringWithFormat:@"javascript: ZhuanQuanJSBridge._invokeJS(\"%@\",%@);",clientId,jsonStr];
+            [self.web stringByEvaluatingJavaScriptFromString:jsStr];
         }
     }];
     

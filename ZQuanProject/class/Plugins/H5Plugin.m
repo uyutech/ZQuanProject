@@ -17,7 +17,7 @@
 }
 
 
--(ZQWebViewController *)webVC
+-(ZQUIWebViewController *)webVC
 {
 //    if(!_webVC){
 //        UINavigationController *nav = (UINavigationController *)[UIApplication sharedApplication].keyWindow.rootViewController;
@@ -30,12 +30,12 @@
 
 
 
--(WKWebView *)wkweb
+-(UIWebView *)web
 {
-    if(!_wkweb){
-        _wkweb = self.webVC.wkWebView;
+    if(!_web){
+        _web = self.webVC.webView;
     }
-    return _wkweb;
+    return _web;
 }
 
 @end

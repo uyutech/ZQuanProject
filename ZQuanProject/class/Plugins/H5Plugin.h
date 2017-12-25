@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ZQWebViewController.h"
+#import "ZQUIWebViewController.h"
 #import <WebKit/WebKit.h>
 #import "Helper.h"
 
@@ -45,8 +45,8 @@ static  NSString * NETWORK_INFO = @ "networkInfo";
 
 @interface H5Plugin : NSObject
 
-@property(nonatomic,strong)ZQWebViewController *webVC;
-@property(nonatomic,strong)WKWebView *wkweb;
+@property(nonatomic,strong)ZQUIWebViewController *webVC;
+@property(nonatomic,strong)UIWebView *web;
 
 -(void)initMessageJson:(NSDictionary *)message;
 

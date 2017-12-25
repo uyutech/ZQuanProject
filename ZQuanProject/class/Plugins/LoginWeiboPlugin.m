@@ -63,10 +63,9 @@
 -(void)jsHandlerData:(NSDictionary *)data ClientId:(NSString *)clientId
 {
     NSString *DatajsonStr = [Helper covertStringWithJson:data];
-    NSString *jsStr = [NSString stringWithFormat:@"\"%@\",%@",clientId,DatajsonStr];
-    [self.wkweb evaluateJavaScript:jsStr completionHandler:^(id _Nullable response, NSError * _Nullable error) {
-        NSLog(@"LoginWeiboPlugin回调————%@————error：%@",response,error);
-    }];
+    
+    NSString *jsStr = [NSString stringWithFormat:@"javascript: ZhuanQuanJSBridge._invokeJS(\"%@\",%@);",clientId,DatajsonStr];
+    [self.web stringByEvaluatingJavaScriptFromString:jsStr];
 }
 
 -(NSString *)statusDescript:(int)statusCode

@@ -23,18 +23,15 @@
             NSLog(@"%@",response);
             if([response[@"success"] boolValue]==YES){
                 NSString *dictStr = [Helper covertStringWithJson:response];
-                NSString *jsStr = [NSString stringWithFormat:@"\"%@\",%@",clientId,dictStr];
-                [self.wkweb evaluateJavaScript:jsStr completionHandler:^(id _Nullable response, NSError * _Nullable error) {
-                    NSLog(@"WeiboLoginPlugin回调————%@————error：%@",response,error);
-                }];
+                NSString *jsStr = [NSString stringWithFormat:@"javascript: ZhuanQuanJSBridge._invokeJS(\"%@\",%@);",clientId,dictStr];
+                [self.web stringByEvaluatingJavaScriptFromString:jsStr];
             }
         } NetFailure:^(id error) {
             NSDictionary *dict = [NSDictionary dictionary];
             NSString *dictStr = [Helper covertStringWithJson:dict];
-            NSString *jsStr = [NSString stringWithFormat:@"\"%@\",%@",clientId,dictStr];
-            [self.wkweb evaluateJavaScript:jsStr completionHandler:^(id _Nullable response, NSError * _Nullable error) {
-                NSLog(@"WeiboLoginPlugin回调————%@————error：%@",response,error);
-            }];
+            NSString *jsStr = [NSString stringWithFormat:@"javascript: ZhuanQuanJSBridge._invokeJS(\"%@\",%@);",clientId,dictStr];
+;
+            [self.web stringByEvaluatingJavaScriptFromString:jsStr];
         }];
     }
 }

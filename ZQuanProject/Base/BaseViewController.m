@@ -139,9 +139,9 @@
 }
 
 
--(void)setNavBarTitle:(NSString *)navTitleStr;
+-(void)setNavTitle:(NSString *)navTitle
 {
-    self.titleLabel.text = navTitleStr;
+    self.titleLabel.text = navTitle;
     if(IsEmptyStr(self.subTitleLabel.text))
     {
         self.titleLabel.top = 20;
@@ -150,11 +150,11 @@
 }
 
 
--(void)setNavSubTile:(NSString *)subTileStr;
+-(void)setSubTitle:(NSString *)subTitle
 {
-    self.subTitleLabel.text = subTileStr;
+    self.subTitleLabel.text = subTitle;
     
-    if(IsEmptyStr(subTileStr)){
+    if(IsEmptyStr(subTitle)){
         self.titleLabel.top = 20;
         self.titleLabel.height = 44;
     }else{
@@ -164,19 +164,22 @@
 }
 
 
+-(void)setHideNavBar:(BOOL)hideNavBar
+{
+    _hideNavBar = hideNavBar;
+    if(hideNavBar){
+        [self.gradientLayer removeFromSuperlayer];
+    }else{
+        [self.navBarview.layer addSublayer:self.gradientLayer];
+    }
+    self.navBarview.hidden = hideNavBar;
+}
 
 
--(void)backEvent{
-    
-}
--(void)OptionMenuEvent
+-(void)setNavBarColor:(NSString *)NavBarColor
 {
-    
-}
--(void)setNavColor:(NSString *)colorStr
-{
-    if([Helper reverseColorString:colorStr]!=0){
-        UIColor *color = HexRGBAlpha([Helper reverseColorString:colorStr],1);
+    if([Helper reverseColorString:NavBarColor]!=0){
+        UIColor *color = HexRGBAlpha([Helper reverseColorString:NavBarColor],1);
         self.navBarview.backgroundColor = color;
         if(_gradientLayer){
             [_gradientLayer removeFromSuperlayer];
@@ -184,7 +187,36 @@
     }
 }
 
+-(void)setShowBackButton:(BOOL)showBackButton
+{
+    //设置是否隐藏返回按钮
+    _showBackButton = showBackButton;
+    self.leftbarButton.hidden = !showBackButton;
+}
 
+-(void)setShowOptionMenu:(BOOL)showOptionMenu
+{
+    _showOptionMenu = showOptionMenu;
+    self.rightbarButton.hidden = !showOptionMenu;
+}
+
+-(void)setOptionMenuTitle:(NSString *)optionMenuTitle
+{
+    if(!IsEmptyStr(optionMenuTitle)){
+        self.showOptionMenu = YES;
+        [self.rightbarButton setTitle:optionMenuTitle forState:UIControlStateNormal];
+    }
+}
+
+
+-(void)backEvent{
+    
+}
+
+-(void)OptionMenuEvent
+{
+    
+}
 -(CAGradientLayer *)gradientLayer
 {
     if(!_gradientLayer){

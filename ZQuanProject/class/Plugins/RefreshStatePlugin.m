@@ -14,16 +14,9 @@
 {
     [super initMessageJson:message];
     
-    if(!IsEmptyStr(message[@"param"])){
+    BOOL state = [message[@"param"] boolValue];
         
-        NSDictionary *param = message[@"param"];
-        
-        BOOL state = [param[@"param"] boolValue];
-        
-        
-        self.webVC.refreshState = state;
-    
-    }
+    self.webVC.refreshState = state;
 }
 
 @end

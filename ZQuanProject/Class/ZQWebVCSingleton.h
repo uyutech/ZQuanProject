@@ -7,12 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ZQWebViewController.h"
+#import "ZQUIWebViewController.h"
 
 @interface ZQWebVCSingleton : NSObject
 
 +(instancetype)shareInstance;
 
-@property(nonatomic,strong)ZQWebViewController *webVC;
+@property(nonatomic,strong)ZQUIWebViewController *webVC;
 
 @end

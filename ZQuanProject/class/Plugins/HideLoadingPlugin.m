@@ -14,11 +14,7 @@
 {
     [super initMessageJson:message];
     
-    if(![Helper isBlankString:message[@"param"]]){
-
-        [HDHud hideHUDInView:[UIApplication sharedApplication].keyWindow];
-    }
-    
+    [HDHud hideHUDInView:[UIApplication sharedApplication].keyWindow];
 }
 
 @end

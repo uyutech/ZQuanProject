@@ -27,13 +27,9 @@
 - (void)request:(WBHttpRequest *)request didFinishLoadingWithResult:(NSString *)result
 {
     NSLog(@"登出成功：%@",result);    
-    NSString *jsStr = [NSString stringWithFormat:@"\"%@\"",_clientId];
-    
-    [self.wkweb evaluateJavaScript:jsStr completionHandler:^(id _Nullable response, NSError * _Nullable error) {
-        NSLog(@"LoginOutPlugin回调————%@————error：%@",response,error);
-    }];
+    NSString *jsStr = [NSString stringWithFormat:@"javascript: ZhuanQuanJSBridge._invokeJS(\"%@\");",_clientId];
+    [self.web stringByEvaluatingJavaScriptFromString:jsStr];
 }
-
 
 - (void)request:(WBHttpRequest *)request didFailWithError:(NSError *)error;
 {

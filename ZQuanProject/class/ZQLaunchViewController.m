@@ -10,9 +10,8 @@
 #import "Helper+Cache.h"
 #import "JZNetTool.h"
 #import "GradientProgressView.h"
-#import "ZQWebViewController.h"
 #import <SSZipArchive/ZipArchive.h>
-
+#import "ZQUIWebViewController.h"
 @interface ZQLaunchViewController ()<SSZipArchiveDelegate>
 
 @property(nonatomic,strong)GradientProgressView *progressView;
@@ -268,10 +267,11 @@
         self.view.alpha = 0;
     } completion:^(BOOL finished) {
         dispatch_async(dispatch_get_main_queue(), ^{
-            ZQWebViewController *webVC = [[ZQWebViewController alloc] init];
+            ZQUIWebViewController *webVC = [[ZQUIWebViewController alloc] init];
             webVC.URLString = [WEBURL stringByAppendingString:@"/index.html"];
             webVC.hideNavBar = YES;
             webVC.showBackButton = NO;
+            webVC.refreshState = YES;
             UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:webVC];
             [UIApplication sharedApplication].keyWindow.rootViewController = nav;
         });

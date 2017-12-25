@@ -84,6 +84,6 @@
 
 //通知
 #define KObserveNetStatusNotify @"KObserveNetStatusNotify"
-
+#define KObserveAPPActiveNotify @"KObserveAPPActiveNotify"
 
 #endif /* Macros_h */

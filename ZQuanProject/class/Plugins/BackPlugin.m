@@ -21,8 +21,8 @@
         BOOL prevent = [param[@"prevent"] boolValue];
         
         if(!prevent){
-            if([self.wkweb canGoBack]){
-                [self.wkweb goBack];
+            if([self.web canGoBack]){
+                [self.web goBack];
             }else{
                 [self.webVC.navigationController popViewControllerAnimated:YES];
             }

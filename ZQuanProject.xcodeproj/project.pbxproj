@@ -18,12 +18,9 @@
 		75A2249B1FDF9781005E28B2 /* UIView+Additional.m in Sources */ = {isa = PBXBuildFile; fileRef = 75A224991FDF9781005E28B2 /* UIView+Additional.m */; };
 		75A2249E1FDF97DC005E28B2 /* JZNetTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 75A2249C1FDF97DC005E28B2 /* JZNetTool.m */; };
 		75A224A11FDF98C1005E28B2 /* ZQLaunchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75A224A01FDF98C1005E28B2 /* ZQLaunchViewController.m */; };
-		75A224AB1FDF9A80005E28B2 /* ZQWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75A224AA1FDF9A80005E28B2 /* ZQWebViewController.m */; };
 		75C527FD1FE13C1B000230DD /* Helper+Cache.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C527FC1FE13C1A000230DD /* Helper+Cache.m */; };
 		75C528041FE148AC000230DD /* GradientProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C528031FE148AC000230DD /* GradientProgressView.m */; };
 		BF4BBD63652293626621B979 /* Pods_ZQuanProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32E48CC7DE08A9023BDB2986 /* Pods_ZQuanProject.framework */; };
-		FC13F8061FE4D1070009499E /* h5_bridge.js in Resources */ = {isa = PBXBuildFile; fileRef = FC13F8041FE4D1070009499E /* h5_bridge.js */; };
-		FC13F8091FE4D3350009499E /* h5.zip in Resources */ = {isa = PBXBuildFile; fileRef = FC13F8081FE4D3350009499E /* h5.zip */; };
 		FC13F9871FE60CD10009499E /* NSURLProtocol+WebKitSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13F9831FE60CD10009499E /* NSURLProtocol+WebKitSupport.m */; };
 		FC13F9881FE60CD10009499E /* WebNSURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13F9861FE60CD10009499E /* WebNSURLProtocol.m */; };
 		FC13F98B1FE61A7B0009499E /* H5Plugin.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13F98A1FE61A7B0009499E /* H5Plugin.m */; };
@@ -95,6 +92,9 @@
 		FCE5CDF41FEB537000CEEDA6 /* WPFunctionView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE5CDEC1FEB537000CEEDA6 /* WPFunctionView.m */; };
 		FCE5CDF51FEB537000CEEDA6 /* UIImage+fixOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE5CDED1FEB537000CEEDA6 /* UIImage+fixOrientation.m */; };
 		FCE5CED91FEBC50000CEEDA6 /* ZQWebVCSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE5CED81FEBC50000CEEDA6 /* ZQWebVCSingleton.m */; };
+		FCE5CEDC1FEF488100CEEDA6 /* ZQUIWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE5CEDB1FEF488100CEEDA6 /* ZQUIWebViewController.m */; };
+		FCE5CEDF1FEF521600CEEDA6 /* h5_bridge.js in Resources */ = {isa = PBXBuildFile; fileRef = FCE5CEDD1FEF521600CEEDA6 /* h5_bridge.js */; };
+		FCE5CEE41FEF58F200CEEDA6 /* h5.zip in Resources */ = {isa = PBXBuildFile; fileRef = FCE5CEE31FEF58F200CEEDA6 /* h5.zip */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -139,8 +139,6 @@
 		75A2249D1FDF97DC005E28B2 /* JZNetTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZNetTool.h; sourceTree = "<group>"; };
 		75A2249F1FDF98C1005E28B2 /* ZQLaunchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZQLaunchViewController.h; sourceTree = "<group>"; };
 		75A224A01FDF98C1005E28B2 /* ZQLaunchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZQLaunchViewController.m; sourceTree = "<group>"; };
-		75A224A91FDF9A80005E28B2 /* ZQWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZQWebViewController.h; sourceTree = "<group>"; };
-		75A224AA1FDF9A80005E28B2 /* ZQWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZQWebViewController.m; sourceTree = "<group>"; };
 		75A224B51FDFA176005E28B2 /* Macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
 		75A224B61FDFA33C005E28B2 /* ZQuanProject-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZQuanProject-Prefix.pch"; sourceTree = "<group>"; };
 		75C527FB1FE13C1A000230DD /* Helper+Cache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Helper+Cache.h"; sourceTree = "<group>"; };
@@ -149,8 +147,6 @@
 		75C528021FE148AC000230DD /* GradientProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradientProgressView.h; sourceTree = "<group>"; };
 		75C528031FE148AC000230DD /* GradientProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GradientProgressView.m; sourceTree = "<group>"; };
 		D87718ED34AD97DD04350730 /* Pods-ZQuanProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZQuanProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZQuanProject/Pods-ZQuanProject.debug.xcconfig"; sourceTree = "<group>"; };
-		FC13F8041FE4D1070009499E /* h5_bridge.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = h5_bridge.js; sourceTree = "<group>"; };
-		FC13F8081FE4D3350009499E /* h5.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = h5.zip; sourceTree = "<group>"; };
 		FC13F9831FE60CD10009499E /* NSURLProtocol+WebKitSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLProtocol+WebKitSupport.m"; sourceTree = "<group>"; };
 		FC13F9841FE60CD10009499E /* WebNSURLProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebNSURLProtocol.h; sourceTree = "<group>"; };
 		FC13F9851FE60CD10009499E /* NSURLProtocol+WebKitSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLProtocol+WebKitSupport.h"; sourceTree = "<group>"; };
@@ -277,6 +273,10 @@
 		FCE5CDED1FEB537000CEEDA6 /* UIImage+fixOrientation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+fixOrientation.m"; sourceTree = "<group>"; };
 		FCE5CED71FEBC50000CEEDA6 /* ZQWebVCSingleton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZQWebVCSingleton.h; sourceTree = "<group>"; };
 		FCE5CED81FEBC50000CEEDA6 /* ZQWebVCSingleton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZQWebVCSingleton.m; sourceTree = "<group>"; };
+		FCE5CEDA1FEF488100CEEDA6 /* ZQUIWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZQUIWebViewController.h; sourceTree = "<group>"; };
+		FCE5CEDB1FEF488100CEEDA6 /* ZQUIWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZQUIWebViewController.m; sourceTree = "<group>"; };
+		FCE5CEDD1FEF521600CEEDA6 /* h5_bridge.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = h5_bridge.js; sourceTree = "<group>"; };
+		FCE5CEE31FEF58F200CEEDA6 /* h5.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = h5.zip; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -377,7 +377,8 @@
 				75A224661FDF8CF6005E28B2 /* LaunchScreen.storyboard */,
 				75A224691FDF8CF6005E28B2 /* Info.plist */,
 				75A2246A1FDF8CF6005E28B2 /* main.m */,
-				FC13F8031FE4D1070009499E /* recource */,
+				FCE5CEDD1FEF521600CEEDA6 /* h5_bridge.js */,
+				FCE5CEE31FEF58F200CEEDA6 /* h5.zip */,
 			);
 			path = ZQuanProject;
 			sourceTree = "<group>";
@@ -426,8 +427,8 @@
 				FC13F9811FE60C200009499E /* Plugins */,
 				75A2249F1FDF98C1005E28B2 /* ZQLaunchViewController.h */,
 				75A224A01FDF98C1005E28B2 /* ZQLaunchViewController.m */,
-				75A224A91FDF9A80005E28B2 /* ZQWebViewController.h */,
-				75A224AA1FDF9A80005E28B2 /* ZQWebViewController.m */,
+				FCE5CEDA1FEF488100CEEDA6 /* ZQUIWebViewController.h */,
+				FCE5CEDB1FEF488100CEEDA6 /* ZQUIWebViewController.m */,
 				75C528021FE148AC000230DD /* GradientProgressView.h */,
 				75C528031FE148AC000230DD /* GradientProgressView.m */,
 				FCE5CED71FEBC50000CEEDA6 /* ZQWebVCSingleton.h */,
@@ -461,15 +462,6 @@
 				0E4837EDC55DCF9DA2F5A8A6 /* Pods-ZQuanProject.release.xcconfig */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		FC13F8031FE4D1070009499E /* recource */ = {
-			isa = PBXGroup;
-			children = (
-				FC13F8081FE4D3350009499E /* h5.zip */,
-				FC13F8041FE4D1070009499E /* h5_bridge.js */,
-			);
-			path = recource;
 			sourceTree = "<group>";
 		};
 		FC13F9811FE60C200009499E /* Plugins */ = {
@@ -772,13 +764,13 @@
 			files = (
 				FCE5CDF21FEB537000CEEDA6 /* wphoto_select_yes@2x.png in Resources */,
 				FCE5CDD21FEAAF7C00CEEDA6 /* EBMuteDetector.mp3 in Resources */,
-				FC13F8091FE4D3350009499E /* h5.zip in Resources */,
 				FCE5CDF11FEB537000CEEDA6 /* wphoto_select_no@2x.png in Resources */,
 				FCE5CDF31FEB537000CEEDA6 /* wphoto_back@2x.png in Resources */,
-				FC13F8061FE4D1070009499E /* h5_bridge.js in Resources */,
+				FCE5CEE41FEF58F200CEEDA6 /* h5.zip in Resources */,
 				75A224681FDF8CF6005E28B2 /* LaunchScreen.storyboard in Resources */,
 				75A224651FDF8CF6005E28B2 /* Assets.xcassets in Resources */,
 				75A224631FDF8CF6005E28B2 /* Main.storyboard in Resources */,
+				FCE5CEDF1FEF521600CEEDA6 /* h5_bridge.js in Resources */,
 				FCE5CDCC1FEAAF7C00CEEDA6 /* EBBannerView.xib in Resources */,
 				FCE5CDA41FEA5C7000CEEDA6 /* WeiboSDK.bundle in Resources */,
 				FCE5CDCD1FEAAF7C00CEEDA6 /* EBBannerViewController.xib in Resources */,
@@ -881,9 +873,9 @@
 				75C528041FE148AC000230DD /* GradientProgressView.m in Sources */,
 				75A2249B1FDF9781005E28B2 /* UIView+Additional.m in Sources */,
 				FC13F9B01FE77C6F0009499E /* AlbumPlugin.m in Sources */,
-				75A224AB1FDF9A80005E28B2 /* ZQWebViewController.m in Sources */,
 				FC13FA011FE77EB10009499E /* ShowOptionMenuPlugin.m in Sources */,
 				FC13F9FE1FE77EA00009499E /* ShowLoadingPlugin.m in Sources */,
+				FCE5CEDC1FEF488100CEEDA6 /* ZQUIWebViewController.m in Sources */,
 				FC13FA041FE77EC50009499E /* ToastPlugin.m in Sources */,
 				FCE5CDCE1FEAAF7C00CEEDA6 /* EBBannerWindow.m in Sources */,
 				FCE5CDCF1FEAAF7C00CEEDA6 /* EBCustomBannerView.m in Sources */,

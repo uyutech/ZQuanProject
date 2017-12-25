@@ -32,8 +32,9 @@
             [[NSUserDefaults standardUserDefaults] removeObjectForKey:key];
         }
         
-        [self.wkweb evaluateJavaScript:clientId completionHandler:^(id _Nullable response, NSError * _Nullable error) {
-        }];
+        NSString *jsStr = [NSString stringWithFormat:@"javascript: ZhuanQuanJSBridge._invokeJS(\"%@\");",clientId];
+        
+        [self.web stringByEvaluatingJavaScriptFromString:jsStr];
     }
 }
 

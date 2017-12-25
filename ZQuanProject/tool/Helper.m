@@ -93,6 +93,7 @@
     NSError * error = nil;
     NSData * jsonData = [NSJSONSerialization dataWithJSONObject:jsonDit options:NSJSONWritingPrettyPrinted error:&error];
     NSString * jsonStr = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+    [jsonStr stringByReplacingOccurrencesOfString:@"\n" withString:@""];
     return jsonStr;
     
 }

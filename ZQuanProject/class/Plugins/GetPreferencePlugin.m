@@ -26,16 +26,13 @@
         NSString *jsStr;
         if(IsEmptyStr(value)){
             value = @"";
-            jsStr = [NSString stringWithFormat:@"\"%@\",\"\"",clientId];
+            jsStr = [NSString stringWithFormat:@"javascript: ZhuanQuanJSBridge._invokeJS(\"%@\",@\"\");",clientId];
         }else{
-            jsStr = [NSString stringWithFormat:@"\"%@\",\"%@\"",clientId,value];
+            
+            jsStr = [NSString stringWithFormat:@"javascript: ZhuanQuanJSBridge._invokeJS(\"%@\",\"%@\");",clientId,value];
         }
-
-        [self.wkweb evaluateJavaScript:jsStr completionHandler:^(id _Nullable response, NSError * _Nullable error) {
-            NSLog(@"GetPreferencePlugin回调————%@————error：%@",response,error);
-        }];
+        [self.web stringByEvaluatingJavaScriptFromString:jsStr];
     }
-    
 }
 
 @end

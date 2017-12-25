@@ -7,7 +7,7 @@
 //
 
 #import "PushWindowPlugin.h"
-#import "ZQWebViewController.h"
+#import "ZQUIWebViewController.h"
 @implementation PushWindowPlugin
 
 -(void)initMessageJson:(NSDictionary *)message
@@ -22,7 +22,7 @@
         
         if(!IsEmptyStr(param[@"url"])){
             
-            ZQWebViewController *containerVC = [[ZQWebViewController alloc] init];
+            ZQUIWebViewController *containerVC = [[ZQUIWebViewController alloc] init];
 
             containerVC.URLString = param[@"url"];
             
@@ -36,7 +36,7 @@
                     }
                 }
             }
-            
+            containerVC.refreshState = YES;
             containerVC.hideNavBar = NO;
             [self.webVC.navigationController pushViewController:containerVC animated:YES];
             

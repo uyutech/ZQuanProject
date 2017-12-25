@@ -15,10 +15,17 @@
 
 @property(nonatomic,strong)UIButton* rightbarButton ;
 
+@property (nonatomic, assign) BOOL hideNavBar;
 
--(void)setNavColor:(NSString *)colorStr;
+@property(nonatomic,strong)NSString *NavBarColor;
 
--(void)setNavBarTitle:(NSString *)navTitleStr;
+@property(nonatomic,strong)NSString *navTitle;
 
--(void)setNavSubTile:(NSString *)subTileStr;
+@property(nonatomic,strong)NSString *subTitle;
+
+@property (nonatomic, assign) BOOL showBackButton;
+
+@property (nonatomic, assign) BOOL showOptionMenu;
+
+@property(nonatomic,strong)NSString *optionMenuTitle;
 @end

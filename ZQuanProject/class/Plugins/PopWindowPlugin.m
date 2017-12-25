@@ -16,9 +16,9 @@
     
     //NSString *clientId = message[@"clientId"];
     
-    if(IS_DICTIONARY_CLASS(message[@"param"])){
+    if(!IsEmptyStr(message[@"param"])){
         
-        NSDictionary *param = message[@"param"];
+        NSString *param = message[@"param"];
         
         [self.webVC emitWithEvenName:POP_WINDOW Param:param];
         

@@ -25,6 +25,14 @@
         NSString *name = param[@"name"];
         
         if([self isImage:url] || [self isImage:name]){
+            
+            NSData * data = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
+            UIImage *image = [UIImage imageWithData:data];
+            if(image){
+                UIImageWriteToSavedPhotosAlbum(image, self, @selector(image:didFinishSavingWithError:contextInfo:), (__bridge void *)self);
+            }
+            
+            /*
             //图片下载
             _hud = [MBProgressHUD showHUDAddedTo:[UIApplication sharedApplication].keyWindow animated:YES];
             _hud.mode = MBProgressHUDModeDeterminateHorizontalBar;
@@ -36,7 +44,7 @@
             _hud.progress = progress;
             
             [self startDownLoad:url name:name];
-            
+            */
         }
     }
 }
@@ -85,7 +93,7 @@
         
     } destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
         //设置下载路径
-        NSString *filePath = [NSString stringWithFormat:@"zqdownload/%@",response.suggestedFilename];
+        NSString *filePath = [NSString stringWithFormat:@"/zqdownload/%@",response.suggestedFilename];
         NSString *fullPath = [CachDirectoryePath stringByAppendingPathComponent:filePath];
         return [NSURL fileURLWithPath:fullPath];
     } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
@@ -110,6 +118,7 @@
         UIImageWriteToSavedPhotosAlbum(image, self, @selector(image:didFinishSavingWithError:contextInfo:), (__bridge void *)self);
     }
 }
+
 
 - (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo
 {
