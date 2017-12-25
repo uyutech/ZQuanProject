@@ -24,11 +24,9 @@
     
     //添加到主控制器
     [self.view addSubview:self.webView];
-    [self registJS];
+    self.refreshState = YES; //默认开启刷新
     
-    if (@available(iOS 11.0, *)){
-        self.webView.scrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
-    }
+    [self registJS];
     
     [NSURLProtocol wk_registerScheme:@"http"];
     [NSURLProtocol wk_registerScheme:@"https"];
@@ -57,9 +55,8 @@
     if(!IsEmptyStr(notifyUrl)){
         ZQUIWebViewController *webVC = [[ZQUIWebViewController alloc] init];
         webVC.URLString = notifyUrl;
-        webVC.hideNavBar = NO;
-        webVC.showBackButton = YES;
-        webVC.refreshState = YES;
+        webVC.transparentTitle = NO;
+        webVC.hideBackButton = NO;
         [self.navigationController pushViewController:webVC animated:YES];
         [[NSUserDefaults standardUserDefaults] removeObjectForKey:K_ReceiveNotifyURL];
     }
@@ -144,7 +141,7 @@
     [self registJS];
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
     
-    if(_readTitle){
+    if(self.readTitle){
         self.navTitle =  [_webView stringByEvaluatingJavaScriptFromString:@"document.title"];
     }
     [self endRefresh];
@@ -156,12 +153,18 @@
 - (UIWebView *)webView{
     if (!_webView) {
         _webView = [[UIWebView alloc] initWithFrame:CGRectMake(0,64, kMainBoundsWidth,kMainBoundsHeight-64)];
-        if(self.hideNavBar){
+        if(self.transparentTitle){
             _webView.frame = [UIScreen mainScreen].bounds;
         }
         _webView.delegate = self;
-        _webView.backgroundColor = [UIColor clearColor];
+        _webView.backgroundColor = [UIColor whiteColor];
+        _webView.allowsInlineMediaPlayback = YES;
+        _webView.scalesPageToFit = YES;
         [_webView sizeToFit];
+        
+        if (@available(iOS 11.0, *)){
+            self.webView.scrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+        }
     }
     return _webView;
 }
@@ -242,6 +245,8 @@
         [_refreshControl endRefreshing];
     }
 }
+
+
 
 #pragma mark ================ WillDisappear ================
 -(void)viewWillDisappear:(BOOL)animated{

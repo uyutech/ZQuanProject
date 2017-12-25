@@ -16,9 +16,9 @@
     
     if(IS_DICTIONARY_CLASS(message)){
         if(!IsEmptyStr(message[@"param"])){
-            self.webVC.NavBarColor = message[@"param"];
+            self.webVC.titleBgColor = message[@"param"];
         }else{
-            self.webVC.NavBarColor = @"";
+            self.webVC.titleBgColor = @"";
         }
     }
 }

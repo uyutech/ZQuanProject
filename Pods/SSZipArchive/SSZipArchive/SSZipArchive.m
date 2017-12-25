@@ -383,6 +383,10 @@ BOOL _fileIsSymbolicLink(const unz_file_info *fileInfo);
             // Contains a path
             if ([strPath rangeOfCharacterFromSet:[NSCharacterSet characterSetWithCharactersInString:@"/\\"]].location != NSNotFound) {
                 strPath = [strPath stringByReplacingOccurrencesOfString:@"\\" withString:@"/"];
+                NSArray *wyy_arr =  [strPath componentsSeparatedByString:@"/"];
+                if(wyy_arr.count>0){
+                    strPath = [wyy_arr lastObject];
+                }
             }
             
             NSString *fullPath = [destination stringByAppendingPathComponent:strPath];

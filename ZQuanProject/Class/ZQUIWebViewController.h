@@ -22,7 +22,6 @@
 
 @property (nonatomic, assign) BOOL refreshState;
 
-@property (nonatomic, assign) BOOL readTitle;
 
 -(void)emitWithEvenName:(NSString *)event Param:(NSString *)paramStr;
 

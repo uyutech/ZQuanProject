@@ -29,17 +29,10 @@
             if(IS_DICTIONARY_CLASS(param[@"params"])){
                 
                 NSDictionary *layoutParams = param[@"params"];
-                
-                if([layoutParams.allKeys containsObject:@"title"]){
-                    if(!IsEmptyStr(layoutParams[@"title"])){
-                        containerVC.navTitle = layoutParams[@"title"];
-                    }
-                }
+                [containerVC initLayoutWithParam:layoutParams];
             }
-            containerVC.refreshState = YES;
-            containerVC.hideNavBar = NO;
+            containerVC.transparentTitle = NO;
             [self.webVC.navigationController pushViewController:containerVC animated:YES];
-            
         }
         
     }

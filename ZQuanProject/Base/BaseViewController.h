@@ -11,21 +11,21 @@
 @interface BaseViewController : UIViewController
 
 
-@property(nonatomic,strong)UIButton* leftbarButton;
+@property(nonatomic,assign) BOOL transparentTitle;
 
-@property(nonatomic,strong)UIButton* rightbarButton ;
-
-@property (nonatomic, assign) BOOL hideNavBar;
-
-@property(nonatomic,strong)NSString *NavBarColor;
-
-@property(nonatomic,strong)NSString *navTitle;
-
-@property(nonatomic,strong)NSString *subTitle;
-
-@property (nonatomic, assign) BOOL showBackButton;
+@property (nonatomic, assign) BOOL hideBackButton;
 
 @property (nonatomic, assign) BOOL showOptionMenu;
 
-@property(nonatomic,strong)NSString *optionMenuTitle;
+@property(nonatomic,strong)NSString *titleBgColor;
+
+@property(nonatomic,strong)NSString *navTitle; //title字段不可用
+
+@property(nonatomic,strong)NSString *subTitle;
+
+@property(nonatomic,strong)NSString *optionMenu;
+
+@property (nonatomic, assign) BOOL readTitle;
+
+-(void)initLayoutWithParam:(NSDictionary *)param;
 @end

@@ -17,7 +17,7 @@
     if(IS_DICTIONARY_CLASS(message[@"param"])){
         NSDictionary *param = message[@"param"];
         if(!IsEmptyStr(param[@"text"])){
-            self.webVC.optionMenuTitle = param[@"text"];
+            self.webVC.optionMenu = param[@"text"];
         }
     }
 }

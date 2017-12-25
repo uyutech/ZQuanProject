@@ -269,9 +269,8 @@
         dispatch_async(dispatch_get_main_queue(), ^{
             ZQUIWebViewController *webVC = [[ZQUIWebViewController alloc] init];
             webVC.URLString = [WEBURL stringByAppendingString:@"/index.html"];
-            webVC.hideNavBar = YES;
-            webVC.showBackButton = NO;
-            webVC.refreshState = YES;
+            webVC.transparentTitle = YES;
+            webVC.hideBackButton = YES;
             UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:webVC];
             [UIApplication sharedApplication].keyWindow.rootViewController = nav;
         });

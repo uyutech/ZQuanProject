@@ -14,7 +14,7 @@
 {
     [super initMessageJson:message];
     
-    self.webVC.showBackButton = YES;
+    self.webVC.hideBackButton = NO;
 }
 
 @end

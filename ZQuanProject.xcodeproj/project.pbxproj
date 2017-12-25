@@ -95,6 +95,7 @@
 		FCE5CEDC1FEF488100CEEDA6 /* ZQUIWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE5CEDB1FEF488100CEEDA6 /* ZQUIWebViewController.m */; };
 		FCE5CEDF1FEF521600CEEDA6 /* h5_bridge.js in Resources */ = {isa = PBXBuildFile; fileRef = FCE5CEDD1FEF521600CEEDA6 /* h5_bridge.js */; };
 		FCE5CEE41FEF58F200CEEDA6 /* h5.zip in Resources */ = {isa = PBXBuildFile; fileRef = FCE5CEE31FEF58F200CEEDA6 /* h5.zip */; };
+		FCE5CEE71FF0C5D400CEEDA6 /* ZQLayoutModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE5CEE61FF0C5D400CEEDA6 /* ZQLayoutModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -277,6 +278,8 @@
 		FCE5CEDB1FEF488100CEEDA6 /* ZQUIWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZQUIWebViewController.m; sourceTree = "<group>"; };
 		FCE5CEDD1FEF521600CEEDA6 /* h5_bridge.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = h5_bridge.js; sourceTree = "<group>"; };
 		FCE5CEE31FEF58F200CEEDA6 /* h5.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = h5.zip; sourceTree = "<group>"; };
+		FCE5CEE51FF0C5D400CEEDA6 /* ZQLayoutModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZQLayoutModel.h; sourceTree = "<group>"; };
+		FCE5CEE61FF0C5D400CEEDA6 /* ZQLayoutModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZQLayoutModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -433,6 +436,8 @@
 				75C528031FE148AC000230DD /* GradientProgressView.m */,
 				FCE5CED71FEBC50000CEEDA6 /* ZQWebVCSingleton.h */,
 				FCE5CED81FEBC50000CEEDA6 /* ZQWebVCSingleton.m */,
+				FCE5CEE51FF0C5D400CEEDA6 /* ZQLayoutModel.h */,
+				FCE5CEE61FF0C5D400CEEDA6 /* ZQLayoutModel.m */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -715,7 +720,7 @@
 				TargetAttributes = {
 					75A224571FDF8CF5005E28B2 = {
 						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -858,6 +863,7 @@
 				FC13F9881FE60CD10009499E /* WebNSURLProtocol.m in Sources */,
 				FC13F9C51FE77D0F0009499E /* HideOptionMenuPlugin.m in Sources */,
 				FC13F9DA1FE77DB10009499E /* PopWindowPlugin.m in Sources */,
+				FCE5CEE71FF0C5D400CEEDA6 /* ZQLayoutModel.m in Sources */,
 				75A224601FDF8CF5005E28B2 /* ViewController.m in Sources */,
 				FCE5CDF51FEB537000CEEDA6 /* UIImage+fixOrientation.m in Sources */,
 				FC13F9E01FE77DDF0009499E /* PushWindowPlugin.m in Sources */,
@@ -998,9 +1004,10 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Zhou Wu (X3RLYG2RNY)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 3WAEEN98E5;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -1020,6 +1027,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "4ac41d96-f253-4023-910a-46e56986fe1c";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -1053,9 +1061,10 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Zhou Wu (X3RLYG2RNY)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 3WAEEN98E5;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -1068,6 +1077,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "4ac41d96-f253-4023-910a-46e56986fe1c";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1079,8 +1089,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = ZQuanProject/ZQuanProject.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Zhou Wu (X3RLYG2RNY)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Zhou Wu (X3RLYG2RNY)";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 3WAEEN98E5;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/ZQuanProject/ZQuanProject-Prefix.pch";
 				INFOPLIST_FILE = ZQuanProject/Info.plist;
@@ -1108,7 +1119,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cc.circling;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "4ac41d96-f253-4023-910a-46e56986fe1c";
+				PROVISIONING_PROFILE_SPECIFIER = circing;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1119,8 +1131,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = ZQuanProject/ZQuanProject.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Zhou Wu (X3RLYG2RNY)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Zhou Wu (X3RLYG2RNY)";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 3WAEEN98E5;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/ZQuanProject/ZQuanProject-Prefix.pch";
 				INFOPLIST_FILE = ZQuanProject/Info.plist;
@@ -1148,7 +1161,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cc.circling;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "4ac41d96-f253-4023-910a-46e56986fe1c";
+				PROVISIONING_PROFILE_SPECIFIER = circing;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

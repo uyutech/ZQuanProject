@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pods/SSZipArchive/SSZipArchive/SSZipArchive.m"
-            timestampString = "535203642.98852"
+            timestampString = "535880521.898981"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "84"
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pods/SSZipArchive/SSZipArchive/SSZipArchive.m"
-            timestampString = "535203642.988596"
+            timestampString = "535880521.899065"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "799"
-            endingLineNumber = "799"
+            startingLineNumber = "803"
+            endingLineNumber = "803"
             landmarkName = "-writeFileAtPath:withFileName:compressionLevel:password:AES:"
             landmarkType = "7">
          </BreakpointContent>

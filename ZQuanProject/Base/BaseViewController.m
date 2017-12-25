@@ -7,13 +7,17 @@
 //
 
 #import "BaseViewController.h"
-
+#import <objc/runtime.h>
 @interface BaseViewController()
 @property(nonatomic,strong)UIView* navBarview;
 
 @property(nonatomic,strong)UILabel* titleLabel;
 
 @property(nonatomic,strong)UILabel* subTitleLabel;
+
+@property(nonatomic,strong)UIButton* leftbarButton;
+
+@property(nonatomic,strong)UIButton* rightbarButton;
 
 @property(nonatomic,strong) CAGradientLayer *gradientLayer;
 @end
@@ -75,15 +79,15 @@
     [_navBarview bringSubviewToFront:self.view];
 }
 
-
+#pragma mark - LayOut
 -(UIView *)navBarview
 {
     if(!_navBarview){
         _navBarview = [[UIView alloc]initWithFrame:CGRectMake(0, [UIApplication sharedApplication].statusBarFrame.size.height, kMainBoundsWidth,self.navigationController.navigationBar.frame.size.height)];
-        //_navBarview.backgroundColor =kDefaultNavBackColorTwo;
     }
     return _navBarview;
 }
+
 
 
 -(UIButton *)leftbarButton
@@ -97,6 +101,8 @@
     }
     return _leftbarButton;
 }
+
+
 
 -(UIButton *)rightbarButton
 {
@@ -125,6 +131,7 @@
     return _titleLabel;
 }
 
+
 -(UILabel *)subTitleLabel
 {
     if(!_subTitleLabel){
@@ -136,6 +143,52 @@
         _subTitleLabel.minimumScaleFactor = 0.5;
     }
     return _subTitleLabel;
+}
+
+
+
+-(void)initLayoutWithParam:(NSDictionary *)param
+{
+    if(IS_DICTIONARY_CLASS(param)){
+        
+        for(NSString *propertyKey in param.allKeys){
+            
+            if([propertyKey isEqualToString:@"title"]){ //title特殊处理
+                [self setValue:param[@"title"] forKey:@"navTitle"];
+            }else{
+                [self setValue:param[propertyKey] forKey:propertyKey];
+            }
+        }
+    }
+}
+
+
+#pragma mark - set
+
+-(void)setTransparentTitle:(BOOL)transparentTitle
+{
+    _transparentTitle = transparentTitle;
+    if(transparentTitle){
+        [self.gradientLayer removeFromSuperlayer];
+    }else{
+        [self.navBarview.layer addSublayer:self.gradientLayer];
+    }
+    self.navBarview.hidden = transparentTitle;
+}
+
+
+-(void)setHideBackButton:(BOOL)hideBackButton
+{
+    //设置是否隐藏返回按钮
+    _hideBackButton = hideBackButton;
+    self.leftbarButton.hidden = hideBackButton;
+}
+
+
+-(void)setShowOptionMenu:(BOOL)showOptionMenu
+{
+    _showOptionMenu = showOptionMenu;
+    self.rightbarButton.hidden = !showOptionMenu;
 }
 
 
@@ -164,22 +217,12 @@
 }
 
 
--(void)setHideNavBar:(BOOL)hideNavBar
-{
-    _hideNavBar = hideNavBar;
-    if(hideNavBar){
-        [self.gradientLayer removeFromSuperlayer];
-    }else{
-        [self.navBarview.layer addSublayer:self.gradientLayer];
-    }
-    self.navBarview.hidden = hideNavBar;
-}
 
 
--(void)setNavBarColor:(NSString *)NavBarColor
+-(void)setTitleBgColor:(NSString *)titleBgColor
 {
-    if([Helper reverseColorString:NavBarColor]!=0){
-        UIColor *color = HexRGBAlpha([Helper reverseColorString:NavBarColor],1);
+    if([Helper reverseColorString:titleBgColor]!=0){
+        UIColor *color = HexRGBAlpha([Helper reverseColorString:titleBgColor],1);
         self.navBarview.backgroundColor = color;
         if(_gradientLayer){
             [_gradientLayer removeFromSuperlayer];
@@ -187,36 +230,23 @@
     }
 }
 
--(void)setShowBackButton:(BOOL)showBackButton
-{
-    //设置是否隐藏返回按钮
-    _showBackButton = showBackButton;
-    self.leftbarButton.hidden = !showBackButton;
-}
 
--(void)setShowOptionMenu:(BOOL)showOptionMenu
+-(void)setOptionMenu:(NSString *)optionMenu
 {
-    _showOptionMenu = showOptionMenu;
-    self.rightbarButton.hidden = !showOptionMenu;
-}
-
--(void)setOptionMenuTitle:(NSString *)optionMenuTitle
-{
-    if(!IsEmptyStr(optionMenuTitle)){
+    if(!IsEmptyStr(optionMenu)){
         self.showOptionMenu = YES;
-        [self.rightbarButton setTitle:optionMenuTitle forState:UIControlStateNormal];
+        [self.rightbarButton setTitle:optionMenu forState:UIControlStateNormal];
     }
 }
 
 
--(void)backEvent{
-    
-}
+-(void)backEvent
+{}
 
 -(void)OptionMenuEvent
-{
-    
-}
+{}
+
+
 -(CAGradientLayer *)gradientLayer
 {
     if(!_gradientLayer){

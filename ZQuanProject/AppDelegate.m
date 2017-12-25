@@ -194,9 +194,8 @@
         
         ZQUIWebViewController *webVC = [[ZQUIWebViewController alloc] init];
         webVC.URLString = url;
-        webVC.hideNavBar = NO;
-        webVC.showBackButton = YES;
-        webVC.refreshState = YES;
+        webVC.transparentTitle = NO;
+        webVC.hideBackButton = NO;
         UINavigationController *nav = (UINavigationController *)[UIApplication sharedApplication].keyWindow.rootViewController;
         [nav pushViewController:webVC animated:YES];
         
