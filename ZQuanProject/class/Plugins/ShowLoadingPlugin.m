@@ -17,11 +17,16 @@
     if(IS_DICTIONARY_CLASS(message[@"param"])){
         NSDictionary *param = message[@"param"];
         //Boolean cancelable = [param[@"cancelable"] boolValue];
-        if(!IsEmptyStr(param[@"message"]))
-        [HDHud showHUDInView:[UIApplication sharedApplication].keyWindow title:param[@"message"]];
-    }else{
-        [HDHud showHUDInView:[UIApplication sharedApplication].keyWindow title:nil];
+        if(IsEmptyStr(param[@"title"]) && IsEmptyStr(param[@"message"])){
+            [HDHud showHUDInView:[UIApplication sharedApplication].keyWindow title:nil];
+        }else{
+            NSString *msg = param[@"message"];
+            if(IsEmptyStr(msg)){
+                msg = param[@"title"];
+            }
+            [HDHud showHUDInView:[UIApplication sharedApplication].keyWindow title:msg];
+        }
+
     }
-    
 }
 @end
