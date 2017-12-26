@@ -21,23 +21,21 @@
         NSDictionary *param = message[@"param"];
         if(param!=nil){
             
-            NSString *ticker = param[@"ticker"];
+            //NSString *ticker = param[@"ticker"];
             NSString *title = param[@"title"];
             NSString *content = param[@"content"];
             NSString *url = param[@"url"];
             if(IsEmptyStr(title)){
-                title = @"";
+                title = @"转圈";
             }
-            if(IsEmptyStr(ticker)){
-                ticker = title;
-            }
+           
             
             
             UIApplicationState state = [UIApplication sharedApplication].applicationState;
             if(state == UIApplicationStateActive){
                 //如果在前台  模拟系统弹框
                 [[EBBannerView bannerWithBlock:^(EBBannerViewMaker *make) {
-                    make.title = (IsEmptyStr(title))?@"转圈":title;
+                    make.title = title;
                     make.content = content;
                     make.object = url;
                 }] show];
@@ -47,8 +45,7 @@
             //本地系统通知
             if (@available(iOS 10.0, *)) {
                 UNMutableNotificationContent *notifyContent = [[UNMutableNotificationContent alloc] init];
-                notifyContent.title = ticker;
-                notifyContent.subtitle = (IsEmptyStr(title))?nil:title;
+                notifyContent.title = title;
                 notifyContent.body =content;
                 notifyContent.badge = @1;
                 notifyContent.userInfo = @{@"url":url};
@@ -70,7 +67,7 @@
                 notification.fireDate=[NSDate dateWithTimeIntervalSinceNow:0];
                 notification.repeatInterval=1;
                 if (@available(iOS 8.2, *)) {
-                    notification.alertTitle = ticker;
+                    notification.alertTitle = title;
                 }
                 notification.alertBody= content;
                 notification.applicationIconBadgeNumber=1;
