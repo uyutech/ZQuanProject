@@ -22,7 +22,7 @@
     
     NSString *netName = [JZNetTool sharedNetTool].netName;
     
-    BOOL isWifi = [netName isEqualToString:@"wifi"];
+    BOOL isWifi = [netName isEqualToString:@"WIFI"];
     
     NSDictionary *dict = @{@"available":@(hasNet),@"wifi":@(isWifi)};
     NSString *jsonStr = [Helper covertStringWithJson:dict];
