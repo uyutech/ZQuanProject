@@ -14,6 +14,9 @@
 {
     [super initMessageJson:message];
     
+    NSString *JS = [NSString stringWithFormat:@"ZhuanQuanJSBridge.emit('pause');"];
+    [self.web stringByEvaluatingJavaScriptFromString:JS];
+    
     if(IS_DICTIONARY_CLASS(message[@"param"])){
         
         NSDictionary *param = message[@"param"];

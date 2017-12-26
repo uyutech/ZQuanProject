@@ -20,11 +20,11 @@
     if(IS_DICTIONARY_CLASS(message[@"param"])){
         NSDictionary *param = message[@"param"];
         if(param!=nil){
-            NSDictionary *data = param[@"data"];
-            NSString *ticker = data[@"ticker"];
-            NSString *title = data[@"title"];
-            NSString *content = data[@"content"];
-            NSString *url = data[@"url"];
+            
+            NSString *ticker = param[@"ticker"];
+            NSString *title = param[@"title"];
+            NSString *content = param[@"content"];
+            NSString *url = param[@"url"];
             if(IsEmptyStr(title)){
                 title = @"";
             }
@@ -37,6 +37,7 @@
             if(state == UIApplicationStateActive){
                 //如果在前台  模拟系统弹框
                 [[EBBannerView bannerWithBlock:^(EBBannerViewMaker *make) {
+                    make.title = (IsEmptyStr(title))?@"转圈":title;
                     make.content = content;
                     make.object = url;
                 }] show];

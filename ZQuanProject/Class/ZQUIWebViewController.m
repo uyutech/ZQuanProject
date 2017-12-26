@@ -12,7 +12,6 @@
 #import "HDHud.h"
 #import "ZQWebVCSingleton.h"
 
-
 @interface ZQUIWebViewController ()<UIWebViewDelegate>
 
 @end
@@ -48,9 +47,8 @@
 
 -(void)viewDidAppear:(BOOL)animated
 {
-    [super viewDidAppear:animated];
-    
-    //读通知栏消息
+    [super viewDidAppear:animated];    
+    //app处于后台 点通知栏消息激活进入新View
     NSString *notifyUrl = [[NSUserDefaults standardUserDefaults] objectForKey:K_ReceiveNotifyURL];
     if(!IsEmptyStr(notifyUrl)){
         ZQUIWebViewController *webVC = [[ZQUIWebViewController alloc] init];
