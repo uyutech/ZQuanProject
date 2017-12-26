@@ -190,20 +190,21 @@
 
 -(void)receiveNotifyPushWebURL:(NSString *)url
 {
-    if([[UIApplication sharedApplication].keyWindow.rootViewController isKindOfClass:[UINavigationController class]]){
-        
-        ZQUIWebViewController *webVC = [[ZQUIWebViewController alloc] init];
-        webVC.URLString = url;
-        webVC.transparentTitle = NO;
-        webVC.hideBackButton = NO;
-        UINavigationController *nav = (UINavigationController *)[UIApplication sharedApplication].keyWindow.rootViewController;
-        [nav pushViewController:webVC animated:YES];
-        
-    }else{
-        //当前启动页  进入首页后跳转
-        [[NSUserDefaults standardUserDefaults] setObject:url forKey:@"K_ReceiveNotifyURL"];
+    if(!IsEmptyStr(url)){
+        if([[UIApplication sharedApplication].keyWindow.rootViewController isKindOfClass:[UINavigationController class]]){
+            
+            ZQUIWebViewController *webVC = [[ZQUIWebViewController alloc] init];
+            webVC.URLString = url;
+            webVC.transparentTitle = NO;
+            webVC.hideBackButton = NO;
+            UINavigationController *nav = (UINavigationController *)[UIApplication sharedApplication].keyWindow.rootViewController;
+            [nav pushViewController:webVC animated:YES];
+            
+        }else{
+            //当前启动页  进入首页后跳转
+            [[NSUserDefaults standardUserDefaults] setObject:url forKey:@"K_ReceiveNotifyURL"];
+        }
     }
-
 }
 
 @end
