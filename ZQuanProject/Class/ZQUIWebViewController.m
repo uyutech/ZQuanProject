@@ -65,7 +65,8 @@
 #pragma mark ================ 加载 ================
 -(void)LoadWebUrl
 {
-    NSURLRequest *request =[NSURLRequest requestWithURL:[NSURL URLWithString:self.URLString] cachePolicy:NSURLRequestReloadRevalidatingCacheData timeoutInterval:60];
+    NSString *encodeURL =  [self.URLString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSURLRequest *request =[NSURLRequest requestWithURL:[NSURL URLWithString:encodeURL] cachePolicy:NSURLRequestReloadRevalidatingCacheData timeoutInterval:60];
     [self.webView loadRequest:request];
 }
 
@@ -122,6 +123,9 @@
 #pragma mark ================ UIWebViewDelegate ================
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType;
 {
+    if([request.URL.host isEqualToString:[NSURL URLWithString:WEBURL].host]){
+        [self registJS];
+    }
     return YES;
 }
 
@@ -138,12 +142,10 @@
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
-    [self registJS];
-    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
-    
     if(self.readTitle){
         self.navTitle =  [_webView stringByEvaluatingJavaScriptFromString:@"document.title"];
     }
+    [self registJS];
     [self endRefresh];
 }
 
@@ -181,8 +183,6 @@
 {
     NSString *JS = [NSString stringWithFormat:@"ZhuanQuanJSBridge.emit('resume',%@)",paramStr];
     [_webView stringByEvaluatingJavaScriptFromString:JS];
-
-    [self.navigationController popViewControllerAnimated:YES];
 }
 
 #pragma mark -  右边按钮

@@ -25,8 +25,7 @@
 }
 
 - (void)request:(WBHttpRequest *)request didFinishLoadingWithResult:(NSString *)result
-{
-    NSLog(@"登出成功：%@",result);    
+{    
     NSString *jsStr = [NSString stringWithFormat:@"javascript: ZhuanQuanJSBridge._invokeJS(\"%@\");",_clientId];
     [self.web stringByEvaluatingJavaScriptFromString:jsStr];
 }

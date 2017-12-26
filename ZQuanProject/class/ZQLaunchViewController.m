@@ -34,9 +34,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = kLaunchBackColor;
+    self.view.backgroundColor = [UIColor whiteColor];
     [self setUpViews];
-    [self fadeIn:self.view];
     [self Runtimer];
     [self CheckVersion];
 
@@ -46,46 +45,36 @@
 #pragma mark - Layout
 -(void)setUpViews
 {
-    UIImageView *backImgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 40, kMainBoundsWidth, kMainBoundsHeight-0-100-40)];
-    backImgView.layer.masksToBounds = YES;
-    backImgView.contentMode = UIViewContentModeScaleAspectFit;
-    backImgView.image = [UIImage imageNamed:@"main_bg"];
-    
+    UIImageView *backImgView = [[UIImageView alloc] initWithFrame:self.view.bounds];
+    backImgView.image = [UIImage imageNamed:@"lauch_img"];
     [self.view addSubview:backImgView];
     
+    UIImageView *logoImg = [[UIImageView alloc] initWithFrame:CGRectMake(kMainBoundsWidth/2-151/2, kMainBoundsHeight-165, 151, 78)];
+    logoImg.image = [UIImage imageNamed:@"logo_bg"];
+    logoImg.contentMode = UIViewContentModeScaleAspectFit;
+    [self.view addSubview:logoImg];
     
-    UILabel *DomainLable = [[UILabel alloc] initWithFrame:CGRectMake(0, kMainBoundsHeight-60, kMainBoundsWidth, 20)];
+    UILabel *DomainLable = [[UILabel alloc] initWithFrame:CGRectMake(0, kMainBoundsHeight-58, kMainBoundsWidth, 20)];
     DomainLable.text = LaunchDomain;
-    DomainLable.textColor = HexRGBAlpha(0X7EB4CA,1);
+    DomainLable.textColor = kLaunchTextColorOne;
     DomainLable.backgroundColor = [UIColor clearColor];
     DomainLable.textAlignment = NSTextAlignmentCenter;
     DomainLable.font = KMainBoldFont(13);
     [self.view addSubview:DomainLable];
     
     
-    UILabel *CoptyrightLable = [[UILabel alloc] initWithFrame:CGRectMake(0, kMainBoundsHeight-40, kMainBoundsWidth, 20)];
+    UILabel *CoptyrightLable = [[UILabel alloc] initWithFrame:CGRectMake(0, kMainBoundsHeight-38, kMainBoundsWidth, 20)];
     CoptyrightLable.text = LaunchCoptyright;
-    CoptyrightLable.textColor = HexRGBAlpha(0XA4D2DF,1);
+    CoptyrightLable.textColor = kLaunchTextColorTwo;
     CoptyrightLable.backgroundColor = [UIColor clearColor];
     CoptyrightLable.textAlignment = NSTextAlignmentCenter;
     CoptyrightLable.font = KMainBoldFont(13);
     [self.view addSubview:CoptyrightLable];
     
     [[self progressView] setProgress:0 animated:YES];
-    
-    self.view.alpha = 0;
+
 }
 
-
-- (void)fadeIn:(UIView *)s_view
-{
-    CGContextRef ctx = UIGraphicsGetCurrentContext();
-    [UIView beginAnimations:nil context:ctx];
-    [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
-    [UIView setAnimationDuration:0.2];
-    [s_view setAlpha:1.0f];
-    [UIView commitAnimations];
-}
 
 /**
  @return 渐变进度条
@@ -93,7 +82,7 @@
 -(GradientProgressView *)progressView
 {
     if(!_progressView){
-        UIView *backView = [[UIView alloc] initWithFrame:CGRectMake(30, kMainBoundsHeight-80, kMainBoundsWidth-60, 5)];
+        UIView *backView = [[UIView alloc] initWithFrame:CGRectMake(30, kMainBoundsHeight-78, kMainBoundsWidth-60, 4)];
         backView.backgroundColor = kProgressBackColor;
         backView.layer.masksToBounds = YES;
         backView.layer.cornerRadius = 3;

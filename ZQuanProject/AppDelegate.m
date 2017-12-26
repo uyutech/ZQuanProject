@@ -26,16 +26,16 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    
-    [NSURLProtocol registerClass:[WebNSURLProtocol class]];
-
-    [self modifyWebViewUserAgent];
-    
+    [[UIApplication sharedApplication] setStatusBarHidden:NO];
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     _window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     _window.backgroundColor = [UIColor whiteColor];
     _window.rootViewController = [[ZQLaunchViewController alloc] init];
     [_window makeKeyAndVisible];
+    
+    [NSURLProtocol registerClass:[WebNSURLProtocol class]];
+    
+    [self modifyWebViewUserAgent];
     
     //监测网络
     [[JZNetTool sharedNetTool] observeNetStatus];
@@ -105,11 +105,13 @@
 {
     [Bugly startWithAppId:BUGLY_APPID];
 }
+
 -(void)registSina
 {
     [WeiboSDK enableDebugMode:YES];
     [WeiboSDK registerApp:SINA_APPKEY];
 }
+
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
@@ -178,8 +180,6 @@
     NSDictionary *userInfo = [notification userInfo];
     NSString *url =userInfo[@"url"];
     [self receiveNotifyPushWebURL:url];
-    NSLog(@"通知URL：%@",url);
-    NSLog(@"点通知激活");
 }
 -(void)customTopBannerDidClick:(NSNotification *)notify
 {

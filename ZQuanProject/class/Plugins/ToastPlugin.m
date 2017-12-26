@@ -17,7 +17,6 @@
     if(!IsEmptyStr(message[@"param"])){
         
         [HDHud showMessageInView:[UIApplication sharedApplication].keyWindow title:message[@"param"]];
-        
     }
     
 }

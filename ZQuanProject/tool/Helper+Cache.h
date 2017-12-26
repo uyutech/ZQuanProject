@@ -52,7 +52,7 @@
 /**
  *  删除缓存文件
  *
- *  @param fileName 文件路径
+ *  @param filePath 文件路径
  */
 + (void)removeCacheWithFilePath:(NSString *)filePath;
 @end

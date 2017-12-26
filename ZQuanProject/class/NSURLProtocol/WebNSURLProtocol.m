@@ -55,7 +55,7 @@ static WebNSURLProtocol * prototol;
         return [extension compare:obj options:NSCaseInsensitiveSearch] == NSOrderedSame;
     }] != NSNotFound;
     
-    return [NSURLProtocol propertyForKey:ZQNSURLProtocolHKey inRequest:request] == nil && isImage &&[request.URL.host isEqualToString:@"h5.circling.cc"];
+    return [NSURLProtocol propertyForKey:ZQNSURLProtocolHKey inRequest:request] == nil && isImage &&[request.URL.host isEqualToString:[NSURL URLWithString:WEBURL].host];
 }
 
 

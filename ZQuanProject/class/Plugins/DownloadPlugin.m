@@ -97,7 +97,6 @@
         NSString *fullPath = [CachDirectoryePath stringByAppendingPathComponent:filePath];
         return [NSURL fileURLWithPath:fullPath];
     } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
-        NSLog(@"完成：%@",filePath);
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.hud hideAnimated:YES];
         });

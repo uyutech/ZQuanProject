@@ -21,8 +21,8 @@
         NSString *param = message[@"param"];
         
         [self.webVC emitWithEvenName:POP_WINDOW Param:param];
-        
     }
+    [self.webVC.navigationController popViewControllerAnimated:YES];
     
 }
 

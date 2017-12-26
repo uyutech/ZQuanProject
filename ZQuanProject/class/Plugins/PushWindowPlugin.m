@@ -14,8 +14,6 @@
 {
     [super initMessageJson:message];
     
-    //NSString *clientId = message[@"clientId"];
-    
     if(IS_DICTIONARY_CLASS(message[@"param"])){
         
         NSDictionary *param = message[@"param"];

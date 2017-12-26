@@ -14,12 +14,10 @@
 {
     [super initMessageJson:message];
     
-    if(IS_DICTIONARY_CLASS(message)){
-        if(!IsEmptyStr(message[@"param"])){
-            self.webVC.navTitle = message[@"param"];
-        }else{
-            self.webVC.navTitle = @"";
-        }
+    if(!IsEmptyStr(message[@"param"])){
+        self.webVC.navTitle = message[@"param"];
+    }else{
+        self.webVC.navTitle = @"";
     }
 }
 @end

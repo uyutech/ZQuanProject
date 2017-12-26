@@ -37,8 +37,9 @@
 #define SINA_APPSECRET @"e63640f825cbcf3ebb3eb9a16db9f97e"
 #define SINA_REDIRECTURL @"https://api.weibo.com/oauth2/default.html"
 
-/** 导航渐变色1*/
-#define kLaunchBackColor   HexRGBAlpha(0XE8F4FF,1)
+
+/** 启动页背景色*/
+//#define kLaunchBackColor   HexRGBAlpha(0XE8F4FF,1)
 
 /** 导航渐变色1*/
 #define kDefaultNavBackColorOne   HexRGBAlpha(0X8BC4E7,1)
@@ -56,6 +57,10 @@
 /** 进度条背景*/
 #define kProgressBackColor   HexRGBAlpha(0XA7D8C0,1)
 
+/** Domain色*/
+#define kLaunchTextColorOne   HexRGBAlpha(0X5D99C4,1)
 
+/** Copyright色*/
+#define kLaunchTextColorTwo   HexRGBAlpha(0X6C7275,1)
 
 #endif /* APPConfig_h */

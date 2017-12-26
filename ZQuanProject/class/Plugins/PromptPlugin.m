@@ -33,7 +33,6 @@
     
     [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         
-        NSLog(@"text:%@",[[alert.textFields lastObject] text]);
         NSString *inputText = [[alert.textFields lastObject] text];
         [self jsHandlerText:inputText Click:true ClientId:clientId];
         

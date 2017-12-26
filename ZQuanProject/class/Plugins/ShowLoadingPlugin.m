@@ -14,7 +14,7 @@
 {
     [super initMessageJson:message];
     
-    if(![Helper isBlankString:message[@"param"]]){
+    if(!IsEmptyStr( message[@"param"])){
         
         [HDHud showHUDInView:[UIApplication sharedApplication].keyWindow title:message[@"param"]];
     }else{

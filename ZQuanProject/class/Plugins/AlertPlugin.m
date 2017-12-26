@@ -16,15 +16,18 @@
 {
     [super initMessageJson:message];
     
-    if(![Helper isBlankString:message[@"param"]]){
+    if(IS_DICTIONARY_CLASS(message[@"param"])){
         
-        NSString *msg = message[@"param"];
-        
-        UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:msg preferredStyle:UIAlertControllerStyleAlert];
+        NSDictionary *param = message[@"param"];
+        NSString *title = param[@"title"];
+        NSString *message = param[@"message"];
+        if(IsEmptyStr(title)){
+            title = nil;
+        }
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
         [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
             
         }]];
-        
         [self.webVC presentViewController:alert animated:YES completion:NULL];
     }
 }

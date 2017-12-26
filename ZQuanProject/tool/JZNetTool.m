@@ -99,8 +99,6 @@ static AFURLSessionManager *urlsession ;
     NSURLSessionDownloadTask *task = [[[JZNetTool sharedNetTool] sharedHTTPSession] downloadTaskWithRequest:request progress:^(NSProgress * _Nonnull downloadProgress) {
 
         float f_progress = 1.0 * downloadProgress.completedUnitCount / downloadProgress.totalUnitCount;
-        //打印下下载进度
-        NSLog(@"打印下下载进度:%lf",f_progress);
         downloadProgressBlock(f_progress);
         
     } destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
@@ -108,11 +106,10 @@ static AFURLSessionManager *urlsession ;
         //设置下载路径，并将文件写入沙盒，最后返回NSURL对象
         NSString *fullPath = [CachDirectoryePath stringByAppendingPathComponent:response.suggestedFilename];
         
-        NSLog(@"targetPath:%@",fullPath);
         return [NSURL fileURLWithPath:fullPath];
         
     } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
-        NSLog(@"完成：%@",filePath);
+ 
         NSString *path = [[filePath absoluteString] stringByReplacingOccurrencesOfString:@"file://" withString:@""];
         completionBlock(path,error);
         
