@@ -14,9 +14,11 @@
 {
     [super initMessageJson:message];
     
-    if(!IsEmptyStr( message[@"param"])){
-        
-        [HDHud showHUDInView:[UIApplication sharedApplication].keyWindow title:message[@"param"]];
+    if(IS_DICTIONARY_CLASS(message[@"param"])){
+        NSDictionary *param = message[@"param"];
+        //Boolean cancelable = [param[@"cancelable"] boolValue];
+        if(!IsEmptyStr(param[@"message"]))
+        [HDHud showHUDInView:[UIApplication sharedApplication].keyWindow title:param[@"message"]];
     }else{
         [HDHud showHUDInView:[UIApplication sharedApplication].keyWindow title:nil];
     }
