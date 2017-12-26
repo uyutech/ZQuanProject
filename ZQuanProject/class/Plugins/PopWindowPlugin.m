@@ -16,14 +16,18 @@
     
     //NSString *clientId = message[@"clientId"];
     
-    if(!IsEmptyStr(message[@"param"])){
-        
-        NSString *param = message[@"param"];
-        
-        [self.webVC emitWithEvenName:POP_WINDOW Param:param];
+    NSString *param = message[@"param"];
+    if(IsEmptyStr(param)){
+        param = nil;
     }
-    [self.webVC.navigationController popViewControllerAnimated:YES];
     
+    if(self.webVC.navigationController.viewControllers.count>1){
+        NSInteger index = [self.webVC.navigationController.viewControllers indexOfObject:self.webVC];
+        ZQUIWebViewController *preWebVC = [self.webVC.navigationController.viewControllers objectAtIndex:index-1];
+        [preWebVC emitWithEvenParam:param];
+    }
+    
+    [self.webVC.navigationController popViewControllerAnimated:YES];
 }
 
 @end

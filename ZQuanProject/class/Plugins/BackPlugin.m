@@ -24,6 +24,11 @@
             if([self.web canGoBack]){
                 [self.web goBack];
             }else{
+                if(self.webVC.navigationController.viewControllers.count>1){
+                    NSInteger index = [self.webVC.navigationController.viewControllers indexOfObject:self.webVC];
+                    ZQUIWebViewController *preWebVC = [self.webVC.navigationController.viewControllers objectAtIndex:index-1];
+                    [preWebVC emitWithEvenParam:nil];
+                }
                 [self.webVC.navigationController popViewControllerAnimated:YES];
             }
         }

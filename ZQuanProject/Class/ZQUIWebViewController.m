@@ -89,34 +89,56 @@
 {
     if([[notify object] boolValue]==NO){
         //app will regist
-        NSHTTPCookie *cookie;
-        NSHTTPCookieStorage *cookies = [NSHTTPCookieStorage sharedHTTPCookieStorage];
-        NSArray *cookiesURL = [cookies cookiesForURL:[NSURL URLWithString:WEBURL]];
-        
-        for (id c in cookiesURL)
+        //app进入后台 保存cookies
+        [self saveCookies];
+        NSString *JS = [NSString stringWithFormat:@"ZhuanQuanJSBridge.emit('pause');"];
+        [_webView stringByEvaluatingJavaScriptFromString:JS];
+    }else{
+        //APP激活
+        [self emitWithEvenParam:nil];
+    }
+}
+
+-(void)emitWithEvenParam:(NSString *)paramStr
+{
+    NSString *JS;
+    if(IsEmptyStr(paramStr)){
+        JS = [NSString stringWithFormat:@"ZhuanQuanJSBridge.emit('resume');"];
+    }else{
+        JS = [NSString stringWithFormat:@"ZhuanQuanJSBridge.emit('resume',%@);",paramStr];
+    }
+    [_webView stringByEvaluatingJavaScriptFromString:JS];
+}
+
+
+-(void)saveCookies
+{
+    NSHTTPCookie *cookie;
+    NSHTTPCookieStorage *cookies = [NSHTTPCookieStorage sharedHTTPCookieStorage];
+    NSArray *cookiesURL = [cookies cookiesForURL:[NSURL URLWithString:WEBURL]];
+    
+    for (id c in cookiesURL)
+    {
+        if ([c isKindOfClass:[NSHTTPCookie class]])
         {
-            if ([c isKindOfClass:[NSHTTPCookie class]])
-            {
-                cookie=(NSHTTPCookie *)c;
-                //                if ([cookie.name isEqualToString:@"sessionid"]) {
-                NSDate *expiresDate = [NSDate dateWithTimeIntervalSinceNow:NSUIntegerMax];
-                NSArray *cookies = [NSArray arrayWithObjects:cookie.name, cookie.value, expiresDate, cookie.domain, cookie.path, nil];
-                if(cookies){
-                    NSMutableDictionary *cookieProperties = [NSMutableDictionary dictionary];
-                    [cookieProperties setObject:[cookies objectAtIndex:0] forKey:NSHTTPCookieName];
-                    [cookieProperties setObject:[cookies objectAtIndex:1] forKey:NSHTTPCookieValue];
-                    [cookieProperties setObject:[cookies objectAtIndex:2] forKey:NSHTTPCookieExpires];
-                    [cookieProperties setObject:[cookies objectAtIndex:3] forKey:NSHTTPCookieDomain];
-                    [cookieProperties setObject:[cookies objectAtIndex:4] forKey:NSHTTPCookiePath];
-                    
-                    NSHTTPCookie *cookieuser = [NSHTTPCookie cookieWithProperties:cookieProperties];
-                    [[NSHTTPCookieStorage sharedHTTPCookieStorage]  setCookie:cookieuser];
-                    //                    }
-                    //                    break;
-                }
+            cookie=(NSHTTPCookie *)c;
+            //                if ([cookie.name isEqualToString:@"sessionid"]) {
+            NSDate *expiresDate = [NSDate dateWithTimeIntervalSinceNow:NSUIntegerMax];
+            NSArray *cookies = [NSArray arrayWithObjects:cookie.name, cookie.value, expiresDate, cookie.domain, cookie.path, nil];
+            if(cookies){
+                NSMutableDictionary *cookieProperties = [NSMutableDictionary dictionary];
+                [cookieProperties setObject:[cookies objectAtIndex:0] forKey:NSHTTPCookieName];
+                [cookieProperties setObject:[cookies objectAtIndex:1] forKey:NSHTTPCookieValue];
+                [cookieProperties setObject:[cookies objectAtIndex:2] forKey:NSHTTPCookieExpires];
+                [cookieProperties setObject:[cookies objectAtIndex:3] forKey:NSHTTPCookieDomain];
+                [cookieProperties setObject:[cookies objectAtIndex:4] forKey:NSHTTPCookiePath];
+                
+                NSHTTPCookie *cookieuser = [NSHTTPCookie cookieWithProperties:cookieProperties];
+                [[NSHTTPCookieStorage sharedHTTPCookieStorage]  setCookie:cookieuser];
+                //                    }
+                //                    break;
             }
         }
-        
     }
 }
 
@@ -176,13 +198,6 @@
 -(void)backEvent{
     NSString *backJS = @"ZhuanQuanJSBridge.trigger('back');";
     [_webView stringByEvaluatingJavaScriptFromString:backJS];
-}
-
-
--(void)emitWithEvenName:(NSString *)event Param:(NSString *)paramStr
-{
-    NSString *JS = [NSString stringWithFormat:@"ZhuanQuanJSBridge.emit('resume',%@)",paramStr];
-    [_webView stringByEvaluatingJavaScriptFromString:JS];
 }
 
 #pragma mark -  右边按钮

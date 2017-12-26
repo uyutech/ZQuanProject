@@ -23,6 +23,6 @@
 @property (nonatomic, assign) BOOL refreshState;
 
 
--(void)emitWithEvenName:(NSString *)event Param:(NSString *)paramStr;
+-(void)emitWithEvenParam:(NSString *)paramStr;
 
 @end
