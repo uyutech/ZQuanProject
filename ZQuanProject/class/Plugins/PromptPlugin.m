@@ -16,10 +16,22 @@
     
     NSString *clientId = message[@"clientId"];
     
+    NSString *str_message = nil;
+    NSString *value = nil;
+    NSDictionary *param = message[@"param"];
+    if(IS_DICTIONARY_CLASS(param)){
+        if(!IsEmptyStr(param[@"message"])){
+            str_message = param[@"message"];
+        }
+        if(!IsEmptyStr(param[@"value"])){
+            value = param[@"value"];
+        }
+    }
     
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:str_message preferredStyle:UIAlertControllerStyleAlert];
     [alert addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
         textField.textColor = [UIColor blackColor];
+        textField.placeholder = str_message;
     }];
     
     

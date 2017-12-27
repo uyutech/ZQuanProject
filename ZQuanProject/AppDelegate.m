@@ -192,7 +192,6 @@
 {
     if(param==nil || param[@"data"]==nil) return;
     if(!IsEmptyStr(param[@"data"][@"url"])){
-        
         if([[UIApplication sharedApplication].keyWindow.rootViewController isKindOfClass:[UINavigationController class]]){
             NSMutableDictionary *newParam = [NSMutableDictionary dictionaryWithDictionary:param];
             [newParam setObject:param[@"data"][@"url"] forKey:@"url"];
