@@ -6,11 +6,11 @@
 //  Copyright © 2017年 zquan. All rights reserved.
 //
 
-#import "NotificationPlugin.h"
+#import "NotifyPlugin.h"
 #import <UserNotifications/UserNotifications.h>
 #import "EBBannerView.h"
 
-@implementation NotificationPlugin
+@implementation NotifyPlugin
 
 -(void)initMessageJson:(NSDictionary *)message
 {

@@ -8,6 +8,6 @@
 
 #import "H5Plugin.h"
 
-@interface NotificationPlugin : H5Plugin
+@interface NotifyPlugin : H5Plugin
 
 @end

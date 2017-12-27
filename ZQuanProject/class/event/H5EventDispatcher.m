@@ -22,8 +22,8 @@
     
     if(![Helper isBlankString:params[@"fn"]]){
         NSString *className = [params[@"fn"] stringByAppendingString:@"Plugin"];
-        NSString *fistChar = [[className substringToIndex:1] capitalizedString];
-        className = [NSString stringWithFormat:@"%@%@",fistChar,[className substringFromIndex:1]];
+        NSString *firstChar = [[className substringToIndex:1] capitalizedString];
+        className = [NSString stringWithFormat:@"%@%@",firstChar,[className substringFromIndex:1]];
         
         dispatch_async(dispatch_get_main_queue(), ^{
             Class pluginClass = NSClassFromString(className);

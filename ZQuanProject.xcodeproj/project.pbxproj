@@ -38,7 +38,7 @@
 		FC13F9CB1FE77D4E0009499E /* LoginWeiboPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13F9CA1FE77D4E0009499E /* LoginWeiboPlugin.m */; };
 		FC13F9CE1FE77D5F0009499E /* MoveTaskToBackPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13F9CD1FE77D5F0009499E /* MoveTaskToBackPlugin.m */; };
 		FC13F9D11FE77D710009499E /* NetworkInfoPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13F9D01FE77D710009499E /* NetworkInfoPlugin.m */; };
-		FC13F9D41FE77D880009499E /* NotificationPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13F9D31FE77D880009499E /* NotificationPlugin.m */; };
+		FC13F9D41FE77D880009499E /* NotifyPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13F9D31FE77D880009499E /* NotifyPlugin.m */; };
 		FC13F9D71FE77D990009499E /* OpenUriPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13F9D61FE77D990009499E /* OpenUriPlugin.m */; };
 		FC13F9DA1FE77DB10009499E /* PopWindowPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13F9D91FE77DB10009499E /* PopWindowPlugin.m */; };
 		FC13F9DD1FE77DC40009499E /* PromptPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13F9DC1FE77DC40009499E /* PromptPlugin.m */; };
@@ -182,8 +182,8 @@
 		FC13F9CD1FE77D5F0009499E /* MoveTaskToBackPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoveTaskToBackPlugin.m; sourceTree = "<group>"; };
 		FC13F9CF1FE77D710009499E /* NetworkInfoPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkInfoPlugin.h; sourceTree = "<group>"; };
 		FC13F9D01FE77D710009499E /* NetworkInfoPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkInfoPlugin.m; sourceTree = "<group>"; };
-		FC13F9D21FE77D880009499E /* NotificationPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationPlugin.h; sourceTree = "<group>"; };
-		FC13F9D31FE77D880009499E /* NotificationPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationPlugin.m; sourceTree = "<group>"; };
+		FC13F9D21FE77D880009499E /* NotifyPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotifyPlugin.h; sourceTree = "<group>"; };
+		FC13F9D31FE77D880009499E /* NotifyPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotifyPlugin.m; sourceTree = "<group>"; };
 		FC13F9D51FE77D990009499E /* OpenUriPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenUriPlugin.h; sourceTree = "<group>"; };
 		FC13F9D61FE77D990009499E /* OpenUriPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpenUriPlugin.m; sourceTree = "<group>"; };
 		FC13F9D81FE77DB10009499E /* PopWindowPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PopWindowPlugin.h; sourceTree = "<group>"; };
@@ -502,8 +502,8 @@
 				FC13F9CD1FE77D5F0009499E /* MoveTaskToBackPlugin.m */,
 				FC13F9CF1FE77D710009499E /* NetworkInfoPlugin.h */,
 				FC13F9D01FE77D710009499E /* NetworkInfoPlugin.m */,
-				FC13F9D21FE77D880009499E /* NotificationPlugin.h */,
-				FC13F9D31FE77D880009499E /* NotificationPlugin.m */,
+				FC13F9D21FE77D880009499E /* NotifyPlugin.h */,
+				FC13F9D31FE77D880009499E /* NotifyPlugin.m */,
 				FC13F9D51FE77D990009499E /* OpenUriPlugin.h */,
 				FC13F9D61FE77D990009499E /* OpenUriPlugin.m */,
 				FC13F9D81FE77DB10009499E /* PopWindowPlugin.h */,
@@ -897,7 +897,7 @@
 				FCE5CDD01FEAAF7C00CEEDA6 /* EBMuteDetector.m in Sources */,
 				75A2245D1FDF8CF5005E28B2 /* AppDelegate.m in Sources */,
 				FC13F9BC1FE77CD80009499E /* GetPreferencePlugin.m in Sources */,
-				FC13F9D41FE77D880009499E /* NotificationPlugin.m in Sources */,
+				FC13F9D41FE77D880009499E /* NotifyPlugin.m in Sources */,
 				FCE5CDEF1FEB537000CEEDA6 /* WPhotoViewController.m in Sources */,
 				FC13F9DD1FE77DC40009499E /* PromptPlugin.m in Sources */,
 				FC13F9AD1FE7726D0009499E /* H5EventDispatcher.m in Sources */,
