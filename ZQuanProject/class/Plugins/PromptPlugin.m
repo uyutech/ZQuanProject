@@ -17,14 +17,14 @@
     NSString *clientId = message[@"clientId"];
     
     NSString *str_message = nil;
-    NSString *value = nil;
+    NSString *str_value = nil;
     NSDictionary *param = message[@"param"];
     if(IS_DICTIONARY_CLASS(param)){
         if(!IsEmptyStr(param[@"message"])){
             str_message = param[@"message"];
         }
         if(!IsEmptyStr(param[@"value"])){
-            value = param[@"value"];
+            str_value = param[@"value"];
         }
     }
     
@@ -32,6 +32,7 @@
     [alert addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
         textField.textColor = [UIColor blackColor];
         textField.placeholder = str_message;
+        textField.text = str_value;
     }];
     
     
