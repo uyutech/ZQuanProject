@@ -11,7 +11,6 @@
 #import "NSURLProtocol+WebKitSupport.h"
 #import "HDHud.h"
 #import "ZQWebVCSingleton.h"
-#import "NotifyPlugin.h"
 
 @interface ZQUIWebViewController ()<UIWebViewDelegate>
 
