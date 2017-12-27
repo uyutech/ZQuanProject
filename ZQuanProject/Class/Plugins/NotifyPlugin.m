@@ -22,6 +22,8 @@
         NSString *title = data[@"title"];
         NSString *content = data[@"content"];
         NSString *url = data[@"url"];
+        
+        NSDictionary *params = param[@"params"];
         if(IsEmptyStr(title)){
             title = @"转圈";
         }
@@ -32,7 +34,7 @@
             [[EBBannerView bannerWithBlock:^(EBBannerViewMaker *make) {
                 make.title = title;
                 make.content = content;
-                make.object = url;
+                make.object = param;
             }] show];
             return;
         }
@@ -43,7 +45,7 @@
             notifyContent.title = title;
             notifyContent.body =content;
             notifyContent.badge = @1;
-            notifyContent.userInfo = @{@"url":url};
+            notifyContent.userInfo = param;
             UNNotificationSound *sound = [UNNotificationSound soundNamed:UILocalNotificationDefaultSoundName];
             notifyContent.sound = sound;
             UNTimeIntervalNotificationTrigger *trigger1 = [UNTimeIntervalNotificationTrigger triggerWithTimeInterval:0 repeats:NO];
@@ -70,7 +72,7 @@
             notification.alertLaunchImage=@"Default";
             notification.soundName=UILocalNotificationDefaultSoundName;
             //设置用户信息
-            notification.userInfo=@{@"url":url};
+            notification.userInfo=param;
             [[UIApplication sharedApplication] scheduleLocalNotification:notification];
         }
     }

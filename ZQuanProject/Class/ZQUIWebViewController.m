@@ -11,6 +11,7 @@
 #import "NSURLProtocol+WebKitSupport.h"
 #import "HDHud.h"
 #import "ZQWebVCSingleton.h"
+#import "NotifyPlugin.h"
 
 @interface ZQUIWebViewController ()<UIWebViewDelegate>
 
@@ -32,14 +33,13 @@
     [NSURLProtocol wk_registerScheme:@"h5container.message"];
     
     [self LoadWebUrl];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appActive:) name:KObserveAPPActiveNotify object:nil];
 }
 
 
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appActive:) name:KObserveAPPActiveNotify object:nil];
     _webView.delegate = self;
     [ZQWebVCSingleton shareInstance].webVC = self;
 }
@@ -49,13 +49,10 @@
 {
     [super viewDidAppear:animated];    
     //app处于后台 点通知栏消息激活进入新View
-    NSString *notifyUrl = [[NSUserDefaults standardUserDefaults] objectForKey:K_ReceiveNotifyURL];
-    if(!IsEmptyStr(notifyUrl)){
-        ZQUIWebViewController *webVC = [[ZQUIWebViewController alloc] init];
-        webVC.URLString = notifyUrl;
-        webVC.transparentTitle = NO;
-        webVC.hideBackButton = NO;
-        [self.navigationController pushViewController:webVC animated:YES];
+    NSDictionary *notifyParam = [[NSUserDefaults standardUserDefaults] objectForKey:K_ReceiveNotifyURL];
+    if(notifyParam!=nil){
+        AppDelegate *app = (AppDelegate *)[UIApplication sharedApplication].delegate;
+        [app receiveNotifyPushWebParam:notifyParam];
         [[NSUserDefaults standardUserDefaults] removeObjectForKey:K_ReceiveNotifyURL];
     }
 }
@@ -265,6 +262,7 @@
 -(void)viewWillDisappear:(BOOL)animated{
     
     [self.webView setDelegate:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:KObserveAPPActiveNotify object:nil];
 }
 
 

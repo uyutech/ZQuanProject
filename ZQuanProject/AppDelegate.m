@@ -16,6 +16,7 @@
 #import <UMMobClick/MobClick.h>
 #import "EBBannerView.h"
 #import <Bugly/Bugly.h>
+#import "PushWindowPlugin.h"
 
 @interface AppDelegate ()
 
@@ -178,31 +179,29 @@
 - (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification
 {
     NSDictionary *userInfo = [notification userInfo];
-    NSString *url =userInfo[@"url"];
-    [self receiveNotifyPushWebURL:url];
+    [self receiveNotifyPushWebParam:userInfo];
 }
 -(void)customTopBannerDidClick:(NSNotification *)notify
 {
-    NSString *notifyUrl = [notify object];
-    [self receiveNotifyPushWebURL:notifyUrl];
+    NSDictionary *notifyInfo = [notify object];
+    [self receiveNotifyPushWebParam:notifyInfo];
 }
 
 
--(void)receiveNotifyPushWebURL:(NSString *)url
+-(void)receiveNotifyPushWebParam:(NSDictionary *)param
 {
-    if(!IsEmptyStr(url)){
+    if(param==nil || param[@"data"]==nil) return;
+    if(!IsEmptyStr(param[@"data"][@"url"])){
+        
         if([[UIApplication sharedApplication].keyWindow.rootViewController isKindOfClass:[UINavigationController class]]){
-            
-            ZQUIWebViewController *webVC = [[ZQUIWebViewController alloc] init];
-            webVC.URLString = url;
-            webVC.transparentTitle = NO;
-            webVC.hideBackButton = NO;
-            UINavigationController *nav = (UINavigationController *)[UIApplication sharedApplication].keyWindow.rootViewController;
-            [nav pushViewController:webVC animated:YES];
-            
+            NSMutableDictionary *newParam = [NSMutableDictionary dictionaryWithDictionary:param];
+            [newParam setObject:param[@"data"][@"url"] forKey:@"url"];
+            NSDictionary *message = @{@"param":newParam};
+            PushWindowPlugin *pushPlugin = [[PushWindowPlugin alloc] init];
+            [pushPlugin initMessageJson:message];
         }else{
             //当前启动页  进入首页后跳转
-            [[NSUserDefaults standardUserDefaults] setObject:url forKey:@"K_ReceiveNotifyURL"];
+            [[NSUserDefaults standardUserDefaults] setObject:param forKey:K_ReceiveNotifyURL];
         }
     }
 }
