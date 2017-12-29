@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		60C4B6EA1FF6725400EE8A89 /* LoginPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C4B6E91FF6725400EE8A89 /* LoginPlugin.m */; };
 		75A2245D1FDF8CF5005E28B2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 75A2245C1FDF8CF5005E28B2 /* AppDelegate.m */; };
 		75A224601FDF8CF5005E28B2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75A2245F1FDF8CF5005E28B2 /* ViewController.m */; };
 		75A224631FDF8CF6005E28B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75A224611FDF8CF6005E28B2 /* Main.storyboard */; };
@@ -118,6 +119,8 @@
 /* Begin PBXFileReference section */
 		0E4837EDC55DCF9DA2F5A8A6 /* Pods-ZQuanProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZQuanProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZQuanProject/Pods-ZQuanProject.release.xcconfig"; sourceTree = "<group>"; };
 		32E48CC7DE08A9023BDB2986 /* Pods_ZQuanProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZQuanProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		60C4B6E81FF6725400EE8A89 /* LoginPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginPlugin.h; sourceTree = "<group>"; };
+		60C4B6E91FF6725400EE8A89 /* LoginPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginPlugin.m; sourceTree = "<group>"; };
 		75A224581FDF8CF5005E28B2 /* ZQuanProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZQuanProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75A2245B1FDF8CF5005E28B2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		75A2245C1FDF8CF5005E28B2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -536,6 +539,8 @@
 				FC13FA001FE77EB10009499E /* ShowOptionMenuPlugin.m */,
 				FC13FA051FE77EDC0009499E /* WeiboLoginPlugin.h */,
 				FC13FA061FE77EDC0009499E /* WeiboLoginPlugin.m */,
+				60C4B6E81FF6725400EE8A89 /* LoginPlugin.h */,
+				60C4B6E91FF6725400EE8A89 /* LoginPlugin.m */,
 			);
 			path = Plugins;
 			sourceTree = "<group>";
@@ -918,6 +923,7 @@
 				FC13F9F21FE77E570009499E /* SetSubTitlePlugin.m in Sources */,
 				FCE5CDF41FEB537000CEEDA6 /* WPFunctionView.m in Sources */,
 				FC13F9E61FE77E0A0009499E /* RefreshStatePlugin.m in Sources */,
+				60C4B6EA1FF6725400EE8A89 /* LoginPlugin.m in Sources */,
 				FCE5CDDA1FEAAFD100CEEDA6 /* HDHud.m in Sources */,
 				FCE5CD951FE8A62E00CEEDA6 /* BaseViewController.m in Sources */,
 				FC13F9C81FE77D3A0009499E /* LoginOutPlugin.m in Sources */,
