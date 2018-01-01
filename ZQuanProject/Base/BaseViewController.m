@@ -70,8 +70,6 @@
     [self.rightbarButton setFrame:CGRectMake(kMainBoundsWidth - 70, 20, 64, 44)];
     
     [self.view addSubview:self.navBarview];
-    [_navBarview.layer addSublayer:self.gradientLayer];
-    
     [_navBarview addSubview:self.rightbarButton];
     [_navBarview addSubview:self.leftbarButton];
     [_navBarview addSubview:self.titleLabel];
@@ -169,9 +167,13 @@
 {
     _transparentTitle = transparentTitle;
     if(transparentTitle){
-        [self.gradientLayer removeFromSuperlayer];
+        if(_gradientLayer){
+            [_gradientLayer removeFromSuperlayer];
+        }
     }else{
-        [self.navBarview.layer addSublayer:self.gradientLayer];
+        if(IsEmptyStr(_titleBgColor)){ //没设置颜色
+            [self.navBarview.layer addSublayer:self.gradientLayer];
+        }
     }
     self.navBarview.hidden = transparentTitle;
 }
@@ -221,6 +223,7 @@
 
 -(void)setTitleBgColor:(NSString *)titleBgColor
 {
+    _titleBgColor = titleBgColor;
     if([Helper reverseColorString:titleBgColor]!=0){
         UIColor *color = HexRGBAlpha([Helper reverseColorString:titleBgColor],1);
         self.navBarview.backgroundColor = color;
