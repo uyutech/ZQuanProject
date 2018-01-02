@@ -19,6 +19,8 @@
 
 @property(nonatomic,strong)NSString *titleBgColor;
 
+@property(nonatomic,strong)NSString *viewBackgroundColor;
+
 @property(nonatomic,strong)NSString *navTitle; //title字段不可用
 
 @property(nonatomic,strong)NSString *subTitle;
