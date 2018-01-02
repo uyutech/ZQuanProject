@@ -99,7 +99,7 @@
     if(IsEmptyStr(paramStr)){
         JS = [NSString stringWithFormat:@"ZhuanQuanJSBridge.emit('resume');"];
     }else{
-        JS = [NSString stringWithFormat:@"ZhuanQuanJSBridge.emit('resume',%@);",paramStr];
+        JS = [NSString stringWithFormat:@"ZhuanQuanJSBridge.emit('resume','%@');",paramStr];
     }
     [_webView stringByEvaluatingJavaScriptFromString:JS];
 }
