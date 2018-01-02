@@ -21,11 +21,9 @@
         NSString *url = [APPURL stringByAppendingString:@"/h5/oauth/weibo"];
         [JZNetTool PostDataWithUrl:url param:param Success:^(id response) {
             NSLog(@"%@",response);
-            if([response[@"success"] boolValue]==YES){
-                NSString *dictStr = [Helper covertStringWithJson:response];
-                NSString *jsStr = [NSString stringWithFormat:@"javascript: ZhuanQuanJSBridge._invokeJS(\"%@\",%@);",clientId,dictStr];
-                [self.web stringByEvaluatingJavaScriptFromString:jsStr];
-            }
+            NSString *dictStr = [Helper covertStringWithJson:response];
+            NSString *jsStr = [NSString stringWithFormat:@"javascript: ZhuanQuanJSBridge._invokeJS(\"%@\",%@);",clientId,dictStr];
+            [self.web stringByEvaluatingJavaScriptFromString:jsStr];
         } NetFailure:^(id error) {
             NSDictionary *dict = [NSDictionary dictionary];
             NSString *dictStr = [Helper covertStringWithJson:dict];
