@@ -175,7 +175,7 @@
             _webView.frame = [UIScreen mainScreen].bounds;
         }
         _webView.delegate = self;
-        _webView.backgroundColor = [UIColor whiteColor];
+        _webView.backgroundColor = [UIColor clearColor];
         _webView.allowsInlineMediaPlayback = YES;
         _webView.scalesPageToFit = YES;
         [_webView sizeToFit];

@@ -61,9 +61,6 @@
     
     
     self.navigationController.navigationBarHidden = YES;
-    self.view.backgroundColor = [UIColor whiteColor];
-    
-
     
     self.navBarview.frame = CGRectMake(0, 0, kMainBoundsWidth,64);
     [self.leftbarButton setFrame:CGRectMake(8,20, 64, 44)];
@@ -152,7 +149,11 @@
         for(NSString *propertyKey in param.allKeys){
             
             if([propertyKey isEqualToString:@"title"]){ //title特殊处理
+                
                 [self setValue:param[@"title"] forKey:@"navTitle"];
+            }else if([propertyKey isEqualToString:@"backgroundColor"]){
+                
+                [self setValue:param[@"backgroundColor"] forKey:@"viewBackgroundColor"];
             }else{
                 [self setValue:param[propertyKey] forKey:propertyKey];
             }
@@ -233,7 +234,15 @@
     }
 }
 
-
+-(void)setViewBackgroundColor:(NSString *)viewBackgroundColor
+{
+    _viewBackgroundColor = viewBackgroundColor;
+    if([Helper reverseColorString:viewBackgroundColor]!=0){
+        UIColor *color = HexRGBAlpha([Helper reverseColorString:viewBackgroundColor],1);
+        self.view.backgroundColor = color;
+    }
+}
+        
 -(void)setOptionMenu:(NSString *)optionMenu
 {
     if(!IsEmptyStr(optionMenu)){
