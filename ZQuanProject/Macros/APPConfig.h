@@ -11,9 +11,9 @@
 
 
 //URL
-#define APPURL @"http://circling.cc"
+#define APPURL @"https://circling.cc"
 
-#define WEBURL @"http://h5.circling.cc"
+#define WEBURL @"https://h5.circling.cc"
 
 #define LogURLScheme @"h5container.message"
 
