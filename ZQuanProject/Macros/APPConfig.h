@@ -11,14 +11,14 @@
 
 
 //URL
-#define APPURL @"http://circling.cc"
+#define APPURL @"https://circling.cc"
 
-#define WEBURL @"http://h5.circling.cc"
+#define WEBURL @"https://h5.circling.cc"
 
 #define LogURLScheme @"h5container.message"
 
 //工程中打包H5默认版本号
-#define DefaultH5Version @"44"
+#define DefaultH5Version @"46"
 
 //项目版本号
 #define IOSVersion @"0.4.0"
