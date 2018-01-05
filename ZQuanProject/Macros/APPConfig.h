@@ -33,8 +33,8 @@
 
 #define BUGLY_APPID @"e7a023119f"
 
-#define SINA_APPKEY @"890459019"
-#define SINA_APPSECRET @"e63640f825cbcf3ebb3eb9a16db9f97e"
+#define SINA_APPKEY @"2920764466"
+#define SINA_APPSECRET @"9607679ad389aff2278798ea5d11d8c6"
 #define SINA_REDIRECTURL @"https://api.weibo.com/oauth2/default.html"
 
 
