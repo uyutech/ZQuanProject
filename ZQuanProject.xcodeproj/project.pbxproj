@@ -58,6 +58,7 @@
 		FC13FA041FE77EC50009499E /* ToastPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13FA031FE77EC50009499E /* ToastPlugin.m */; };
 		FC13FA071FE77EDC0009499E /* WeiboLoginPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13FA061FE77EDC0009499E /* WeiboLoginPlugin.m */; };
 		FC13FA0A1FE790770009499E /* SetPreferencePlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13FA091FE790770009499E /* SetPreferencePlugin.m */; };
+		FCBEE0E9202320040087D927 /* ZQLayoutModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FCBEE0E8202320040087D927 /* ZQLayoutModel.m */; };
 		FCCC3BD11FE021AE00C95569 /* Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCC3BD01FE021AE00C95569 /* Helper.m */; };
 		FCE5CD951FE8A62E00CEEDA6 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE5CD931FE8A62E00CEEDA6 /* BaseViewController.m */; };
 		FCE5CD9B1FEA082400CEEDA6 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCE5CD9A1FEA081800CEEDA6 /* UserNotifications.framework */; };
@@ -222,6 +223,8 @@
 		FC13FA061FE77EDC0009499E /* WeiboLoginPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeiboLoginPlugin.m; sourceTree = "<group>"; };
 		FC13FA081FE790770009499E /* SetPreferencePlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SetPreferencePlugin.h; sourceTree = "<group>"; };
 		FC13FA091FE790770009499E /* SetPreferencePlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SetPreferencePlugin.m; sourceTree = "<group>"; };
+		FCBEE0E7202320040087D927 /* ZQLayoutModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZQLayoutModel.h; sourceTree = "<group>"; };
+		FCBEE0E8202320040087D927 /* ZQLayoutModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZQLayoutModel.m; sourceTree = "<group>"; };
 		FCCC3BCF1FE021AE00C95569 /* Helper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Helper.h; sourceTree = "<group>"; };
 		FCCC3BD01FE021AE00C95569 /* Helper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Helper.m; sourceTree = "<group>"; };
 		FCE5CD931FE8A62E00CEEDA6 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
@@ -439,6 +442,8 @@
 				75C528031FE148AC000230DD /* GradientProgressView.m */,
 				FCE5CED71FEBC50000CEEDA6 /* ZQWebVCSingleton.h */,
 				FCE5CED81FEBC50000CEEDA6 /* ZQWebVCSingleton.m */,
+				FCBEE0E7202320040087D927 /* ZQLayoutModel.h */,
+				FCBEE0E8202320040087D927 /* ZQLayoutModel.m */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -912,6 +917,7 @@
 				FC13F9B31FE77C880009499E /* AlertPlugin.m in Sources */,
 				FC13F9EC1FE77E360009499E /* SetOptionMenuPlugin.m in Sources */,
 				FCE5CDF01FEB537000CEEDA6 /* NavView.m in Sources */,
+				FCBEE0E9202320040087D927 /* ZQLayoutModel.m in Sources */,
 				FC13F9C21FE77CFE0009499E /* HideLoadingPlugin.m in Sources */,
 				FC13F9F51FE77E690009499E /* SetTitleBgColorPlugin.m in Sources */,
 				FCCC3BD11FE021AE00C95569 /* Helper.m in Sources */,
