@@ -21,7 +21,7 @@
         
         NSString *key = param[@"key"];
         
-        NSString *value = param[@"value"];
+        NSString *value = [NSString stringWithFormat:@"%@",param[@"value"]];
         
         NSString *clientId = message[@"clientId"];
         
