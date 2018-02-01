@@ -28,7 +28,7 @@
 
   var callbackHash = {};
 
-  window.ZhuanQuanJSBridge = {
+  window.ZhuanQuanJSBridge = window.ZhuanQuanJsBridge = {
     ios: true,
     call: function(fn, param, cb) {
       if(!isString(fn)) {
