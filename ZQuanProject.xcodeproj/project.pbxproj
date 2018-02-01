@@ -97,7 +97,6 @@
 		FCE5CEDC1FEF488100CEEDA6 /* ZQUIWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE5CEDB1FEF488100CEEDA6 /* ZQUIWebViewController.m */; };
 		FCE5CEDF1FEF521600CEEDA6 /* h5_bridge.js in Resources */ = {isa = PBXBuildFile; fileRef = FCE5CEDD1FEF521600CEEDA6 /* h5_bridge.js */; };
 		FCE5CEE41FEF58F200CEEDA6 /* h5.zip in Resources */ = {isa = PBXBuildFile; fileRef = FCE5CEE31FEF58F200CEEDA6 /* h5.zip */; };
-		FCE5CEE71FF0C5D400CEEDA6 /* ZQLayoutModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE5CEE61FF0C5D400CEEDA6 /* ZQLayoutModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -283,8 +282,6 @@
 		FCE5CEDB1FEF488100CEEDA6 /* ZQUIWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZQUIWebViewController.m; sourceTree = "<group>"; };
 		FCE5CEDD1FEF521600CEEDA6 /* h5_bridge.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = h5_bridge.js; sourceTree = "<group>"; };
 		FCE5CEE31FEF58F200CEEDA6 /* h5.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = h5.zip; sourceTree = "<group>"; };
-		FCE5CEE51FF0C5D400CEEDA6 /* ZQLayoutModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZQLayoutModel.h; sourceTree = "<group>"; };
-		FCE5CEE61FF0C5D400CEEDA6 /* ZQLayoutModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZQLayoutModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -442,8 +439,6 @@
 				75C528031FE148AC000230DD /* GradientProgressView.m */,
 				FCE5CED71FEBC50000CEEDA6 /* ZQWebVCSingleton.h */,
 				FCE5CED81FEBC50000CEEDA6 /* ZQWebVCSingleton.m */,
-				FCE5CEE51FF0C5D400CEEDA6 /* ZQLayoutModel.h */,
-				FCE5CEE61FF0C5D400CEEDA6 /* ZQLayoutModel.m */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -872,7 +867,6 @@
 				FC13F9881FE60CD10009499E /* WebNSURLProtocol.m in Sources */,
 				FC13F9C51FE77D0F0009499E /* HideOptionMenuPlugin.m in Sources */,
 				FC13F9DA1FE77DB10009499E /* PopWindowPlugin.m in Sources */,
-				FCE5CEE71FF0C5D400CEEDA6 /* ZQLayoutModel.m in Sources */,
 				75A224601FDF8CF5005E28B2 /* ViewController.m in Sources */,
 				FCE5CDF51FEB537000CEEDA6 /* UIImage+fixOrientation.m in Sources */,
 				FC13F9E01FE77DDF0009499E /* PushWindowPlugin.m in Sources */,
