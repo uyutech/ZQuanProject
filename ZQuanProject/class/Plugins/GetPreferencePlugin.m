@@ -27,7 +27,7 @@
             value = @"";
         }
             
-        NSString *jsStr = [NSString stringWithFormat:@"javascript: ZhuanQuanJSBridge._invokeJS(\"%@\",\"%@\");",clientId,value];
+        NSString *jsStr = [NSString stringWithFormat:@"javascript: ZhuanQuanJSBridge._invokeJS(\"%@\",%@);",clientId,value];
         
         [self.web stringByEvaluatingJavaScriptFromString:jsStr];
     }
