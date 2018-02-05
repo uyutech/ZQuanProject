@@ -28,4 +28,14 @@
 
 @property(nonatomic,copy)NSString *backgroundColor;
 
+//
+@property(nonatomic,copy)NSString *titleColor;
+
+@property(nonatomic,copy)NSString *backIcon;
+
+@property(nonatomic,copy)NSString *optionMenuColor;
+
+@property(nonatomic,copy)NSString *optionMenuIcon1;
+
+@property(nonatomic,copy)NSString *optionMenuIcon2;
 @end

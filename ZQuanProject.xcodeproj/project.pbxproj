@@ -35,7 +35,6 @@
 		FC13F9BC1FE77CD80009499E /* GetPreferencePlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13F9BB1FE77CD80009499E /* GetPreferencePlugin.m */; };
 		FC13F9BF1FE77CEB0009499E /* HideBackButtonPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13F9BE1FE77CEB0009499E /* HideBackButtonPlugin.m */; };
 		FC13F9C21FE77CFE0009499E /* HideLoadingPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13F9C11FE77CFE0009499E /* HideLoadingPlugin.m */; };
-		FC13F9C51FE77D0F0009499E /* HideOptionMenuPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13F9C41FE77D0F0009499E /* HideOptionMenuPlugin.m */; };
 		FC13F9C81FE77D3A0009499E /* LoginOutPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13F9C71FE77D3A0009499E /* LoginOutPlugin.m */; };
 		FC13F9CB1FE77D4E0009499E /* LoginWeiboPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13F9CA1FE77D4E0009499E /* LoginWeiboPlugin.m */; };
 		FC13F9CE1FE77D5F0009499E /* MoveTaskToBackPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13F9CD1FE77D5F0009499E /* MoveTaskToBackPlugin.m */; };
@@ -47,17 +46,17 @@
 		FC13F9E01FE77DDF0009499E /* PushWindowPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13F9DF1FE77DDF0009499E /* PushWindowPlugin.m */; };
 		FC13F9E31FE77DF10009499E /* RefreshPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13F9E21FE77DF10009499E /* RefreshPlugin.m */; };
 		FC13F9E61FE77E0A0009499E /* RefreshStatePlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13F9E51FE77E0A0009499E /* RefreshStatePlugin.m */; };
-		FC13F9E91FE77E1D0009499E /* SetCookiePlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13F9E81FE77E1D0009499E /* SetCookiePlugin.m */; };
 		FC13F9EC1FE77E360009499E /* SetOptionMenuPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13F9EB1FE77E360009499E /* SetOptionMenuPlugin.m */; };
 		FC13F9F21FE77E570009499E /* SetSubTitlePlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13F9F11FE77E570009499E /* SetSubTitlePlugin.m */; };
 		FC13F9F51FE77E690009499E /* SetTitleBgColorPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13F9F41FE77E690009499E /* SetTitleBgColorPlugin.m */; };
 		FC13F9F81FE77E7C0009499E /* SetTitlePlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13F9F71FE77E7C0009499E /* SetTitlePlugin.m */; };
 		FC13F9FB1FE77E910009499E /* ShowBackButtonPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13F9FA1FE77E910009499E /* ShowBackButtonPlugin.m */; };
 		FC13F9FE1FE77EA00009499E /* ShowLoadingPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13F9FD1FE77EA00009499E /* ShowLoadingPlugin.m */; };
-		FC13FA011FE77EB10009499E /* ShowOptionMenuPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13FA001FE77EB10009499E /* ShowOptionMenuPlugin.m */; };
 		FC13FA041FE77EC50009499E /* ToastPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13FA031FE77EC50009499E /* ToastPlugin.m */; };
 		FC13FA071FE77EDC0009499E /* WeiboLoginPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13FA061FE77EDC0009499E /* WeiboLoginPlugin.m */; };
 		FC13FA0A1FE790770009499E /* SetPreferencePlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13FA091FE790770009499E /* SetPreferencePlugin.m */; };
+		FC974D3120286B0A009A0271 /* SetCachePlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = FC974D3020286B0A009A0271 /* SetCachePlugin.m */; };
+		FC974D3420286B2F009A0271 /* GetCachePlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = FC974D3320286B2F009A0271 /* GetCachePlugin.m */; };
 		FCBEE0E9202320040087D927 /* ZQLayoutModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FCBEE0E8202320040087D927 /* ZQLayoutModel.m */; };
 		FCCC3BD11FE021AE00C95569 /* Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCC3BD01FE021AE00C95569 /* Helper.m */; };
 		FCE5CD951FE8A62E00CEEDA6 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE5CD931FE8A62E00CEEDA6 /* BaseViewController.m */; };
@@ -177,8 +176,6 @@
 		FC13F9BE1FE77CEB0009499E /* HideBackButtonPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HideBackButtonPlugin.m; sourceTree = "<group>"; };
 		FC13F9C01FE77CFE0009499E /* HideLoadingPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HideLoadingPlugin.h; sourceTree = "<group>"; };
 		FC13F9C11FE77CFE0009499E /* HideLoadingPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HideLoadingPlugin.m; sourceTree = "<group>"; };
-		FC13F9C31FE77D0F0009499E /* HideOptionMenuPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HideOptionMenuPlugin.h; sourceTree = "<group>"; };
-		FC13F9C41FE77D0F0009499E /* HideOptionMenuPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HideOptionMenuPlugin.m; sourceTree = "<group>"; };
 		FC13F9C61FE77D3A0009499E /* LoginOutPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginOutPlugin.h; sourceTree = "<group>"; };
 		FC13F9C71FE77D3A0009499E /* LoginOutPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginOutPlugin.m; sourceTree = "<group>"; };
 		FC13F9C91FE77D4E0009499E /* LoginWeiboPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginWeiboPlugin.h; sourceTree = "<group>"; };
@@ -201,8 +198,6 @@
 		FC13F9E21FE77DF10009499E /* RefreshPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RefreshPlugin.m; sourceTree = "<group>"; };
 		FC13F9E41FE77E0A0009499E /* RefreshStatePlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RefreshStatePlugin.h; sourceTree = "<group>"; };
 		FC13F9E51FE77E0A0009499E /* RefreshStatePlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RefreshStatePlugin.m; sourceTree = "<group>"; };
-		FC13F9E71FE77E1D0009499E /* SetCookiePlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SetCookiePlugin.h; sourceTree = "<group>"; };
-		FC13F9E81FE77E1D0009499E /* SetCookiePlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SetCookiePlugin.m; sourceTree = "<group>"; };
 		FC13F9EA1FE77E360009499E /* SetOptionMenuPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SetOptionMenuPlugin.h; sourceTree = "<group>"; };
 		FC13F9EB1FE77E360009499E /* SetOptionMenuPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SetOptionMenuPlugin.m; sourceTree = "<group>"; };
 		FC13F9F01FE77E570009499E /* SetSubTitlePlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SetSubTitlePlugin.h; sourceTree = "<group>"; };
@@ -215,14 +210,16 @@
 		FC13F9FA1FE77E910009499E /* ShowBackButtonPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShowBackButtonPlugin.m; sourceTree = "<group>"; };
 		FC13F9FC1FE77EA00009499E /* ShowLoadingPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShowLoadingPlugin.h; sourceTree = "<group>"; };
 		FC13F9FD1FE77EA00009499E /* ShowLoadingPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShowLoadingPlugin.m; sourceTree = "<group>"; };
-		FC13F9FF1FE77EB10009499E /* ShowOptionMenuPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShowOptionMenuPlugin.h; sourceTree = "<group>"; };
-		FC13FA001FE77EB10009499E /* ShowOptionMenuPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShowOptionMenuPlugin.m; sourceTree = "<group>"; };
 		FC13FA021FE77EC50009499E /* ToastPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToastPlugin.h; sourceTree = "<group>"; };
 		FC13FA031FE77EC50009499E /* ToastPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToastPlugin.m; sourceTree = "<group>"; };
 		FC13FA051FE77EDC0009499E /* WeiboLoginPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeiboLoginPlugin.h; sourceTree = "<group>"; };
 		FC13FA061FE77EDC0009499E /* WeiboLoginPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeiboLoginPlugin.m; sourceTree = "<group>"; };
 		FC13FA081FE790770009499E /* SetPreferencePlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SetPreferencePlugin.h; sourceTree = "<group>"; };
 		FC13FA091FE790770009499E /* SetPreferencePlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SetPreferencePlugin.m; sourceTree = "<group>"; };
+		FC974D2F20286B0A009A0271 /* SetCachePlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SetCachePlugin.h; sourceTree = "<group>"; };
+		FC974D3020286B0A009A0271 /* SetCachePlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SetCachePlugin.m; sourceTree = "<group>"; };
+		FC974D3220286B2F009A0271 /* GetCachePlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GetCachePlugin.h; sourceTree = "<group>"; };
+		FC974D3320286B2F009A0271 /* GetCachePlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GetCachePlugin.m; sourceTree = "<group>"; };
 		FCBEE0E7202320040087D927 /* ZQLayoutModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZQLayoutModel.h; sourceTree = "<group>"; };
 		FCBEE0E8202320040087D927 /* ZQLayoutModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZQLayoutModel.m; sourceTree = "<group>"; };
 		FCCC3BCF1FE021AE00C95569 /* Helper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Helper.h; sourceTree = "<group>"; };
@@ -498,8 +495,6 @@
 				FC13F9BB1FE77CD80009499E /* GetPreferencePlugin.m */,
 				FC13F9BD1FE77CEB0009499E /* HideBackButtonPlugin.h */,
 				FC13F9BE1FE77CEB0009499E /* HideBackButtonPlugin.m */,
-				FC13F9C31FE77D0F0009499E /* HideOptionMenuPlugin.h */,
-				FC13F9C41FE77D0F0009499E /* HideOptionMenuPlugin.m */,
 				FC13F9C61FE77D3A0009499E /* LoginOutPlugin.h */,
 				FC13F9C71FE77D3A0009499E /* LoginOutPlugin.m */,
 				FC13F9C91FE77D4E0009499E /* LoginWeiboPlugin.h */,
@@ -520,8 +515,6 @@
 				FC13F9E21FE77DF10009499E /* RefreshPlugin.m */,
 				FC13F9E41FE77E0A0009499E /* RefreshStatePlugin.h */,
 				FC13F9E51FE77E0A0009499E /* RefreshStatePlugin.m */,
-				FC13F9E71FE77E1D0009499E /* SetCookiePlugin.h */,
-				FC13F9E81FE77E1D0009499E /* SetCookiePlugin.m */,
 				FC13F9EA1FE77E360009499E /* SetOptionMenuPlugin.h */,
 				FC13F9EB1FE77E360009499E /* SetOptionMenuPlugin.m */,
 				FC13F9F01FE77E570009499E /* SetSubTitlePlugin.h */,
@@ -538,12 +531,14 @@
 				FC13F9FD1FE77EA00009499E /* ShowLoadingPlugin.m */,
 				FC13F9C01FE77CFE0009499E /* HideLoadingPlugin.h */,
 				FC13F9C11FE77CFE0009499E /* HideLoadingPlugin.m */,
-				FC13F9FF1FE77EB10009499E /* ShowOptionMenuPlugin.h */,
-				FC13FA001FE77EB10009499E /* ShowOptionMenuPlugin.m */,
 				FC13FA051FE77EDC0009499E /* WeiboLoginPlugin.h */,
 				FC13FA061FE77EDC0009499E /* WeiboLoginPlugin.m */,
 				60C4B6E81FF6725400EE8A89 /* LoginPlugin.h */,
 				60C4B6E91FF6725400EE8A89 /* LoginPlugin.m */,
+				FC974D2F20286B0A009A0271 /* SetCachePlugin.h */,
+				FC974D3020286B0A009A0271 /* SetCachePlugin.m */,
+				FC974D3220286B2F009A0271 /* GetCachePlugin.h */,
+				FC974D3320286B2F009A0271 /* GetCachePlugin.m */,
 			);
 			path = Plugins;
 			sourceTree = "<group>";
@@ -868,9 +863,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC13F9E91FE77E1D0009499E /* SetCookiePlugin.m in Sources */,
 				FC13F9881FE60CD10009499E /* WebNSURLProtocol.m in Sources */,
-				FC13F9C51FE77D0F0009499E /* HideOptionMenuPlugin.m in Sources */,
 				FC13F9DA1FE77DB10009499E /* PopWindowPlugin.m in Sources */,
 				75A224601FDF8CF5005E28B2 /* ViewController.m in Sources */,
 				FCE5CDF51FEB537000CEEDA6 /* UIImage+fixOrientation.m in Sources */,
@@ -887,7 +880,6 @@
 				75C528041FE148AC000230DD /* GradientProgressView.m in Sources */,
 				75A2249B1FDF9781005E28B2 /* UIView+Additional.m in Sources */,
 				FC13F9B01FE77C6F0009499E /* AlbumPlugin.m in Sources */,
-				FC13FA011FE77EB10009499E /* ShowOptionMenuPlugin.m in Sources */,
 				FC13F9FE1FE77EA00009499E /* ShowLoadingPlugin.m in Sources */,
 				FCE5CEDC1FEF488100CEEDA6 /* ZQUIWebViewController.m in Sources */,
 				FC13FA041FE77EC50009499E /* ToastPlugin.m in Sources */,
@@ -911,6 +903,7 @@
 				FC13F9AD1FE7726D0009499E /* H5EventDispatcher.m in Sources */,
 				75A2249E1FDF97DC005E28B2 /* JZNetTool.m in Sources */,
 				FC13F98B1FE61A7B0009499E /* H5Plugin.m in Sources */,
+				FC974D3120286B0A009A0271 /* SetCachePlugin.m in Sources */,
 				FCE5CED91FEBC50000CEEDA6 /* ZQWebVCSingleton.m in Sources */,
 				FCE5CDD11FEAAF7C00CEEDA6 /* EBBannerView+Categories.m in Sources */,
 				FC13F9CE1FE77D5F0009499E /* MoveTaskToBackPlugin.m in Sources */,
@@ -922,6 +915,7 @@
 				FC13F9F51FE77E690009499E /* SetTitleBgColorPlugin.m in Sources */,
 				FCCC3BD11FE021AE00C95569 /* Helper.m in Sources */,
 				FCE5CDEE1FEB537000CEEDA6 /* myPhotoCell.m in Sources */,
+				FC974D3420286B2F009A0271 /* GetCachePlugin.m in Sources */,
 				FC13F9D71FE77D990009499E /* OpenUriPlugin.m in Sources */,
 				FC13F9B91FE77CC30009499E /* DownloadPlugin.m in Sources */,
 				FC13F9F21FE77E570009499E /* SetSubTitlePlugin.m in Sources */,
@@ -1100,9 +1094,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = ZQuanProject/ZQuanProject.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Lixin Hao (54KENJ26LF)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Lixin Hao (54KENJ26LF)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = JA5QLCHF8U;
+				DEVELOPMENT_TEAM = "";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/ZQuanProject/ZQuanProject-Prefix.pch";
 				INFOPLIST_FILE = ZQuanProject/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -1129,8 +1123,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cc.circling;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "867dbe78-f769-4e9d-9676-54f042b008d4";
-				PROVISIONING_PROFILE_SPECIFIER = "circling20180103-dev";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1142,9 +1136,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = ZQuanProject/ZQuanProject.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Lixin Hao (54KENJ26LF)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Lixin Hao (54KENJ26LF)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = JA5QLCHF8U;
+				DEVELOPMENT_TEAM = "";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/ZQuanProject/ZQuanProject-Prefix.pch";
 				INFOPLIST_FILE = ZQuanProject/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -1171,8 +1165,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cc.circling;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "867dbe78-f769-4e9d-9676-54f042b008d4";
-				PROVISIONING_PROFILE_SPECIFIER = "circling20180103-dev";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

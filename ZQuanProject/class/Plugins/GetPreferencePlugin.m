@@ -11,7 +11,6 @@
 @implementation GetPreferencePlugin
 
 
-
 -(void)initMessageJson:(NSDictionary *)message
 {
     [super initMessageJson:message];
@@ -23,14 +22,13 @@
         NSString *value = [[NSUserDefaults standardUserDefaults] objectForKey:key];
         
         NSString *clientId = message[@"clientId"];
-        NSString *jsStr;
+    
         if(IsEmptyStr(value)){
             value = @"";
-            jsStr = [NSString stringWithFormat:@"javascript: ZhuanQuanJSBridge._invokeJS(\"%@\",\"\");",clientId];
-        }else{
-            
-            jsStr = [NSString stringWithFormat:@"javascript: ZhuanQuanJSBridge._invokeJS(\"%@\",'%@');",clientId,value];
         }
+            
+        NSString *jsStr = [NSString stringWithFormat:@"javascript: ZhuanQuanJSBridge._invokeJS(\"%@\",\"%@\");",clientId,value];
+        
         [self.web stringByEvaluatingJavaScriptFromString:jsStr];
     }
 }

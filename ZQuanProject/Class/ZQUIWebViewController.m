@@ -23,6 +23,7 @@
     
     //添加到主控制器
     [self.view addSubview:self.webView];
+    
     self.refreshState = YES; //默认开启刷新
     
     [self registJS];
@@ -200,7 +201,17 @@
     NSString *JS = @"ZhuanQuanJSBridge.emit('optionMenu');";
     [_webView stringByEvaluatingJavaScriptFromString:JS];
 }
+-(void)OptionMenuEvent1
+{
+    NSString *JS = @"ZhuanQuanJSBridge.emit('optionMenu1');";
+    [_webView stringByEvaluatingJavaScriptFromString:JS];
+}
 
+-(void)OptionMenuEvent2
+{
+    NSString *JS = @"ZhuanQuanJSBridge.emit('optionMenu2');";
+    [_webView stringByEvaluatingJavaScriptFromString:JS];
+}
 
 #pragma mark -  添加刷新
 -(void)setIsdoFresh:(BOOL)isdoFresh

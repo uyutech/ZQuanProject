@@ -373,7 +373,7 @@
     }
     else {
         //[_finishBtn setTitleColor:UIColorFromRGB(0x7EB4CA) forState:UIControlStateNormal];
-        [_finishBtn setBackgroundColor:kDefaultNavBackColorTwo];
+        [_finishBtn setBackgroundColor:kDefaultNavBackColor];
     }
 }
 
