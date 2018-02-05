@@ -23,6 +23,10 @@
         
         NSString *value = [NSString stringWithFormat:@"%@",param[@"value"]];
         
+        if([param[@"value"] isKindOfClass:[NSDictionary class]]){
+            value = [Helper covertStringWithJson:param[@"value"]];
+        }
+        
         NSString *clientId = message[@"clientId"];
         
         if(!IsEmptyStr(value)){
