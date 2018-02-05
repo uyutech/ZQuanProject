@@ -40,7 +40,7 @@
 #define IS_NIL(variable)    (variable == nil)
 
 //字符串是否为空
-#define IsEmptyStr(_ref)    (((_ref) == nil) || ((_ref) == NULL) || ([(_ref) isEqual:[NSNull null]]) || ([(_ref)isEqualToString:@"(null)"]) || ([[(_ref) stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] length]==0))
+#define IsEmptyStr(_ref)    (((_ref) == nil) || ((_ref) == NULL) || ([(_ref) isEqual:[NSNull null]]) || ([(_ref)isEqualToString:@"(null)"]) || ([(_ref)isEqualToString:@"<null>"]) || ([[(_ref) stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] length]==0))
 
 //是不是NULL类型
 #define IS_NULL_CLASS(variable)    ((!IS_NIL(variable))&&([variable  isKindOfClass:[NSNull class]])

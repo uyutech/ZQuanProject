@@ -2,8 +2,8 @@
 //  ZQLayoutModel.h
 //  ZQuanProject
 //
-//  Created by 王园园 on 2017/12/25.
-//  Copyright © 2017年 zquan. All rights reserved.
+//  Created by 王园园 on 2018/2/1.
+//  Copyright © 2018年 zquan. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -27,4 +27,15 @@
 @property(nonatomic,copy)NSString *titleBgColor;
 
 @property(nonatomic,copy)NSString *backgroundColor;
+
+//
+@property(nonatomic,copy)NSString *titleColor;
+
+@property(nonatomic,copy)NSString *backIcon;
+
+@property(nonatomic,copy)NSString *optionMenuColor;
+
+@property(nonatomic,copy)NSString *optionMenuIcon1;
+
+@property(nonatomic,copy)NSString *optionMenuIcon2;
 @end

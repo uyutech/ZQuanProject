@@ -78,4 +78,18 @@
  */
 +(UIImage *)imageWithColor:(UIColor *)color;
 
+/**
+ 生成图片
+ 
+ @param str base64Str
+ @return image
+ */
++ (UIImage *)base64stringToImage:(NSString *)str;
+
+/**
+ * 缩放图片
+ */
++(UIImage*)imageWithImage:(UIImage*)image scaledToSize:(CGSize)newSize;
+
++ (CGFloat)widthForLabelWithString:(NSString *)labelString withFontSize:(CGFloat)fontsize withWidth:(CGFloat)width withHeight:(CGFloat)height;
 @end

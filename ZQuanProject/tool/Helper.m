@@ -181,4 +181,61 @@
 }
 
 
++ (UIImage *)base64stringToImage:(NSString *)str {
+    
+    NSData * imageData =[[NSData alloc] initWithBase64EncodedString:str options:NSDataBase64DecodingIgnoreUnknownCharacters];
+    
+    UIImage *photo = [UIImage imageWithData:imageData];
+    
+    return photo;
+}
+
+
+//对图片尺寸进行压缩--
++(UIImage*)imageWithImage:(UIImage*)image scaledToSize:(CGSize)newSize{
+    // Create a graphics image context
+    UIGraphicsBeginImageContext(newSize);
+    
+    // Tell the old image to draw in this new context, with the desired
+    // new size
+    [image drawInRect:CGRectMake(0,0,newSize.width,newSize.height)];
+    
+    // Get the new image from the context
+    UIImage* newImage = UIGraphicsGetImageFromCurrentImageContext();
+    
+    // End the context
+    UIGraphicsEndImageContext();
+    
+    // Return the new image.
+    return newImage;
+}
+
+
++ (CGFloat)widthForLabelWithString:(NSString *)labelString withFontSize:(CGFloat)fontsize withWidth:(CGFloat)width withHeight:(CGFloat)height
+{
+    if(labelString.length == 0){
+        return 0.0;
+    }
+    
+    if ([UIDevice currentDevice].systemVersion.doubleValue <= 7.0) {
+        CGSize maximumLabelSize = CGSizeMake(width,height);
+        CGSize expectedLabelSize = [labelString sizeWithFont:[UIFont systemFontOfSize:fontsize]
+                                           constrainedToSize:maximumLabelSize
+                                               lineBreakMode:0];
+        
+        return (expectedLabelSize.width);
+    } else {
+        CGSize size = CGSizeMake(width, height);
+        NSDictionary * tdic = [NSDictionary dictionaryWithObjectsAndKeys:[UIFont systemFontOfSize:fontsize],NSFontAttributeName,nil];
+        CGSize actualsize = [labelString boundingRectWithSize:size options:NSStringDrawingUsesLineFragmentOrigin attributes:tdic context:nil].size;
+        
+        //得到的宽度为0，返回最大宽度
+        if(actualsize.width == 0){
+            return width;
+        }
+        
+        return actualsize.width;
+    }
+}
+
 @end

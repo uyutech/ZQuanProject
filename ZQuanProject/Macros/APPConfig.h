@@ -18,10 +18,10 @@
 #define LogURLScheme @"h5container.message"
 
 //工程中打包H5默认版本号
-#define DefaultH5Version @"46"
+#define DefaultH5Version @"50"
 
 //项目版本号
-#define IOSVersion @"0.4.0"
+#define IOSVersion @"0.5.2"
 
 #define LaunchDomain @"circling.cc"
 #define LaunchCoptyright @"2016-2018 © All Rights Reserved"
@@ -38,15 +38,8 @@
 #define SINA_REDIRECTURL @"https://api.weibo.com/oauth2/default.html"
 
 
-/** 启动页背景色*/
-//#define kLaunchBackColor   HexRGBAlpha(0XE8F4FF,1)
-
-/** 导航渐变色1*/
-#define kDefaultNavBackColorOne   HexRGBAlpha(0X8BC4E7,1)
-
-/** 导航渐变色2*/
-#define kDefaultNavBackColorTwo   HexRGBAlpha(0X83BDE5,1)
-
+/** 导航颜色 蓝*/
+#define kDefaultNavBackColor   HexRGBAlpha(0X83BDE5,1)
 
 /** 进度条渐变色1*/
 #define kProgressColorOne   HexRGBAlpha(0XA4D2DF,1)

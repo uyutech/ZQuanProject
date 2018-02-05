@@ -10,12 +10,11 @@
 
 @interface BaseViewController : UIViewController
 
+@property(nonatomic,strong)UIView* navBarview;
 
 @property(nonatomic,assign) BOOL transparentTitle;
 
 @property (nonatomic, assign) BOOL hideBackButton;
-
-@property (nonatomic, assign) BOOL showOptionMenu;
 
 @property(nonatomic,strong)NSString *titleBgColor;
 
@@ -29,5 +28,24 @@
 
 @property (nonatomic, assign) BOOL readTitle;
 
+//
+@property(nonatomic,copy)NSString *titleColor;
+
+@property(nonatomic,copy)NSString *backIcon;
+
+@property(nonatomic,copy)NSString *optionMenuColor;
+
+@property(nonatomic,copy)NSString *optionMenuIcon1;
+
+@property(nonatomic,copy)NSString *optionMenuIcon2;
+
+/**
+ 映射
+ */
 -(void)initLayoutWithParam:(NSDictionary *)param;
+
+/**
+ setOptinMenu
+ */
+-(void)initOptinMenuLayoutWithParam:(NSDictionary *)param;
 @end

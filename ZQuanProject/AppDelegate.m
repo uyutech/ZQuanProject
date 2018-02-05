@@ -28,7 +28,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     [[UIApplication sharedApplication] setStatusBarHidden:NO];
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
     _window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     _window.backgroundColor = [UIColor whiteColor];
     _window.rootViewController = [[ZQLaunchViewController alloc] init];
