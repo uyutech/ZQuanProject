@@ -31,7 +31,7 @@
                 }
                 [values addObject:value];
             }];
-            NSString *jsStr = [NSString stringWithFormat:@"javascript: ZhuanQuanJSBridge._invokeJS(\"%@\",\"%@\");",clientId,values];
+            NSString *jsStr = [NSString stringWithFormat:@"javascript: ZhuanQuanJSBridge._invokeJS(\"%@\",%@);",clientId,values];
             [self.web stringByEvaluatingJavaScriptFromString:jsStr];
         }else if([param[@"key"] isKindOfClass:[NSString class]]){
             
