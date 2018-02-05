@@ -45,7 +45,7 @@
 /**
  json转字符串
  */
-+(NSString *)covertStringWithJson:(NSDictionary *)jsonDit;
++(NSString *)covertStringWithJson:(id)jsonDit;
 /**
   去掉UITextField前后空格
  */
