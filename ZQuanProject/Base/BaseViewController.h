@@ -27,6 +27,7 @@
 @property(nonatomic,strong)NSString *optionMenu;
 
 @property (nonatomic, assign) BOOL readTitle;
+@property (nonatomic, assign) BOOL showOptionMenu;
 
 //
 @property(nonatomic,copy)NSString *titleColor;

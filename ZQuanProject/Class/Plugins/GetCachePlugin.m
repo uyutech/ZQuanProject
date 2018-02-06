@@ -31,19 +31,22 @@
                 }
                 [values addObject:value];
             }];
-            NSString *jsStr = [NSString stringWithFormat:@"javascript: ZhuanQuanJSBridge._invokeJS(\"%@\",\"%@\");",clientId,values];
+            
+            NSString *valueJsonStr = [Helper covertStringWithJson:values];
+            
+            NSString *jsStr = [NSString stringWithFormat:@"javascript: ZhuanQuanJSBridge._invokeJS(\"%@\",%@);",clientId,valueJsonStr];
             [self.web stringByEvaluatingJavaScriptFromString:jsStr];
+            
         }else if([param[@"key"] isKindOfClass:[NSString class]]){
             
             NSString *key = param[@"key"];
             
             NSString *value = [[NSUserDefaults standardUserDefaults] objectForKey:key];
-            
-            NSString *jsStr;
+  
             if(IsEmptyStr(value)){
                 value = @"";
             }
-            jsStr = [NSString stringWithFormat:@"javascript: ZhuanQuanJSBridge._invokeJS(\"%@\",\"%@\");",clientId,value];
+            NSString *jsStr = [NSString stringWithFormat:@"javascript: ZhuanQuanJSBridge._invokeJS(\"%@\",\"%@\");",clientId,value];
             [self.web stringByEvaluatingJavaScriptFromString:jsStr];
         }
     

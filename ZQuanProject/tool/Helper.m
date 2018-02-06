@@ -88,7 +88,7 @@
 }
 
 
-+(NSString *)covertStringWithJson:(NSDictionary *)jsonDit
++(NSString *)covertStringWithJson:(id)jsonDit
 {
     NSError * error = nil;
     NSData * jsonData = [NSJSONSerialization dataWithJSONObject:jsonDit options:NSJSONWritingPrettyPrinted error:&error];

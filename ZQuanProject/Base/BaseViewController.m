@@ -233,9 +233,8 @@
         self.navBarview.backgroundColor = [UIColor clearColor];
         _line.hidden = YES;
         //default
-        if(!_titleColor){
-            self.titleColor = @"#FFFFFF";
-        }
+        self.titleColor = @"#FFFFFF";
+        
         if(!_backIcon){
             [_leftbarButton setImage:[UIImage imageNamed:@"back_transparent"] forState:UIControlStateNormal];
         }
@@ -244,9 +243,9 @@
         if(!_titleBgColor){
             self.titleBgColor = @"#FFFFFF";
         }
-        if(!_titleColor){
-            self.titleColor = @"#636365";
-        }
+        
+        self.titleColor = @"#636365";
+        
         if(!_backIcon){
             [_leftbarButton setImage:[UIImage imageNamed:@"back"] forState:UIControlStateNormal];
         }
@@ -267,10 +266,11 @@
 {
     _navTitle = navTitle;
     if(_transparentTitle){
+    
         NSShadow *shadow = [[NSShadow alloc] init];
         shadow.shadowBlurRadius = 4;
-        shadow.shadowColor = HexRGBAlpha(0X33000000, 1);
-        shadow.shadowOffset = CGSizeMake(2,2);
+        shadow.shadowColor = HexRGBAlpha(0X33000000, 0.5);
+        shadow.shadowOffset = CGSizeMake(0,2);
         NSAttributedString *attributedText = [[NSAttributedString alloc] initWithString:_navTitle attributes:@{NSShadowAttributeName:shadow}];
         _titleLabel.text = nil;
         _titleLabel.attributedText = attributedText;
@@ -345,6 +345,12 @@
 /**
  optionMenu
  */
+
+-(void)setShowOptionMenu:(BOOL)showOptionMenu
+{
+    _showOptionMenu = showOptionMenu;
+}
+
 -(void)setOptionMenu:(NSString *)optionMenu
 {
     _optionMenu = optionMenu;
