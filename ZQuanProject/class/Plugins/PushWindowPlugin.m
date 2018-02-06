@@ -26,10 +26,12 @@
             ZQUIWebViewController *containerVC = [[ZQUIWebViewController alloc] init];
 
             containerVC.URLString = param[@"url"];
-            containerVC.transparentTitle = NO;
             if(IS_DICTIONARY_CLASS(param[@"params"])){
 
                 NSDictionary *layoutParams = param[@"params"];
+                if(![layoutParams.allKeys containsObject:@"transparentTitle"]){
+                    containerVC.transparentTitle = NO;
+                }
                 [containerVC initLayoutWithParam:layoutParams];
             }
             [self.webVC.navigationController pushViewController:containerVC animated:YES];
