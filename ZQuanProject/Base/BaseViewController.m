@@ -116,11 +116,11 @@
     if(!IsEmptyStr(param[@"textColor"])){
         self.optionMenuColor = param[@"textColor"];
     }
-    if(!IsEmptyStr(param[@"img1"])){
-        self.optionMenuIcon1 = param[@"img1"];
+    if(!IsEmptyStr(param[@"icon1"])){
+        self.optionMenuIcon1 = param[@"icon1"];
     }
-    if(!IsEmptyStr(param[@"img2"])){
-        self.optionMenuIcon2 = param[@"img2"];
+    if(!IsEmptyStr(param[@"icon2"])){
+        self.optionMenuIcon2 = param[@"icon2"];
     }
     [self resetOptionMenueLayout];
 }
