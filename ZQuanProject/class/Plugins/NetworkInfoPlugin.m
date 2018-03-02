@@ -8,7 +8,7 @@
 //
 
 #import "NetworkInfoPlugin.h"
-#import "JZNetTool.h"
+#import "JZNetObserver.h"
 
 @implementation NetworkInfoPlugin
 
@@ -18,9 +18,9 @@
     
     NSString *clientId = message[@"clientId"];
     
-    BOOL hasNet = [JZNetTool sharedNetTool].isEnableNet;
+    BOOL hasNet = [JZNetObserver shared].isEnableNet;
     
-    NSString *netName = [JZNetTool sharedNetTool].netName;
+    NSString *netName = [JZNetObserver shared].netName;
     
     BOOL isWifi = [netName isEqualToString:@"WIFI"];
     

@@ -82,8 +82,10 @@
 
 #define K_ReceiveNotifyURL @"K_ReceiveNotifyURL"
 
+
 //通知
 #define KObserveNetStatusNotify @"KObserveNetStatusNotify"
 #define KObserveAPPActiveNotify @"KObserveAPPActiveNotify"
+#define KWebReloadNotify @"KWebReloadNotify"
 
 #endif /* Macros_h */

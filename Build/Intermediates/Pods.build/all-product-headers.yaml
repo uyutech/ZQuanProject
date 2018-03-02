@@ -4,187 +4,187 @@
   'roots': [
     {
       'type': 'directory',
-      'name': "/Users/wyy/Desktop/ZQuanProject/Build/Products/Debug-iphonesimulator/AFNetworking/AFNetworking.framework/Headers",
+      'name': "/Users/wyy/Desktop/\u8F6C\u5708/ZQuanProject1.1/Build/Products/Debug-iphoneos/AFNetworking/AFNetworking.framework/Headers",
       'contents': [
         {
           'type': 'file',
           'name': "AFAutoPurgingImageCache.h",
-          'external-contents': "/Users/wyy/Desktop/ZQuanProject/Pods/AFNetworking/UIKit+AFNetworking/AFAutoPurgingImageCache.h"
+          'external-contents': "/Users/wyy/Desktop/\u8F6C\u5708/ZQuanProject1.1/Pods/AFNetworking/UIKit+AFNetworking/AFAutoPurgingImageCache.h"
         },
         {
           'type': 'file',
           'name': "AFHTTPSessionManager.h",
-          'external-contents': "/Users/wyy/Desktop/ZQuanProject/Pods/AFNetworking/AFNetworking/AFHTTPSessionManager.h"
+          'external-contents': "/Users/wyy/Desktop/\u8F6C\u5708/ZQuanProject1.1/Pods/AFNetworking/AFNetworking/AFHTTPSessionManager.h"
         },
         {
           'type': 'file',
           'name': "AFImageDownloader.h",
-          'external-contents': "/Users/wyy/Desktop/ZQuanProject/Pods/AFNetworking/UIKit+AFNetworking/AFImageDownloader.h"
+          'external-contents': "/Users/wyy/Desktop/\u8F6C\u5708/ZQuanProject1.1/Pods/AFNetworking/UIKit+AFNetworking/AFImageDownloader.h"
         },
         {
           'type': 'file',
           'name': "AFNetworkActivityIndicatorManager.h",
-          'external-contents': "/Users/wyy/Desktop/ZQuanProject/Pods/AFNetworking/UIKit+AFNetworking/AFNetworkActivityIndicatorManager.h"
+          'external-contents': "/Users/wyy/Desktop/\u8F6C\u5708/ZQuanProject1.1/Pods/AFNetworking/UIKit+AFNetworking/AFNetworkActivityIndicatorManager.h"
         },
         {
           'type': 'file',
           'name': "AFNetworkReachabilityManager.h",
-          'external-contents': "/Users/wyy/Desktop/ZQuanProject/Pods/AFNetworking/AFNetworking/AFNetworkReachabilityManager.h"
+          'external-contents': "/Users/wyy/Desktop/\u8F6C\u5708/ZQuanProject1.1/Pods/AFNetworking/AFNetworking/AFNetworkReachabilityManager.h"
         },
         {
           'type': 'file',
           'name': "AFNetworking-Swift.h",
-          'external-contents': "/Users/wyy/Desktop/ZQuanProject/Build/Products/Debug-iphonesimulator/AFNetworking/AFNetworking.framework/Headers/AFNetworking-Swift.h"
+          'external-contents': "/Users/wyy/Desktop/\u8F6C\u5708/ZQuanProject1.1/Build/Products/Debug-iphoneos/AFNetworking/AFNetworking.framework/Headers/AFNetworking-Swift.h"
         },
         {
           'type': 'file',
           'name': "AFNetworking-umbrella.h",
-          'external-contents': "/Users/wyy/Desktop/ZQuanProject/Pods/Target Support Files/AFNetworking/AFNetworking-umbrella.h"
+          'external-contents': "/Users/wyy/Desktop/\u8F6C\u5708/ZQuanProject1.1/Pods/Target Support Files/AFNetworking/AFNetworking-umbrella.h"
         },
         {
           'type': 'file',
           'name': "AFNetworking.h",
-          'external-contents': "/Users/wyy/Desktop/ZQuanProject/Pods/AFNetworking/AFNetworking/AFNetworking.h"
+          'external-contents': "/Users/wyy/Desktop/\u8F6C\u5708/ZQuanProject1.1/Pods/AFNetworking/AFNetworking/AFNetworking.h"
         },
         {
           'type': 'file',
           'name': "AFSecurityPolicy.h",
-          'external-contents': "/Users/wyy/Desktop/ZQuanProject/Pods/AFNetworking/AFNetworking/AFSecurityPolicy.h"
+          'external-contents': "/Users/wyy/Desktop/\u8F6C\u5708/ZQuanProject1.1/Pods/AFNetworking/AFNetworking/AFSecurityPolicy.h"
         },
         {
           'type': 'file',
           'name': "AFURLRequestSerialization.h",
-          'external-contents': "/Users/wyy/Desktop/ZQuanProject/Pods/AFNetworking/AFNetworking/AFURLRequestSerialization.h"
+          'external-contents': "/Users/wyy/Desktop/\u8F6C\u5708/ZQuanProject1.1/Pods/AFNetworking/AFNetworking/AFURLRequestSerialization.h"
         },
         {
           'type': 'file',
           'name': "AFURLResponseSerialization.h",
-          'external-contents': "/Users/wyy/Desktop/ZQuanProject/Pods/AFNetworking/AFNetworking/AFURLResponseSerialization.h"
+          'external-contents': "/Users/wyy/Desktop/\u8F6C\u5708/ZQuanProject1.1/Pods/AFNetworking/AFNetworking/AFURLResponseSerialization.h"
         },
         {
           'type': 'file',
           'name': "AFURLSessionManager.h",
-          'external-contents': "/Users/wyy/Desktop/ZQuanProject/Pods/AFNetworking/AFNetworking/AFURLSessionManager.h"
+          'external-contents': "/Users/wyy/Desktop/\u8F6C\u5708/ZQuanProject1.1/Pods/AFNetworking/AFNetworking/AFURLSessionManager.h"
         },
         {
           'type': 'file',
           'name': "UIActivityIndicatorView+AFNetworking.h",
-          'external-contents': "/Users/wyy/Desktop/ZQuanProject/Pods/AFNetworking/UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.h"
+          'external-contents': "/Users/wyy/Desktop/\u8F6C\u5708/ZQuanProject1.1/Pods/AFNetworking/UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.h"
         },
         {
           'type': 'file',
           'name': "UIButton+AFNetworking.h",
-          'external-contents': "/Users/wyy/Desktop/ZQuanProject/Pods/AFNetworking/UIKit+AFNetworking/UIButton+AFNetworking.h"
+          'external-contents': "/Users/wyy/Desktop/\u8F6C\u5708/ZQuanProject1.1/Pods/AFNetworking/UIKit+AFNetworking/UIButton+AFNetworking.h"
         },
         {
           'type': 'file',
           'name': "UIImage+AFNetworking.h",
-          'external-contents': "/Users/wyy/Desktop/ZQuanProject/Pods/AFNetworking/UIKit+AFNetworking/UIImage+AFNetworking.h"
+          'external-contents': "/Users/wyy/Desktop/\u8F6C\u5708/ZQuanProject1.1/Pods/AFNetworking/UIKit+AFNetworking/UIImage+AFNetworking.h"
         },
         {
           'type': 'file',
           'name': "UIImageView+AFNetworking.h",
-          'external-contents': "/Users/wyy/Desktop/ZQuanProject/Pods/AFNetworking/UIKit+AFNetworking/UIImageView+AFNetworking.h"
+          'external-contents': "/Users/wyy/Desktop/\u8F6C\u5708/ZQuanProject1.1/Pods/AFNetworking/UIKit+AFNetworking/UIImageView+AFNetworking.h"
         },
         {
           'type': 'file',
           'name': "UIKit+AFNetworking.h",
-          'external-contents': "/Users/wyy/Desktop/ZQuanProject/Pods/AFNetworking/UIKit+AFNetworking/UIKit+AFNetworking.h"
+          'external-contents': "/Users/wyy/Desktop/\u8F6C\u5708/ZQuanProject1.1/Pods/AFNetworking/UIKit+AFNetworking/UIKit+AFNetworking.h"
         },
         {
           'type': 'file',
           'name': "UIProgressView+AFNetworking.h",
-          'external-contents': "/Users/wyy/Desktop/ZQuanProject/Pods/AFNetworking/UIKit+AFNetworking/UIProgressView+AFNetworking.h"
+          'external-contents': "/Users/wyy/Desktop/\u8F6C\u5708/ZQuanProject1.1/Pods/AFNetworking/UIKit+AFNetworking/UIProgressView+AFNetworking.h"
         },
         {
           'type': 'file',
           'name': "UIRefreshControl+AFNetworking.h",
-          'external-contents': "/Users/wyy/Desktop/ZQuanProject/Pods/AFNetworking/UIKit+AFNetworking/UIRefreshControl+AFNetworking.h"
+          'external-contents': "/Users/wyy/Desktop/\u8F6C\u5708/ZQuanProject1.1/Pods/AFNetworking/UIKit+AFNetworking/UIRefreshControl+AFNetworking.h"
         },
         {
           'type': 'file',
           'name': "UIWebView+AFNetworking.h",
-          'external-contents': "/Users/wyy/Desktop/ZQuanProject/Pods/AFNetworking/UIKit+AFNetworking/UIWebView+AFNetworking.h"
+          'external-contents': "/Users/wyy/Desktop/\u8F6C\u5708/ZQuanProject1.1/Pods/AFNetworking/UIKit+AFNetworking/UIWebView+AFNetworking.h"
         }
       ]
     },
     {
       'type': 'directory',
-      'name': "/Users/wyy/Desktop/ZQuanProject/Build/Products/Debug-iphonesimulator/AFNetworking/AFNetworking.framework/Modules",
+      'name': "/Users/wyy/Desktop/\u8F6C\u5708/ZQuanProject1.1/Build/Products/Debug-iphoneos/AFNetworking/AFNetworking.framework/Modules",
       'contents': [
         {
           'type': 'file',
           'name': "module.modulemap",
-          'external-contents': "/Users/wyy/Desktop/ZQuanProject/Build/Intermediates/Pods.build/Debug-iphonesimulator/AFNetworking.build/module.modulemap"
+          'external-contents': "/Users/wyy/Desktop/\u8F6C\u5708/ZQuanProject1.1/Build/Intermediates/Pods.build/Debug-iphoneos/AFNetworking.build/module.modulemap"
         }
       ]
     },
     {
       'type': 'directory',
-      'name': "/Users/wyy/Desktop/ZQuanProject/Build/Products/Debug-iphonesimulator/Pods_ZQuanProject.framework/Headers",
+      'name': "/Users/wyy/Desktop/\u8F6C\u5708/ZQuanProject1.1/Build/Products/Debug-iphoneos/Pods_ZQuanProject.framework/Headers",
       'contents': [
         {
           'type': 'file',
           'name': "Pods-ZQuanProject-umbrella.h",
-          'external-contents': "/Users/wyy/Desktop/ZQuanProject/Pods/Target Support Files/Pods-ZQuanProject/Pods-ZQuanProject-umbrella.h"
+          'external-contents': "/Users/wyy/Desktop/\u8F6C\u5708/ZQuanProject1.1/Pods/Target Support Files/Pods-ZQuanProject/Pods-ZQuanProject-umbrella.h"
         },
         {
           'type': 'file',
           'name': "Pods_ZQuanProject-Swift.h",
-          'external-contents': "/Users/wyy/Desktop/ZQuanProject/Build/Products/Debug-iphonesimulator/Pods_ZQuanProject.framework/Headers/Pods_ZQuanProject-Swift.h"
+          'external-contents': "/Users/wyy/Desktop/\u8F6C\u5708/ZQuanProject1.1/Build/Products/Debug-iphoneos/Pods_ZQuanProject.framework/Headers/Pods_ZQuanProject-Swift.h"
         }
       ]
     },
     {
       'type': 'directory',
-      'name': "/Users/wyy/Desktop/ZQuanProject/Build/Products/Debug-iphonesimulator/Pods_ZQuanProject.framework/Modules",
+      'name': "/Users/wyy/Desktop/\u8F6C\u5708/ZQuanProject1.1/Build/Products/Debug-iphoneos/Pods_ZQuanProject.framework/Modules",
       'contents': [
         {
           'type': 'file',
           'name': "module.modulemap",
-          'external-contents': "/Users/wyy/Desktop/ZQuanProject/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-ZQuanProject.build/module.modulemap"
+          'external-contents': "/Users/wyy/Desktop/\u8F6C\u5708/ZQuanProject1.1/Build/Intermediates/Pods.build/Debug-iphoneos/Pods-ZQuanProject.build/module.modulemap"
         }
       ]
     },
     {
       'type': 'directory',
-      'name': "/Users/wyy/Desktop/ZQuanProject/Build/Products/Debug-iphonesimulator/SSZipArchive/SSZipArchive.framework/Headers",
+      'name': "/Users/wyy/Desktop/\u8F6C\u5708/ZQuanProject1.1/Build/Products/Debug-iphoneos/SSZipArchive/SSZipArchive.framework/Headers",
       'contents': [
         {
           'type': 'file',
           'name': "SSZipArchive-Swift.h",
-          'external-contents': "/Users/wyy/Desktop/ZQuanProject/Build/Products/Debug-iphonesimulator/SSZipArchive/SSZipArchive.framework/Headers/SSZipArchive-Swift.h"
+          'external-contents': "/Users/wyy/Desktop/\u8F6C\u5708/ZQuanProject1.1/Build/Products/Debug-iphoneos/SSZipArchive/SSZipArchive.framework/Headers/SSZipArchive-Swift.h"
         },
         {
           'type': 'file',
           'name': "SSZipArchive-umbrella.h",
-          'external-contents': "/Users/wyy/Desktop/ZQuanProject/Pods/Target Support Files/SSZipArchive/SSZipArchive-umbrella.h"
+          'external-contents': "/Users/wyy/Desktop/\u8F6C\u5708/ZQuanProject1.1/Pods/Target Support Files/SSZipArchive/SSZipArchive-umbrella.h"
         },
         {
           'type': 'file',
           'name': "SSZipArchive.h",
-          'external-contents': "/Users/wyy/Desktop/ZQuanProject/Pods/SSZipArchive/SSZipArchive/SSZipArchive.h"
+          'external-contents': "/Users/wyy/Desktop/\u8F6C\u5708/ZQuanProject1.1/Pods/SSZipArchive/SSZipArchive/SSZipArchive.h"
         },
         {
           'type': 'file',
           'name': "SSZipCommon.h",
-          'external-contents': "/Users/wyy/Desktop/ZQuanProject/Pods/SSZipArchive/SSZipArchive/SSZipCommon.h"
+          'external-contents': "/Users/wyy/Desktop/\u8F6C\u5708/ZQuanProject1.1/Pods/SSZipArchive/SSZipArchive/SSZipCommon.h"
         },
         {
           'type': 'file',
           'name': "ZipArchive.h",
-          'external-contents': "/Users/wyy/Desktop/ZQuanProject/Pods/SSZipArchive/SSZipArchive/ZipArchive.h"
+          'external-contents': "/Users/wyy/Desktop/\u8F6C\u5708/ZQuanProject1.1/Pods/SSZipArchive/SSZipArchive/ZipArchive.h"
         }
       ]
     },
     {
       'type': 'directory',
-      'name': "/Users/wyy/Desktop/ZQuanProject/Build/Products/Debug-iphonesimulator/SSZipArchive/SSZipArchive.framework/Modules",
+      'name': "/Users/wyy/Desktop/\u8F6C\u5708/ZQuanProject1.1/Build/Products/Debug-iphoneos/SSZipArchive/SSZipArchive.framework/Modules",
       'contents': [
         {
           'type': 'file',
           'name': "module.modulemap",
-          'external-contents': "/Users/wyy/Desktop/ZQuanProject/Build/Intermediates/Pods.build/Debug-iphonesimulator/SSZipArchive.build/module.modulemap"
+          'external-contents': "/Users/wyy/Desktop/\u8F6C\u5708/ZQuanProject1.1/Build/Intermediates/Pods.build/Debug-iphoneos/SSZipArchive.build/module.modulemap"
         }
       ]
     }

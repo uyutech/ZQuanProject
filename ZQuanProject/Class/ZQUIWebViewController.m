@@ -11,6 +11,7 @@
 #import "NSURLProtocol+WebKitSupport.h"
 #import "HDHud.h"
 #import "ZQWebVCSingleton.h"
+#import "JZNetObserver.h"
 
 @interface ZQUIWebViewController ()<UIWebViewDelegate>
 
@@ -40,6 +41,8 @@
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appActive:) name:KObserveAPPActiveNotify object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appNetChange:) name:KObserveNetStatusNotify object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(webReload:) name:KWebReloadNotify object:nil];
     _webView.delegate = self;
     [ZQWebVCSingleton shareInstance].webVC = self;
 }
@@ -92,6 +95,26 @@
         //APP激活
         [self emitWithEvenParam:nil];
     }
+}
+/**
+ app网络变化
+ */
+-(void)appNetChange:(NSNotification *)notify
+{
+    BOOL hasNet = [JZNetObserver shared].isEnableNet;
+    NSString *netName = [JZNetObserver shared].netName;
+    BOOL isWifi = [netName isEqualToString:@"WIFI"];
+    
+    NSDictionary *dict = @{@"available":@(hasNet),@"wifi":@(isWifi)};
+    NSString *jsonStr = [Helper covertStringWithJson:dict];
+    
+    NSString *JS = [NSString stringWithFormat:@"ZhuanQuanJSBridge.emit('networkChange',%@);",jsonStr];
+    [_webView stringByEvaluatingJavaScriptFromString:JS];
+}
+
+-(void)webReload:(NSNotification *)notify
+{
+    [_webView reload];
 }
 
 -(void)emitWithEvenParam:(NSString *)paramStr
