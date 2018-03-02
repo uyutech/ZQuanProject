@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6082EA1B1FFE0CC00052EB0B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6082EA1A1FFE0CC00052EB0B /* InfoPlist.strings */; };
 		60C4B6EA1FF6725400EE8A89 /* LoginPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C4B6E91FF6725400EE8A89 /* LoginPlugin.m */; };
+		7519ADB92046A44E00C30B0C /* UnzipManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7519ADB82046A44E00C30B0C /* UnzipManager.m */; };
 		75A2245D1FDF8CF5005E28B2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 75A2245C1FDF8CF5005E28B2 /* AppDelegate.m */; };
 		75A224601FDF8CF5005E28B2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75A2245F1FDF8CF5005E28B2 /* ViewController.m */; };
 		75A224631FDF8CF6005E28B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75A224611FDF8CF6005E28B2 /* Main.storyboard */; };
@@ -18,10 +19,11 @@
 		75A224751FDF8CF7005E28B2 /* ZQuanProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 75A224741FDF8CF7005E28B2 /* ZQuanProjectTests.m */; };
 		75A224801FDF8CF7005E28B2 /* ZQuanProjectUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 75A2247F1FDF8CF7005E28B2 /* ZQuanProjectUITests.m */; };
 		75A2249B1FDF9781005E28B2 /* UIView+Additional.m in Sources */ = {isa = PBXBuildFile; fileRef = 75A224991FDF9781005E28B2 /* UIView+Additional.m */; };
-		75A2249E1FDF97DC005E28B2 /* JZNetTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 75A2249C1FDF97DC005E28B2 /* JZNetTool.m */; };
 		75A224A11FDF98C1005E28B2 /* ZQLaunchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75A224A01FDF98C1005E28B2 /* ZQLaunchViewController.m */; };
 		75C527FD1FE13C1B000230DD /* Helper+Cache.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C527FC1FE13C1A000230DD /* Helper+Cache.m */; };
 		75C528041FE148AC000230DD /* GradientProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C528031FE148AC000230DD /* GradientProgressView.m */; };
+		75E80A89204924D500667839 /* JZNetObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E80A85204924D400667839 /* JZNetObserver.m */; };
+		75E80A8A204924D500667839 /* JZNetTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E80A86204924D400667839 /* JZNetTool.m */; };
 		BF4BBD63652293626621B979 /* Pods_ZQuanProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32E48CC7DE08A9023BDB2986 /* Pods_ZQuanProject.framework */; };
 		FC13F9871FE60CD10009499E /* NSURLProtocol+WebKitSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13F9831FE60CD10009499E /* NSURLProtocol+WebKitSupport.m */; };
 		FC13F9881FE60CD10009499E /* WebNSURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = FC13F9861FE60CD10009499E /* WebNSURLProtocol.m */; };
@@ -122,6 +124,8 @@
 		6082EA1A1FFE0CC00052EB0B /* InfoPlist.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
 		60C4B6E81FF6725400EE8A89 /* LoginPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginPlugin.h; sourceTree = "<group>"; };
 		60C4B6E91FF6725400EE8A89 /* LoginPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginPlugin.m; sourceTree = "<group>"; };
+		7519ADB72046A44E00C30B0C /* UnzipManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UnzipManager.h; sourceTree = "<group>"; };
+		7519ADB82046A44E00C30B0C /* UnzipManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UnzipManager.m; sourceTree = "<group>"; };
 		75A224581FDF8CF5005E28B2 /* ZQuanProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZQuanProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75A2245B1FDF8CF5005E28B2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		75A2245C1FDF8CF5005E28B2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -140,8 +144,6 @@
 		75A224811FDF8CF7005E28B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75A224991FDF9781005E28B2 /* UIView+Additional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Additional.m"; sourceTree = "<group>"; };
 		75A2249A1FDF9781005E28B2 /* UIView+Additional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Additional.h"; sourceTree = "<group>"; };
-		75A2249C1FDF97DC005E28B2 /* JZNetTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZNetTool.m; sourceTree = "<group>"; };
-		75A2249D1FDF97DC005E28B2 /* JZNetTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZNetTool.h; sourceTree = "<group>"; };
 		75A2249F1FDF98C1005E28B2 /* ZQLaunchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZQLaunchViewController.h; sourceTree = "<group>"; };
 		75A224A01FDF98C1005E28B2 /* ZQLaunchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZQLaunchViewController.m; sourceTree = "<group>"; };
 		75A224B51FDFA176005E28B2 /* Macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
@@ -151,6 +153,10 @@
 		75C527FE1FE14078000230DD /* APPConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APPConfig.h; sourceTree = "<group>"; };
 		75C528021FE148AC000230DD /* GradientProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradientProgressView.h; sourceTree = "<group>"; };
 		75C528031FE148AC000230DD /* GradientProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GradientProgressView.m; sourceTree = "<group>"; };
+		75E80A85204924D400667839 /* JZNetObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZNetObserver.m; sourceTree = "<group>"; };
+		75E80A86204924D400667839 /* JZNetTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZNetTool.m; sourceTree = "<group>"; };
+		75E80A87204924D500667839 /* JZNetTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZNetTool.h; sourceTree = "<group>"; };
+		75E80A88204924D500667839 /* JZNetObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZNetObserver.h; sourceTree = "<group>"; };
 		D87718ED34AD97DD04350730 /* Pods-ZQuanProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZQuanProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZQuanProject/Pods-ZQuanProject.debug.xcconfig"; sourceTree = "<group>"; };
 		FC13F9831FE60CD10009499E /* NSURLProtocol+WebKitSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLProtocol+WebKitSupport.m"; sourceTree = "<group>"; };
 		FC13F9841FE60CD10009499E /* WebNSURLProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebNSURLProtocol.h; sourceTree = "<group>"; };
@@ -417,8 +423,6 @@
 				FCCC3BD01FE021AE00C95569 /* Helper.m */,
 				75C527FB1FE13C1A000230DD /* Helper+Cache.h */,
 				75C527FC1FE13C1A000230DD /* Helper+Cache.m */,
-				75A2249D1FDF97DC005E28B2 /* JZNetTool.h */,
-				75A2249C1FDF97DC005E28B2 /* JZNetTool.m */,
 				75A2249A1FDF9781005E28B2 /* UIView+Additional.h */,
 				75A224991FDF9781005E28B2 /* UIView+Additional.m */,
 			);
@@ -428,6 +432,7 @@
 		75A2248E1FDF9714005E28B2 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				75E80A842049248C00667839 /* Net */,
 				FC13F9821FE60C510009499E /* NSURLProtocol */,
 				FC13F9AA1FE772050009499E /* Event */,
 				FC13F9811FE60C200009499E /* Plugins */,
@@ -435,6 +440,8 @@
 				75A224A01FDF98C1005E28B2 /* ZQLaunchViewController.m */,
 				FCE5CEDA1FEF488100CEEDA6 /* ZQUIWebViewController.h */,
 				FCE5CEDB1FEF488100CEEDA6 /* ZQUIWebViewController.m */,
+				7519ADB72046A44E00C30B0C /* UnzipManager.h */,
+				7519ADB82046A44E00C30B0C /* UnzipManager.m */,
 				75C528021FE148AC000230DD /* GradientProgressView.h */,
 				75C528031FE148AC000230DD /* GradientProgressView.m */,
 				FCE5CED71FEBC50000CEEDA6 /* ZQWebVCSingleton.h */,
@@ -461,6 +468,17 @@
 				75A224B51FDFA176005E28B2 /* Macros.h */,
 			);
 			path = Macros;
+			sourceTree = "<group>";
+		};
+		75E80A842049248C00667839 /* Net */ = {
+			isa = PBXGroup;
+			children = (
+				75E80A87204924D500667839 /* JZNetTool.h */,
+				75E80A86204924D400667839 /* JZNetTool.m */,
+				75E80A88204924D500667839 /* JZNetObserver.h */,
+				75E80A85204924D400667839 /* JZNetObserver.m */,
+			);
+			path = Net;
 			sourceTree = "<group>";
 		};
 		FBE617125EFA3423A5E009FD /* Pods */ = {
@@ -865,6 +883,7 @@
 			files = (
 				FC13F9881FE60CD10009499E /* WebNSURLProtocol.m in Sources */,
 				FC13F9DA1FE77DB10009499E /* PopWindowPlugin.m in Sources */,
+				75E80A89204924D500667839 /* JZNetObserver.m in Sources */,
 				75A224601FDF8CF5005E28B2 /* ViewController.m in Sources */,
 				FCE5CDF51FEB537000CEEDA6 /* UIImage+fixOrientation.m in Sources */,
 				FC13F9E01FE77DDF0009499E /* PushWindowPlugin.m in Sources */,
@@ -877,6 +896,7 @@
 				FC13FA071FE77EDC0009499E /* WeiboLoginPlugin.m in Sources */,
 				FCE5CDD91FEAAFD100CEEDA6 /* MBProgressHUD.m in Sources */,
 				75C527FD1FE13C1B000230DD /* Helper+Cache.m in Sources */,
+				75E80A8A204924D500667839 /* JZNetTool.m in Sources */,
 				75C528041FE148AC000230DD /* GradientProgressView.m in Sources */,
 				75A2249B1FDF9781005E28B2 /* UIView+Additional.m in Sources */,
 				FC13F9B01FE77C6F0009499E /* AlbumPlugin.m in Sources */,
@@ -901,7 +921,6 @@
 				FCE5CDEF1FEB537000CEEDA6 /* WPhotoViewController.m in Sources */,
 				FC13F9DD1FE77DC40009499E /* PromptPlugin.m in Sources */,
 				FC13F9AD1FE7726D0009499E /* H5EventDispatcher.m in Sources */,
-				75A2249E1FDF97DC005E28B2 /* JZNetTool.m in Sources */,
 				FC13F98B1FE61A7B0009499E /* H5Plugin.m in Sources */,
 				FC974D3120286B0A009A0271 /* SetCachePlugin.m in Sources */,
 				FCE5CED91FEBC50000CEEDA6 /* ZQWebVCSingleton.m in Sources */,
@@ -920,6 +939,7 @@
 				FC13F9B91FE77CC30009499E /* DownloadPlugin.m in Sources */,
 				FC13F9F21FE77E570009499E /* SetSubTitlePlugin.m in Sources */,
 				FCE5CDF41FEB537000CEEDA6 /* WPFunctionView.m in Sources */,
+				7519ADB92046A44E00C30B0C /* UnzipManager.m in Sources */,
 				FC13F9E61FE77E0A0009499E /* RefreshStatePlugin.m in Sources */,
 				60C4B6EA1FF6725400EE8A89 /* LoginPlugin.m in Sources */,
 				FCE5CDDA1FEAAFD100CEEDA6 /* HDHud.m in Sources */,

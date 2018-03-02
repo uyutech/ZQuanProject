@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 #import "ZQLaunchViewController.h"
 #import "ZQUIWebViewController.h"
-#import "JZNetTool.h"
+#import "JZNetObserver.h"
 #import "WebNSURLProtocol.h"
 #import <AVFoundation/AVFoundation.h>
 #import <UserNotifications/UserNotifications.h>
@@ -39,7 +39,7 @@
     [self modifyWebViewUserAgent];
     
     //监测网络
-    [[JZNetTool sharedNetTool] observeNetStatus];
+    [[JZNetObserver shared] observeNetStatus];
     
     //注册通知
     [self registNotify];
@@ -55,6 +55,7 @@
     
     return YES;
 }
+
 
 -(void)modifyWebViewUserAgent
 {
