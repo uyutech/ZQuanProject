@@ -18,10 +18,10 @@
 #define LogURLScheme @"h5container.message"
 
 //工程中打包H5默认版本号
-#define DefaultH5Version @"55"
+#define DefaultH5Version @"61"
 
 //项目版本号
-#define IOSVersion @"0.5.3"
+#define IOSVersion @"0.5.4"
 
 #define LaunchDomain @"circling.cc"
 #define LaunchCoptyright @"2016-2018 © All Rights Reserved"

@@ -71,6 +71,7 @@ static WebNSURLProtocol * prototol;
     if(arr.count>=1){
         NSString *PreURL = arr[0];
         NSString *path = [NSString stringWithFormat:@"%@/%@",[Helper getUnZipFilePah],[PreURL lastPathComponent]];
+        NSString *mimeType = [self type:self.request.URL.pathExtension];
         NSURL* url1 = [NSURL URLWithString:path];
         mrequest = [NSMutableURLRequest requestWithURL:url1];
         
@@ -78,7 +79,7 @@ static WebNSURLProtocol * prototol;
         
         NSData* data = [NSData dataWithContentsOfFile:path];
         
-        NSURLResponse* response = [[NSURLResponse alloc] initWithURL:mrequest.URL MIMEType:@"text/html" expectedContentLength:data.length textEncodingName:nil];
+        NSURLResponse* response = [[NSURLResponse alloc] initWithURL:mrequest.URL MIMEType:mimeType expectedContentLength:data.length textEncodingName:nil];
         
         [self.client URLProtocol:self didReceiveResponse:response cacheStoragePolicy:NSURLCacheStorageAllowed];
         [self.client URLProtocol:self didLoadData:data];
@@ -105,7 +106,7 @@ static WebNSURLProtocol * prototol;
     }else if([pathExtension isEqualToString:@"gif"]){
         return @"image/gif";
     }else if([pathExtension isEqualToString:@"jpg"]){
-        return @"image/jpg";
+        return @"image/jpeg";
     }else if([pathExtension isEqualToString:@"jpeg"]){
         return @"image/jpeg";
     }else return @"text/html";
