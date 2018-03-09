@@ -52,7 +52,9 @@ static WebNSURLProtocol * prototol;
     NSString* extension = request.URL.pathExtension;
     
     BOOL isImage =  [@[@"html",@"htm",@"css",@"js",@"ico",@"png",@"gif",@"jpg",@"jpeg"] indexOfObjectPassingTest:^BOOL(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        return [extension compare:obj options:NSCaseInsensitiveSearch] == NSOrderedSame;
+        NSString *path = [NSString stringWithFormat:@"%@/%@",[Helper getUnZipFilePah],[request.URL lastPathComponent]];
+        
+        return [extension compare:obj options:NSCaseInsensitiveSearch] == NSOrderedSame && [Helper isExistObjectForfilePath:path];
     }] != NSNotFound;
     
     return [NSURLProtocol propertyForKey:ZQNSURLProtocolHKey inRequest:request] == nil && isImage &&[request.URL.host isEqualToString:[NSURL URLWithString:WEBURL].host];
@@ -64,21 +66,19 @@ static WebNSURLProtocol * prototol;
 }
 
 - (void)startLoading {
-    //NSMutableURLRequest* request = self.request.mutableCopy;
     
-    NSMutableURLRequest *mrequest;
+    NSMutableURLRequest* request = self.request.mutableCopy;
     NSArray *arr = [self.request.URL.absoluteString componentsSeparatedByString:@"?"];
     if(arr.count>=1){
         NSString *PreURL = arr[0];
         NSString *path = [NSString stringWithFormat:@"%@/%@",[Helper getUnZipFilePah],[PreURL lastPathComponent]];
-        NSURL* url1 = [NSURL URLWithString:path];
-        mrequest = [NSMutableURLRequest requestWithURL:url1];
+        NSString *mimeType = [self type:self.request.URL.pathExtension];
         
-        [NSURLProtocol setProperty:@YES forKey:ZQNSURLProtocolHKey inRequest:mrequest];
+        [NSURLProtocol setProperty:@YES forKey:ZQNSURLProtocolHKey inRequest:request];
         
         NSData* data = [NSData dataWithContentsOfFile:path];
         
-        NSURLResponse* response = [[NSURLResponse alloc] initWithURL:mrequest.URL MIMEType:@"text/html" expectedContentLength:data.length textEncodingName:nil];
+        NSURLResponse* response = [[NSURLResponse alloc] initWithURL:request.URL MIMEType:mimeType expectedContentLength:data.length textEncodingName:nil];
         
         [self.client URLProtocol:self didReceiveResponse:response cacheStoragePolicy:NSURLCacheStorageAllowed];
         [self.client URLProtocol:self didLoadData:data];
