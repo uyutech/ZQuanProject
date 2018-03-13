@@ -33,6 +33,11 @@
     [NSURLProtocol wk_registerScheme:@"https"];
     [NSURLProtocol wk_registerScheme:@"h5container.message"];
     
+    //将要进入全屏
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(startFullScreen:) name:UIWindowDidResignKeyNotification object:nil];
+    //退出全屏
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(endFullScreen:) name:UIWindowDidBecomeHiddenNotification object:nil];
+
     [self LoadWebUrl];
 }
 
@@ -50,7 +55,7 @@
 
 -(void)viewDidAppear:(BOOL)animated
 {
-    [super viewDidAppear:animated];    
+    [super viewDidAppear:animated];
     //app处于后台 点通知栏消息激活进入新View
     NSDictionary *notifyParam = [[NSUserDefaults standardUserDefaults] objectForKey:K_ReceiveNotifyURL];
     if(notifyParam!=nil){
@@ -73,11 +78,11 @@
 {
     NSString *path = [[NSBundle mainBundle] pathForResource:@"h5_bridge.js" ofType:nil];
     NSString *js = [[NSString alloc] initWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
-    
+
     [self.webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"var script = document.createElement('script');"
                                                           "script.type = 'text/javascript';"
                                                           "script.text = %@", js]];
-    
+
 }
 
 /**
@@ -104,10 +109,10 @@
     BOOL hasNet = [JZNetObserver shared].isEnableNet;
     NSString *netName = [JZNetObserver shared].netName;
     BOOL isWifi = [netName isEqualToString:@"WIFI"];
-    
+
     NSDictionary *dict = @{@"available":@(hasNet),@"wifi":@(isWifi)};
     NSString *jsonStr = [Helper covertStringWithJson:dict];
-    
+
     NSString *JS = [NSString stringWithFormat:@"ZhuanQuanJSBridge.emit('networkChange',%@);",jsonStr];
     [_webView stringByEvaluatingJavaScriptFromString:JS];
 }
@@ -134,7 +139,7 @@
     NSHTTPCookie *cookie;
     NSHTTPCookieStorage *cookies = [NSHTTPCookieStorage sharedHTTPCookieStorage];
     NSArray *cookiesURL = [cookies cookiesForURL:[NSURL URLWithString:WEBURL]];
-    
+
     for (id c in cookiesURL)
     {
         if ([c isKindOfClass:[NSHTTPCookie class]])
@@ -150,7 +155,7 @@
                 [cookieProperties setObject:[cookies objectAtIndex:2] forKey:NSHTTPCookieExpires];
                 [cookieProperties setObject:[cookies objectAtIndex:3] forKey:NSHTTPCookieDomain];
                 [cookieProperties setObject:[cookies objectAtIndex:4] forKey:NSHTTPCookiePath];
-                
+
                 NSHTTPCookie *cookieuser = [NSHTTPCookie cookieWithProperties:cookieProperties];
                 [[NSHTTPCookieStorage sharedHTTPCookieStorage]  setCookie:cookieuser];
                 //                    }
@@ -203,7 +208,7 @@
         _webView.allowsInlineMediaPlayback = YES;
         _webView.scalesPageToFit = YES;
         [_webView sizeToFit];
-        
+
         if (@available(iOS 11.0, *)){
             self.webView.scrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
         }
@@ -247,7 +252,7 @@
             [_webView reload];
         }
     }
-    
+
 }
 
 -(void)setRefreshState:(BOOL)refreshState
@@ -259,14 +264,13 @@
             self.refreshControl.tintColor = [UIColor grayColor];
             [self.refreshControl addTarget:self action:@selector(refreshAction) forControlEvents:UIControlEventValueChanged];
         }
-        
+
         if (@available(iOS 10.0, *)) {
             self.webView.scrollView.refreshControl = _refreshControl;
         } else {
             // Fallback on iOS 10 earlier versions
-            [self.webView addSubview:_refreshControl];
+            [self.webView.scrollView addSubview:_refreshControl];
         }
-        
     }else{
         if (@available(iOS 10.0, *)) {
             self.webView.scrollView.refreshControl = nil;
@@ -290,10 +294,41 @@
 }
 
 
+#pragma mark - video
+-(void)startFullScreen:(NSNotification *)notification
+{
+    NSLog(@"全屏开始");
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    appDelegate.isFull = YES;
+    [self changeScreen:UIInterfaceOrientationLandscapeRight];
+}
+
+
+-(void)endFullScreen:(NSNotification *)notification{
+    NSLog(@"全屏结束");
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    appDelegate.isFull = NO;
+    [self changeScreen:UIInterfaceOrientationPortrait];
+}
+
+-(void)changeScreen:(UIInterfaceOrientation)interfaceOrientation
+{
+    //强制归正：
+    if ([[UIDevice currentDevice] respondsToSelector:@selector(setOrientation:)]) {
+        SEL selector = NSSelectorFromString(@"setOrientation:");
+        NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:[UIDevice instanceMethodSignatureForSelector:selector]];
+
+        [invocation setSelector:selector];
+        [invocation setTarget:[UIDevice currentDevice]];
+        int val = interfaceOrientation;
+        [invocation setArgument:&val atIndex:2];
+        [invocation invoke];
+    }
+}
 
 #pragma mark ================ WillDisappear ================
 -(void)viewWillDisappear:(BOOL)animated{
-    
+
     [self.webView setDelegate:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:KObserveAPPActiveNotify object:nil];
 }
@@ -301,7 +336,7 @@
 
 //注意，观察的移除
 -(void)dealloc{
-    
+
 }
 
 
