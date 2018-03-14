@@ -50,7 +50,7 @@
 	<key>NSPhotoLibraryAddUsageDescription</key>
 	<string>转圈想要访问您的相册</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>转圈想要访问您的相册</string>
+	<string>您可以选择相册中的图片插入到所画圈发言的内容中，之后依然可以进行增删改操作。</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>audio</string>
