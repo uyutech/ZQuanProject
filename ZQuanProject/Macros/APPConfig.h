@@ -18,7 +18,7 @@
 #define LogURLScheme @"h5container.message"
 
 //工程中打包H5默认版本号
-#define DefaultH5Version @"68"
+#define DefaultH5Version @"85"
 
 //项目版本号
 #define IOSVersion @"0.5.5"
